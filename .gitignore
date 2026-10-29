@@ -1,0 +1,28 @@
+# Secrets — never committed (SEC-1)
+.env
+.env.*
+secrets/
+*.pfx
+*.key
+
+# Personal Claude Code settings
+.claude/settings.local.json
+CLAUDE.local.md
+
+# .NET build output
+bin/
+obj/
+.vs/
+*.user
+TestResults/
+
+# Local data
+*.db
+*.db-shm
+*.db-wal
+runs/
+
+# Node / Playwright
+node_modules/
+test-results/
+playwright-report/

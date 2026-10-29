@@ -1,0 +1,13 @@
+{
+  "name": "ad-astra-ui-visual",
+  "private": true,
+  "description": "Playwright tooling for Ad Astra: template capture and visual passes (plan §3.5).",
+  "type": "module",
+  "scripts": {
+    "capture-templates": "node scripts/capture-templates.mjs",
+    "registry": "node scripts/build-registry.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1"
+  }
+}

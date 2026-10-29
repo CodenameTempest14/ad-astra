@@ -1,0 +1,363 @@
+{
+  "$comment": "Single source of truth for Ad Astra UI templates (plan §3). Edit this file, then run `npm run capture-templates` and `npm run registry` in tests/ui-visual. Generated files: design/templates/**/README.md (template records), design/templates/**/approved/*, design/TEMPLATE_REGISTRY.md.",
+  "defaults": {
+    "viewport": { "width": 1366, "height": 768 },
+    "theme": "dark",
+    "settleMs": 2000
+  },
+  "sources": {
+    "tabler": {
+      "name": "Tabler (HTML dashboard UI kit, Bootstrap 5)",
+      "home": "https://tabler.io/admin-template",
+      "repo": "https://github.com/tabler/tabler",
+      "license": "MIT",
+      "hideSelectors": [".tblr-banner", ".btn-floating"],
+      "use": "Primary design system. Plain HTML/CSS, so markup and SCSS can be adapted into Razor components (credit in THIRD_PARTY_NOTICES.md). The demo's promo banner and 'customize' button are vendor chrome and are hidden before capture."
+    },
+    "judge0-ide": {
+      "name": "Judge0 IDE",
+      "home": "https://ide.judge0.com",
+      "repo": "https://github.com/judge0/ide",
+      "license": "MIT",
+      "use": "Primary reference for the student coding workspace layout (editor + input + output panels)."
+    },
+    "monaco": {
+      "name": "Monaco Editor playground",
+      "home": "https://microsoft.github.io/monaco-editor/",
+      "repo": "https://github.com/microsoft/monaco-editor",
+      "license": "MIT",
+      "use": "The code editor component itself (Decision D-UI, Option A)."
+    },
+    "shadcn-ui": {
+      "name": "shadcn/ui examples",
+      "home": "https://ui.shadcn.com/examples/dashboard",
+      "repo": "https://github.com/shadcn-ui/ui",
+      "license": "MIT",
+      "use": "Alternative candidate for comparison. React + Tailwind, so layout reference only; markup is not directly reusable in Razor."
+    }
+  },
+  "elements": [
+    {
+      "id": "shared-login", "level": "page", "name": "Login", "phase": 4,
+      "usedBy": "All users at app start",
+      "approved": "tabler",
+      "adopt": "Centered single card, logo above, email/password, remember-me, primary full-width button.",
+      "change": "Ad Astra icon and navy/cyan tokens; username instead of email; no social sign-in; no sign-up link (accounts are created by a teacher).",
+      "candidates": [
+        { "source": "tabler", "captures": [{ "state": "default", "url": "https://preview.tabler.io/sign-in.html?theme=dark" }] },
+        { "source": "shadcn-ui", "captures": [{ "state": "default", "url": "https://ui.shadcn.com/examples/authentication" }] }
+      ]
+    },
+    {
+      "id": "shared-startup-splash", "level": "page", "name": "Startup / Splash", "phase": 2,
+      "usedBy": "App launch while database and toolchains initialise",
+      "approved": "tabler",
+      "adopt": "Centered logo with a thin progress indicator.",
+      "change": "Show the current startup step text (database, toolchains) under the bar.",
+      "candidates": [
+        { "source": "tabler", "captures": [{ "state": "default", "url": "https://preview.tabler.io/page-loader.html?theme=dark" }] }
+      ]
+    },
+    {
+      "id": "shared-error-page", "level": "page", "name": "Error Page", "phase": 2,
+      "usedBy": "Unrecoverable errors and missing views",
+      "approved": "tabler",
+      "adopt": "Large status code, short explanation, one primary recovery action.",
+      "change": "Add 'Copy diagnostic report' secondary action (redacted, plan §14).",
+      "candidates": [
+        { "source": "tabler", "captures": [
+          { "state": "not-found", "url": "https://preview.tabler.io/error-404.html?theme=dark" },
+          { "state": "server-error", "url": "https://preview.tabler.io/error-500.html?theme=dark" }
+        ] }
+      ]
+    },
+    {
+      "id": "shared-toolchain-status", "level": "page", "name": "Toolchain Status", "phase": 2,
+      "usedBy": "Teachers/admin checking C, C++, Java, Python, C# toolchains",
+      "approved": "tabler",
+      "adopt": "Per-service status rows with up/down indicator and detail text.",
+      "change": "One row per language: detected version, path, status badge, 'how to fix' link when missing.",
+      "candidates": [
+        { "source": "tabler", "captures": [{ "state": "default", "url": "https://preview.tabler.io/uptime.html?theme=dark" }] }
+      ]
+    },
+    {
+      "id": "shared-first-run-setup", "level": "page", "name": "First-Run Setup Wizard", "phase": 8,
+      "usedBy": "First launch after install",
+      "approved": "tabler",
+      "adopt": "Numbered steps with one form per step and back/next actions.",
+      "change": "Steps: welcome → toolchain detection → first teacher account → backup location → done.",
+      "candidates": [
+        { "source": "tabler", "captures": [{ "state": "default", "url": "https://preview.tabler.io/wizard.html?theme=dark" }] },
+        { "source": "tabler-onboarding", "sourceRef": "tabler", "captures": [{ "state": "default", "url": "https://preview.tabler.io/onboarding.html?theme=dark" }] }
+      ]
+    },
+    {
+      "id": "teacher-dashboard", "level": "page", "name": "Teacher Dashboard", "phase": 5,
+      "usedBy": "Teacher landing page",
+      "approved": "tabler",
+      "adopt": "Sidebar shell, KPI cards row, recent-activity table, chart card.",
+      "change": "KPIs: active assessments, submissions today, average score, toolchain health. Fewer charts.",
+      "candidates": [
+        { "source": "tabler", "captures": [{ "state": "default", "url": "https://preview.tabler.io/index.html?theme=dark" }] },
+        { "source": "shadcn-ui", "captures": [{ "state": "default", "url": "https://ui.shadcn.com/view/new-york-v4/dashboard-01" }] }
+      ]
+    },
+    {
+      "id": "teacher-assessment-list", "level": "page", "name": "Assessment List", "phase": 5,
+      "usedBy": "Teacher browsing/creating assessments",
+      "approved": "tabler",
+      "adopt": "Filterable table with status badges, search, pagination and row actions.",
+      "change": "Columns: title, language(s), status (draft/published/closed), questions, attempts, updated.",
+      "candidates": [
+        { "source": "tabler", "captures": [{ "state": "default", "url": "https://preview.tabler.io/datatables.html?theme=dark" }] },
+        { "source": "shadcn-ui", "captures": [{ "state": "default", "url": "https://ui.shadcn.com/examples/tasks" }] }
+      ]
+    },
+    {
+      "id": "teacher-assessment-editor", "level": "page", "name": "Assessment Editor", "phase": 5,
+      "usedBy": "Teacher creating/editing an assessment",
+      "approved": "tabler",
+      "adopt": "Two-column form layout with grouped cards and a sticky save bar.",
+      "change": "Groups: details, timing, scoring, submission rules; question list in a side column.",
+      "candidates": [
+        { "source": "tabler", "captures": [{ "state": "default", "url": "https://preview.tabler.io/form-layout.html?theme=dark" }] },
+        { "source": "tabler-settings", "sourceRef": "tabler", "captures": [{ "state": "default", "url": "https://preview.tabler.io/settings.html?theme=dark" }] }
+      ]
+    },
+    {
+      "id": "teacher-question-editor", "level": "page", "name": "Question Editor", "phase": 5,
+      "usedBy": "Teacher writing a problem statement, starter code and test cases",
+      "approved": "tabler",
+      "adopt": "Rich-text/markdown editing card with toolbar.",
+      "change": "Tabs: Statement (markdown) | Starter code (Monaco) | Test cases (table) | Scoring.",
+      "candidates": [
+        { "source": "tabler", "captures": [{ "state": "default", "url": "https://preview.tabler.io/wysiwyg.html?theme=dark" }] }
+      ]
+    },
+    {
+      "id": "teacher-account-management", "level": "page", "name": "Account Management", "phase": 4,
+      "usedBy": "Teacher managing student/teacher accounts",
+      "approved": "tabler",
+      "adopt": "User grid/list with avatar, role, status and actions.",
+      "change": "List view (not cards) for classes of 40+; bulk import; reset-password action.",
+      "candidates": [
+        { "source": "tabler", "captures": [{ "state": "default", "url": "https://preview.tabler.io/users.html?theme=dark" }] }
+      ]
+    },
+    {
+      "id": "teacher-backup-restore", "level": "page", "name": "Backup & Restore", "phase": 4,
+      "usedBy": "Teacher/admin data protection",
+      "approved": "tabler",
+      "adopt": "Settings page: left settings nav, right content cards with actions.",
+      "change": "Cards: create backup, backup history table, restore (with destructive confirm).",
+      "candidates": [
+        { "source": "tabler", "captures": [{ "state": "default", "url": "https://preview.tabler.io/settings.html?theme=dark" }] }
+      ]
+    },
+    {
+      "id": "teacher-assessment-report", "level": "page", "name": "Assessment Report", "phase": 7,
+      "usedBy": "Teacher reviewing class performance",
+      "approved": "tabler",
+      "adopt": "Analytics dashboard: KPI row, charts, ranked table.",
+      "change": "Score distribution, per-question pass rate, per-test failure hotspots.",
+      "candidates": [
+        { "source": "tabler", "captures": [{ "state": "default", "url": "https://preview.tabler.io/dashboard-crm.html?theme=dark" }] }
+      ]
+    },
+    {
+      "id": "teacher-gradebook", "level": "page", "name": "Gradebook", "phase": 7,
+      "usedBy": "Teacher viewing scores per student x assessment",
+      "approved": "tabler",
+      "adopt": "Dense data grid with sortable columns.",
+      "change": "Students as rows, assessments as columns, export action.",
+      "candidates": [
+        { "source": "tabler", "captures": [{ "state": "default", "url": "https://preview.tabler.io/tables.html?theme=dark" }] }
+      ]
+    },
+    {
+      "id": "teacher-submission-review", "level": "page", "name": "Submission Review", "phase": 7,
+      "usedBy": "Teacher inspecting one student's submission",
+      "approved": "judge0-ide",
+      "adopt": "Read-only code pane beside an output/results pane.",
+      "change": "Code read-only; right pane shows per-test results including hidden tests (teacher only).",
+      "candidates": [
+        { "source": "judge0-ide", "captures": [{ "state": "default", "url": "https://ide.judge0.com/" }] }
+      ]
+    },
+    {
+      "id": "student-dashboard", "level": "page", "name": "Student Dashboard", "phase": 6,
+      "usedBy": "Student landing page",
+      "approved": "tabler",
+      "adopt": "Three-column board (Upcoming / In progress / Completed) of cards with meta row and actions. Chosen over the job-listing candidate because the columns map 1:1 to attempt states.",
+      "change": "Cards = assigned assessments: due time, duration, language, status, Start/Resume. No images, likes or comments.",
+      "candidates": [
+        { "source": "tabler", "captures": [{ "state": "default", "url": "https://preview.tabler.io/tasks.html?theme=dark" }] },
+        { "source": "tabler-job-listing", "sourceRef": "tabler", "captures": [{ "state": "default", "url": "https://preview.tabler.io/job-listing.html?theme=dark" }] }
+      ]
+    },
+    {
+      "id": "student-assessment-lobby", "level": "page", "name": "Assessment Lobby", "phase": 6,
+      "usedBy": "Student reading instructions before starting",
+      "approved": "tabler",
+      "adopt": "Readable long-form text column.",
+      "change": "Instructions, rules, time limit summary, 'Start assessment' confirm button.",
+      "candidates": [
+        { "source": "tabler", "captures": [{ "state": "default", "url": "https://preview.tabler.io/terms-of-service.html?theme=dark" }] }
+      ]
+    },
+    {
+      "id": "student-coding-workspace", "level": "page", "name": "Coding Workspace", "phase": 6,
+      "usedBy": "Student solving a problem",
+      "approved": "judge0-ide",
+      "adopt": "Editor-dominant split layout with input/output panels and a top action bar (language, run).",
+      "change": "Add left problem panel, top timer bar, question navigator, visible-test results panel, Submit button. Drop Judge0's AI-assistant panel, 'Sign in with Puter' and minimap (not allowed in an exam).",
+      "candidates": [
+        { "source": "judge0-ide", "captures": [{ "state": "default", "url": "https://ide.judge0.com/" }] },
+        { "source": "monaco", "captures": [{ "state": "default", "url": "https://microsoft.github.io/monaco-editor/playground.html" }] }
+      ]
+    },
+    {
+      "id": "student-results", "level": "page", "name": "Results", "phase": 6,
+      "usedBy": "Student viewing a finished attempt (when allowed)",
+      "approved": "tabler",
+      "adopt": "Summary stat cards plus a detail list.",
+      "change": "Score, tests passed, time used; per-question breakdown; hidden tests shown only as counts.",
+      "candidates": [
+        { "source": "tabler", "captures": [{ "state": "default", "url": "https://preview.tabler.io/widgets.html?theme=dark" }] }
+      ]
+    },
+    {
+      "id": "dev-system-health", "level": "page", "name": "System Health", "phase": 7,
+      "usedBy": "Developer diagnostics",
+      "approved": "tabler",
+      "adopt": "Status list with uptime-style indicators.",
+      "change": "Rows: app version, DB/migrations, disk, settings, toolchains.",
+      "candidates": [
+        { "source": "tabler", "captures": [{ "state": "default", "url": "https://preview.tabler.io/uptime.html?theme=dark" }] }
+      ]
+    },
+    {
+      "id": "dev-log-explorer", "level": "page", "name": "Log Explorer", "phase": 7,
+      "usedBy": "Developer diagnostics",
+      "approved": "tabler",
+      "adopt": "Log list with severity, timestamp and message.",
+      "change": "Filters by severity/component/run ID; copy redacted report.",
+      "candidates": [
+        { "source": "tabler", "captures": [{ "state": "default", "url": "https://preview.tabler.io/logs.html?theme=dark" }] }
+      ]
+    },
+    {
+      "id": "dev-test-runner", "level": "page", "name": "Test Runner", "phase": 7,
+      "usedBy": "Developer diagnostics",
+      "approved": "tabler",
+      "adopt": "Checklist rows with pass/fail state.",
+      "change": "Rows per test with duration and failure message expander.",
+      "candidates": [
+        { "source": "tabler", "captures": [{ "state": "default", "url": "https://preview.tabler.io/tasks-list.html?theme=dark" }] }
+      ]
+    },
+
+    {
+      "id": "shell-navigation-sidebar", "level": "section", "name": "Navigation Sidebar", "phase": 2,
+      "usedBy": "Every signed-in page",
+      "approved": "tabler",
+      "adopt": "Dark vertical sidebar: logo top, icon + label nav items, active highlight.",
+      "change": "Role-specific items; user/sign-out at bottom.",
+      "candidates": [
+        { "source": "tabler", "captures": [{ "state": "default", "url": "https://preview.tabler.io/layout-vertical.html?theme=dark", "selector": "aside.navbar-vertical" }] }
+      ]
+    },
+    {
+      "id": "shell-top-bar", "level": "section", "name": "Top Bar", "phase": 2,
+      "usedBy": "Every signed-in page",
+      "approved": "tabler",
+      "adopt": "Slim top header with page title area and user menu.",
+      "change": "Breadcrumb/page title left; status indicators (toolchains, sync) right.",
+      "candidates": [
+        { "source": "tabler", "captures": [{ "state": "default", "url": "https://preview.tabler.io/layout-navbar-dark.html?theme=dark", "selector": "header.navbar" }] }
+      ]
+    },
+    {
+      "id": "shell-content-area", "level": "section", "name": "Content Area + Page Header", "phase": 2,
+      "usedBy": "Every signed-in page",
+      "approved": "tabler",
+      "adopt": "Page header (pretitle, title, actions) above a fluid card grid.",
+      "change": "None beyond tokens.",
+      "candidates": [
+        { "source": "tabler", "captures": [{ "state": "default", "url": "https://preview.tabler.io/blank.html?theme=dark" }] }
+      ]
+    },
+    {
+      "id": "workspace-code-editor-panel", "level": "section", "name": "Code Editor Panel", "phase": 6,
+      "usedBy": "student-coding-workspace, teacher-question-editor",
+      "approved": "monaco",
+      "adopt": "Monaco with line numbers, minimap off, dark theme.",
+      "change": "Ad Astra editor theme colours; font size control; no minimap.",
+      "candidates": [
+        { "source": "monaco", "captures": [{ "state": "default", "url": "https://microsoft.github.io/monaco-editor/playground.html" }] }
+      ]
+    },
+
+    { "id": "button", "level": "component", "name": "Buttons", "phase": 2, "usedBy": "Everywhere", "approved": "tabler",
+      "adopt": "Primary, secondary, outline, ghost, danger, icon buttons, loading state.", "change": "Ad Astra blue primary, cyan focus ring.",
+      "candidates": [{ "source": "tabler", "captures": [{ "state": "all-variants", "url": "https://preview.tabler.io/buttons.html?theme=dark", "fullPage": true }] }] },
+    { "id": "form-controls", "level": "component", "name": "Form Controls (text, select, checkbox, radio, switch)", "phase": 2, "usedBy": "All forms", "approved": "tabler",
+      "adopt": "Label above input, help text, invalid state with message.", "change": "Tokens only.",
+      "candidates": [{ "source": "tabler", "captures": [{ "state": "all-variants", "url": "https://preview.tabler.io/form-elements.html?theme=dark", "fullPage": true }] }] },
+    { "id": "password-field", "level": "component", "name": "Password Field", "phase": 4, "usedBy": "Login, account dialogs", "approved": "tabler",
+      "adopt": "Show/hide toggle and strength meter.", "change": "Strength meter only on create/change password.",
+      "candidates": [{ "source": "tabler", "captures": [{ "state": "all-variants", "url": "https://preview.tabler.io/password-strength.html?theme=dark", "fullPage": true }] }] },
+    { "id": "card", "level": "component", "name": "Card", "phase": 2, "usedBy": "Dashboards, forms", "approved": "tabler",
+      "adopt": "Header/body/footer card, status top border.", "change": "Tokens only.",
+      "candidates": [{ "source": "tabler", "captures": [{ "state": "all-variants", "url": "https://preview.tabler.io/cards.html?theme=dark", "fullPage": true }] }] },
+    { "id": "data-table", "level": "component", "name": "Data Table", "phase": 2, "usedBy": "Lists, gradebook, logs", "approved": "tabler",
+      "adopt": "Striped/hover table, sortable headers, row actions, pagination.", "change": "Sticky header for long lists.",
+      "candidates": [{ "source": "tabler", "captures": [{ "state": "all-variants", "url": "https://preview.tabler.io/tables.html?theme=dark", "fullPage": true }] }] },
+    { "id": "status-badge", "level": "component", "name": "Status Badge", "phase": 2, "usedBy": "Statuses everywhere", "approved": "tabler",
+      "adopt": "Soft-colour pill badges.", "change": "Fixed status palette: draft, published, closed, passed, failed, hidden, running, timeout.",
+      "candidates": [{ "source": "tabler", "captures": [{ "state": "all-variants", "url": "https://preview.tabler.io/badges.html?theme=dark", "fullPage": true }] }] },
+    { "id": "toast", "level": "component", "name": "Toast", "phase": 2, "usedBy": "Save/submit feedback", "approved": "tabler",
+      "adopt": "Top-right stacked toasts with icon and close.", "change": "Never used for exam-critical messages (those use dialogs).",
+      "candidates": [{ "source": "tabler", "captures": [{ "state": "all-variants", "url": "https://preview.tabler.io/toasts.html?theme=dark", "fullPage": true }] }] },
+    { "id": "modal-dialog", "level": "component", "name": "Modal Dialog", "phase": 2, "usedBy": "Confirms, create/edit dialogs, submit, time expired", "approved": "tabler",
+      "adopt": "Centered modal, status-coloured top strip for danger/success.", "change": "Destructive confirms require typing the item name.",
+      "candidates": [{ "source": "tabler", "captures": [{ "state": "all-variants", "url": "https://preview.tabler.io/modals.html?theme=dark", "fullPage": true }] }] },
+    { "id": "tabs", "level": "component", "name": "Tabs", "phase": 5, "usedBy": "Question editor, settings", "approved": "tabler",
+      "adopt": "Card-header tabs.", "change": "Tokens only.",
+      "candidates": [{ "source": "tabler", "captures": [{ "state": "all-variants", "url": "https://preview.tabler.io/tabs.html?theme=dark", "fullPage": true }] }] },
+    { "id": "empty-state", "level": "component", "name": "Empty State", "phase": 2, "usedBy": "Any empty list", "approved": "tabler",
+      "adopt": "Icon/illustration, title, one-line explanation, primary action.", "change": "Ad Astra line icons, no stock illustrations.",
+      "candidates": [{ "source": "tabler", "captures": [{ "state": "default", "url": "https://preview.tabler.io/empty.html?theme=dark" }] }] },
+    { "id": "loading-indicator", "level": "component", "name": "Loading / Skeleton", "phase": 2, "usedBy": "Async views", "approved": "tabler",
+      "adopt": "Skeleton placeholders and spinner.", "change": "Execution 'running…' state uses spinner + elapsed time.",
+      "candidates": [{ "source": "tabler", "captures": [{ "state": "all-variants", "url": "https://preview.tabler.io/placeholder.html?theme=dark", "fullPage": true }] }] },
+    { "id": "alert-validation", "level": "component", "name": "Alert / Validation Summary", "phase": 2, "usedBy": "Forms, compiler errors", "approved": "tabler",
+      "adopt": "Important alerts with icon, title and description.", "change": "Compiler-error variant uses monospace body.",
+      "candidates": [{ "source": "tabler", "captures": [{ "state": "all-variants", "url": "https://preview.tabler.io/alerts.html?theme=dark", "fullPage": true }] }] },
+    { "id": "steps", "level": "component", "name": "Steps / Progress Tracker", "phase": 8, "usedBy": "First-run wizard, question navigator", "approved": "tabler",
+      "adopt": "Numbered/dotted step indicator.", "change": "Question navigator shows answered/unanswered/flagged.",
+      "candidates": [{ "source": "tabler", "captures": [{ "state": "all-variants", "url": "https://preview.tabler.io/steps.html?theme=dark", "fullPage": true }] }] },
+    { "id": "chart", "level": "component", "name": "Charts", "phase": 7, "usedBy": "Reports, dashboard", "approved": "tabler",
+      "adopt": "Simple bar/line/donut charts inside cards.", "change": "Ad Astra chart palette; must work offline (bundled library).",
+      "candidates": [{ "source": "tabler", "captures": [{ "state": "all-variants", "url": "https://preview.tabler.io/charts.html?theme=dark", "fullPage": true }] }] },
+    { "id": "dropdown", "level": "component", "name": "Dropdown Menu", "phase": 2, "usedBy": "Row actions, user menu, language selector", "approved": "tabler",
+      "adopt": "Icon + label menu items, dividers.", "change": "Tokens only.",
+      "candidates": [{ "source": "tabler", "captures": [{ "state": "all-variants", "url": "https://preview.tabler.io/dropdowns.html?theme=dark", "fullPage": true }] }] },
+    { "id": "pagination", "level": "component", "name": "Pagination", "phase": 2, "usedBy": "Long tables", "approved": "tabler",
+      "adopt": "Prev/next with page numbers.", "change": "Tokens only.",
+      "candidates": [{ "source": "tabler", "captures": [{ "state": "all-variants", "url": "https://preview.tabler.io/pagination.html?theme=dark", "fullPage": true }] }] },
+    { "id": "progress-bar", "level": "component", "name": "Progress Bar", "phase": 6, "usedBy": "Timer bar, tests passed, splash", "approved": "tabler",
+      "adopt": "Thin progress bars with labels.", "change": "Timer warning (amber) and expired (red) states.",
+      "candidates": [{ "source": "tabler", "captures": [{ "state": "all-variants", "url": "https://preview.tabler.io/progress.html?theme=dark", "fullPage": true }] }] },
+    { "id": "segmented-control", "level": "component", "name": "Segmented Control", "phase": 5, "usedBy": "Visible/hidden toggle, comparison policy", "approved": "tabler",
+      "adopt": "Inline segmented choice.", "change": "Tokens only.",
+      "candidates": [{ "source": "tabler", "captures": [{ "state": "all-variants", "url": "https://preview.tabler.io/segmented-control.html?theme=dark", "fullPage": true }] }] },
+    { "id": "number-input", "level": "component", "name": "Number / Duration Input", "phase": 5, "usedBy": "Points, time limits", "approved": "tabler",
+      "adopt": "Stepper input.", "change": "Duration variant (hh:mm).",
+      "candidates": [{ "source": "tabler", "captures": [{ "state": "all-variants", "url": "https://preview.tabler.io/number-input.html?theme=dark", "fullPage": true }] }] },
+    { "id": "avatar", "level": "component", "name": "Avatar", "phase": 4, "usedBy": "User lists, user menu", "approved": "tabler",
+      "adopt": "Initials avatars.", "change": "Initials only, no photos (privacy, offline).",
+      "candidates": [{ "source": "tabler", "captures": [{ "state": "all-variants", "url": "https://preview.tabler.io/avatars.html?theme=dark", "fullPage": true }] }] }
+  ]
+}
