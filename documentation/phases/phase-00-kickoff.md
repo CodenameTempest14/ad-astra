@@ -25,11 +25,11 @@
 - [x] P00-07c Exam integrity approach: record evidence + flag for review — evidence: DECISIONS.md D-010
 - [ ] P00-07d Owner approves or rejects each remaining proposed feature — PROG: 4 approved, 1 deferred, 58 awaiting (documentation/specs/FEATURES.md)
 - [x] P00-07e Classroom setup directions written — evidence: documentation/guides/CLASSROOM-SETUP.md
-- [ ] P00-08 Can students run code before submitting? Visible/hidden feedback rules
-- [ ] P00-09 Scoring policy: partial credit, penalties, multiple submissions
-- [ ] P00-10 Timer rules: expiry, autosave, late submission, interruption
+- [x] P00-08 Run-before-submit and feedback rules — evidence: DECISIONS.md D-011
+- [x] P00-09 Scoring policy — evidence: DECISIONS.md D-012 (partial credit by weight; penalties still awaiting approval)
+- [x] P00-10 Timer rules — evidence: DECISIONS.md D-013 (auto-submit at zero; autosave + interruption rules specified in Phase 7)
 - [ ] P00-11 Retention: source code, submissions, temp run folders
-- [ ] P00-12 Isolation strength required for the classroom threat model
+- [x] P00-12 Isolation strength — evidence: DECISIONS.md D-014 (practical lab protection)
 - [ ] P00-13 Report/export formats
 
 ## Requirements and inventory

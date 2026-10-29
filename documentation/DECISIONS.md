@@ -59,3 +59,20 @@ a reversed decision gets a new entry that references the old one.
 - **Decided by:** owner (Q4: "Yes").
 - **Meaning:** Ad Astra records integrity events and raises "review suggested" flags. It never claims to prevent
   cheating or labels a student as a cheater. Classroom supervision remains required.
+
+## D-011 — Students run freely against visible tests — 2026-10-29
+- **Decided by:** owner (P00-08), on the agent's recommendation.
+- **Meaning:** unlimited **Run** on the lab PC against visible tests, plus a custom-input box. Hidden tests run only on the host at **Submit**; students see only pass/fail counts for them, never test data (D-008, MASTER-PLAN §9.4).
+- **Note:** a run limit per question can be added later if trial-and-error guessing becomes a problem.
+
+## D-012 — Scoring: partial credit by test weight — 2026-10-29
+- **Decided by:** owner (P00-09).
+- **Meaning:** score = weight of passed tests ÷ total weight × question points. A teacher may switch a question to all-or-nothing. Attempt penalties (F-TCH-11) are **not** part of this decision; they stay awaiting approval.
+
+## D-013 — Timer expiry: auto-submit the saved code — 2026-10-29
+- **Decided by:** owner (P00-10).
+- **Meaning:** each student's timer starts from the host's recorded time. At zero, the latest autosaved code is submitted and the editor locks. The teacher can extend an individual student's time from the console (F-TCH-10, F-ADM-14 still awaiting approval).
+
+## D-014 — Isolation: practical lab protection — 2026-10-29
+- **Decided by:** owner (P00-12).
+- **Meaning:** standard Windows student account, Job Objects (time, memory, output limits, kill process tree), a separate temp folder per run, no shell-string building. This stops accidents and casual abuse. It does **not** stop a determined attacker, and SECURITY.md must say so (MASTER-PLAN §10, never claim a sandbox without evidence). Stronger isolation can be re-evaluated in Phase 3 if the owner's threat model changes.
