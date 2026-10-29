@@ -4,7 +4,7 @@
 
 **Current phase:** P00 — Kickoff, Requirements, and Working System
 **Last session:** 2026-10-29 s01 — [close report](../phase-reports/phase-00-kickoff/sessions/2026-10-29_s01_CLOSE.md)
-**Branch / last commit:** `main` (local only, not pushed) — see `git log -1`
+**Branch / last commit:** `main`, pushed to GitHub 2026-10-29 (remote = local at 65d6d83). Later commits are local until the owner approves each push.
 **Status line:** run `node tools/phase-report.mjs`
 
 ## Recommended model for the next session (MDL-1)

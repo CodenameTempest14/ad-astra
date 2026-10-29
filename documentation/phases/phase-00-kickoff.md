@@ -7,8 +7,8 @@
 
 ## Opening
 - [x] P00-OPEN-01 Master plan v2 written — evidence: documentation/planning/MASTER-PLAN.md
-- [ ] P00-OPEN-02 Phase Opening Report written — documentation/phase-reports/phase-00-kickoff/PHASE_OPENING.md
-- [ ] P00-OPEN-03 Phase brief written — documentation/context/phase-00-brief.md
+- [x] P00-OPEN-02 Phase Opening Report written — evidence: documentation/phase-reports/phase-00-kickoff/PHASE_OPENING.md; owner approved start 2026-10-29 ("proceed to Phase 0")
+- [x] P00-OPEN-03 Phase brief written — evidence: documentation/context/phase-00-brief.md
 - [x] P00-OPEN-04 Claude Code best practices researched and recorded — evidence: documentation/guides/CLAUDE-CODE-PLAYBOOK.md (sources listed, 2026-10-29)
 - [x] P00-OPEN-05 Colleague reference project reviewed (EngiRent, with permission) — evidence: playbook §0, rules marked *(EngiRent)*
 
@@ -47,7 +47,7 @@
 - [x] P00-23 .gitignore and .gitattributes (LFS) — evidence: repo root
 - [x] P00-24 Phase report script — evidence: tools/phase-report.mjs
 - [x] P00-25 Context files: CURRENT_STATE.md, PHASE_INDEX.md, report templates — evidence: documentation/context/, documentation/phase-reports/
-- [ ] P00-26 First commit pushed to GitHub — BLOCKED: owner approval to push (SEC-7); also run secret sweep + visibility check first (SEC-6)
+- [x] P00-26 First push to GitHub — evidence: owner approved 2026-10-29; secret sweep clean; `git push -u origin main` → remote main 65d6d83 = local HEAD (`git ls-remote`); 108 LFS files. **Owner rule: ask before every later push.**
 - [ ] P00-27 Owner can explain the session workflow and where every report lives (walkthrough)
 
 ## Closing
