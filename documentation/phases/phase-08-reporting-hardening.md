@@ -36,6 +36,18 @@
 - [ ] P08-22 Failure modes have reproducible tests and useful diagnostics
 - [ ] P08-23 Security claims match implemented controls
 
+## Approved features to build (documentation/specs/FEATURES.md, approved 2026-10-29)
+- [ ] P08-F01 F-ADM-01 Overview dashboard — acceptance test written first
+- [ ] P08-F02 F-ADM-07 Integrity centre — acceptance test written first
+- [ ] P08-F03 F-ADM-08 Cross-class reports — acceptance test written first
+- [ ] P08-F04 F-ADM-09 Toolchain manager — acceptance test written first
+- [ ] P08-F05 F-ADM-11 Audit log — acceptance test written first
+- [ ] P08-F06 F-ADM-16 Diagnostics hub — acceptance test written first
+- [ ] P08-F07 F-TCH-15 Manual grade override with a required reason (audited) and comments… — acceptance test written first
+- [ ] P08-F08 F-TCH-16 Rejudge — acceptance test written first
+- [ ] P08-F09 F-TCH-19 Gradebook with export (CSV/Excel) — acceptance test written first
+- [ ] P08-F10 F-TCH-20 Question analytics — acceptance test written first
+
 ## Closing
 - [ ] P08-CLOSE-01 Full Playwright regression of the whole app, no Mismatch
 - [ ] P08-CLOSE-02 `dotnet test` output in Closing Report

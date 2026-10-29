@@ -13,11 +13,18 @@ Implemented/Verified/Baselined are set during the build phases; the last column 
 | `shared-login` | page | Login | P4 | Tabler | MIT | Approved | [image](templates/pages/shared-login/approved/default__dark__1366x768.png) | — |
 | `teacher-account-management` | page | Account Management | P4 | Tabler | MIT | Approved | [image](templates/pages/teacher-account-management/approved/default__dark__1366x768.png) | — |
 | `teacher-backup-restore` | page | Backup & Restore | P4 | Tabler | MIT | Approved | [image](templates/pages/teacher-backup-restore/approved/default__dark__1366x768.png) | — |
+| `admin-class-import` | page | Class List Import | P4 | Tabler | MIT | Approved | [image](templates/pages/admin-class-import/approved/default__dark__1366x768.png) | — |
+| `admin-academic-structure` | page | Academic Structure (terms, subjects, sections) | P4 | Tabler | MIT | Approved | [image](templates/pages/admin-academic-structure/approved/default__dark__1366x768.png) | — |
+| `admin-system-settings` | page | System Settings | P4 | Tabler | MIT | Approved | [image](templates/pages/admin-system-settings/approved/default__dark__1366x768.png) | — |
 | `teacher-dashboard` | page | Teacher Dashboard | P5 | Tabler | MIT | Approved | [image](templates/pages/teacher-dashboard/approved/default__dark__1366x768.png) | — |
 | `teacher-assessment-list` | page | Assessment List | P5 | Tabler | MIT | Approved | [image](templates/pages/teacher-assessment-list/approved/default__dark__1366x768.png) | — |
 | `teacher-assessment-editor` | page | Assessment Editor | P5 | Tabler | MIT | Approved | [image](templates/pages/teacher-assessment-editor/approved/default__dark__1366x768.png) | — |
 | `teacher-question-editor` | page | Question Editor | P5 | Tabler | MIT | Approved | [image](templates/pages/teacher-question-editor/approved/default__dark__1366x768.png) | — |
+| `teacher-question-bank` | page | Question Bank | P5 | Tabler | MIT | Approved | [image](templates/pages/teacher-question-bank/approved/default__dark__1366x768.png) | — |
 | `lab-connect-to-host` | page | Lab PC: Connect to Host | P6 | Tabler | MIT | Approved | [image](templates/pages/lab-connect-to-host/approved/default__dark__1366x768.png) | — |
+| `admin-live-monitor` | page | Live Exam Monitor | P6 | Tabler | MIT | Approved | [image](templates/pages/admin-live-monitor/approved/default__dark__1366x768.png) | — |
+| `admin-lab-pcs` | page | Lab PCs | P6 | Tabler | MIT | Approved | [image](templates/pages/admin-lab-pcs/approved/default__dark__1366x768.png) | — |
+| `teacher-clarifications-inbox` | page | Clarifications Inbox | P6 | Tabler | MIT | Approved | [image](templates/pages/teacher-clarifications-inbox/approved/default__dark__1366x768.png) | — |
 | `student-dashboard` | page | Student Dashboard | P7 | Tabler | MIT | Approved | [image](templates/pages/student-dashboard/approved/default__dark__1366x768.png) | — |
 | `student-assessment-lobby` | page | Assessment Lobby | P7 | Tabler | MIT | Approved | [image](templates/pages/student-assessment-lobby/approved/default__dark__1366x768.png) | — |
 | `student-coding-workspace` | page | Coding Workspace | P7 | Judge0 IDE | MIT | Approved | [image](templates/pages/student-coding-workspace/approved/default__dark__1366x768.png) | — |
@@ -28,6 +35,9 @@ Implemented/Verified/Baselined are set during the build phases; the last column 
 | `dev-system-health` | page | System Health | P8 | Tabler | MIT | Approved | [image](templates/pages/dev-system-health/approved/default__dark__1366x768.png) | — |
 | `dev-log-explorer` | page | Log Explorer | P8 | Tabler | MIT | Approved | [image](templates/pages/dev-log-explorer/approved/default__dark__1366x768.png) | — |
 | `dev-test-runner` | page | Test Runner | P8 | Tabler | MIT | Approved | [image](templates/pages/dev-test-runner/approved/default__dark__1366x768.png) | — |
+| `admin-overview` | page | Admin Overview Dashboard | P8 | Tabler | MIT | Approved | [image](templates/pages/admin-overview/approved/default__dark__1366x768.png) | — |
+| `admin-integrity-centre` | page | Integrity Centre | P8 | Tabler | MIT | Approved | [image](templates/pages/admin-integrity-centre/approved/default__dark__1366x768.png) | — |
+| `admin-audit-log` | page | Audit Log | P8 | Tabler | MIT | Approved | [image](templates/pages/admin-audit-log/approved/default__dark__1366x768.png) | — |
 | `shared-first-run-setup` | page | First-Run Setup Wizard | P9 | Tabler | MIT | Approved | [image](templates/pages/shared-first-run-setup/approved/default__dark__1366x768.png) | — |
 | `shell-navigation-sidebar` | section | Navigation Sidebar | P2 | Tabler | MIT | Approved | [image](templates/sections/shell-navigation-sidebar/approved/default__dark__1366x768.png) | — |
 | `shell-top-bar` | section | Top Bar | P2 | Tabler | MIT | Approved | [image](templates/sections/shell-top-bar/approved/default__dark__1366x768.png) | — |
@@ -35,6 +45,7 @@ Implemented/Verified/Baselined are set during the build phases; the last column 
 | `host-network-settings` | section | Host Network Settings | P6 | Tabler | MIT | Approved | [image](templates/sections/host-network-settings/approved/default__dark__1366x768.png) | — |
 | `package-transfer-dialog` | section | Package Export / Import (USB fallback) | P6 | Tabler | MIT | Approved | [image](templates/sections/package-transfer-dialog/approved/default__dark__1366x768.png) | — |
 | `workspace-code-editor-panel` | section | Code Editor Panel | P7 | Monaco Editor playground | MIT | Approved | [image](templates/sections/workspace-code-editor-panel/approved/default__dark__1366x768.png) | — |
+| `student-clarification-panel` | section | Student Clarification Panel | P7 | Tabler | MIT | Approved | [image](templates/sections/student-clarification-panel/approved/default__dark__1366x768.png) | — |
 | `button` | component | Buttons | P2 | Tabler | MIT | Approved | [image](templates/components/button/approved/all-variants__dark__1366x768.png) | — |
 | `form-controls` | component | Form Controls (text, select, checkbox, radio, switch) | P2 | Tabler | MIT | Approved | [image](templates/components/form-controls/approved/all-variants__dark__1366x768.png) | — |
 | `card` | component | Card | P2 | Tabler | MIT | Approved | [image](templates/components/card/approved/all-variants__dark__1366x768.png) | — |
@@ -57,4 +68,4 @@ Implemented/Verified/Baselined are set during the build phases; the last column 
 | `chart` | component | Charts | P8 | Tabler | MIT | Approved | [image](templates/components/chart/approved/all-variants__dark__1366x768.png) | — |
 | `steps` | component | Steps / Progress Tracker | P9 | Tabler | MIT | Approved | [image](templates/components/steps/approved/all-variants__dark__1366x768.png) | — |
 
-**Totals:** 49 elements — 49 approved.
+**Totals:** 60 elements — 60 approved.

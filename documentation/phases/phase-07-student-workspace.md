@@ -36,6 +36,24 @@
 - [ ] P07-22 Hidden test details absent from student responses
 - [ ] P07-23 Interrupted attempts and repeated submissions follow the documented rules
 
+## Approved features to build (documentation/specs/FEATURES.md, approved 2026-10-29)
+- [ ] P07-F01 F-INT-01 Exam lockdown window — acceptance test written first
+- [ ] P07-F02 F-INT-02 Integrity event log — acceptance test written first
+- [ ] P07-F03 F-INT-03 Paste from outside the app blocked in Exam mode (paste inside the… — acceptance test written first
+- [ ] P07-F04 F-INT-04 "Review suggested" flag per attempt based on events (never "cheated") — acceptance test written first
+- [ ] P07-F05 F-INT-06 Hidden tests never in student-facing data or logs (MASTER-PLAN §9 — acceptance test written first
+- [ ] P07-F06 F-STU-01 Dashboard — acceptance test written first
+- [ ] P07-F07 F-STU-02 Assessment lobby — acceptance test written first
+- [ ] P07-F08 F-STU-03 Coding workspace — acceptance test written first
+- [ ] P07-F09 F-STU-04 Run with my own input (custom stdin) — acceptance test written first
+- [ ] P07-F10 F-STU-05 Penalty-free precheck in Practice/Assignment mode — acceptance test written first
+- [ ] P07-F11 F-STU-06 Timer from persisted timestamps; warnings at 10 and 1 minutes;… — acceptance test written first
+- [ ] P07-F12 F-STU-07 Autosave and recovery after a crash or power loss — acceptance test written first
+- [ ] P07-F13 F-STU-08 Question navigator (answered / not answered / flagged for review) — acceptance test written first
+- [ ] P07-F14 F-STU-09 Ask a clarification question — acceptance test written first
+- [ ] P07-F15 F-STU-10 Results and history (when the teacher allows) — acceptance test written first
+- [ ] P07-F16 F-STU-12 Accessibility — acceptance test written first
+
 ## Closing
 - [ ] P07-CLOSE-01 Full Playwright regression, no Mismatch; baselines approved
 - [ ] P07-CLOSE-02 `dotnet test` + E2E output in Closing Report

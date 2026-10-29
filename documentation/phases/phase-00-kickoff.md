@@ -23,7 +23,7 @@
 - [x] P00-07a Classroom network in V1; new Phase 6 added; later phases renumbered 7–9 — evidence: DECISIONS.md D-008, documentation/phases/phase-06-classroom-network.md
 - [x] P00-07b Multiple-choice deferred until coding portion is reviewed — evidence: DECISIONS.md D-009
 - [x] P00-07c Exam integrity approach: record evidence + flag for review — evidence: DECISIONS.md D-010
-- [ ] P00-07d Owner approves or rejects each remaining proposed feature — PROG: 4 approved, 1 deferred, 57 awaiting (documentation/specs/FEATURES.md)
+- [x] P00-07d Owner approved or held every proposed feature — evidence: documentation/specs/FEATURES.md (51 approved, 10 held, 2 declined = 63 rows, counted by script); DECISIONS.md D-018
 - [x] P00-07e Classroom setup directions written — evidence: documentation/guides/CLASSROOM-SETUP.md
 - [x] P00-08 Run-before-submit and feedback rules — evidence: DECISIONS.md D-011
 - [x] P00-09 Scoring policy — evidence: DECISIONS.md D-012 (partial credit by weight; penalties still awaiting approval)
@@ -33,9 +33,9 @@
 - [x] P00-13 Export formats — evidence: DECISIONS.md D-017 (Excel only)
 
 ## Requirements and inventory
-- [ ] P00-14 Teacher workflow written — documentation/specs/teacher-workflow.md
-- [ ] P00-15 Student workflow written — documentation/specs/student-workflow.md
-- [ ] P00-16 Capability list (plan §6) confirmed item by item
+- [ ] P00-14 Teacher workflow — PROG: draft written (documentation/specs/teacher-workflow.md, 3 open questions marked (?)); awaiting owner review
+- [ ] P00-15 Student workflow — PROG: draft written (documentation/specs/student-workflow.md, 1 open question marked (?)); awaiting owner review
+- [x] P00-16 Capability list confirmed item by item — evidence: FEATURES.md approval column + D-018
 - [x] P00-17 UI inventory (pages → sections → components with IDs) — evidence: design/templates/template-manifest.json (45 elements), design/TEMPLATE_REGISTRY.md
 - [ ] P00-18 Owner reviews and approves the UI inventory
 

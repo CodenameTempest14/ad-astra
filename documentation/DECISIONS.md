@@ -85,3 +85,10 @@ a reversed decision gets a new entry that references the old one.
 
 ## D-017 — Exports: Excel (.xlsx) only — 2026-10-29
 - **Decided by:** owner (P00-13), who selected Excel and not CSV or PDF. Gradebook and assessment results export to .xlsx. CSV and PDF reports are **not** planned (propose again if needed). Importing class lists (F-ADM-03) is a separate feature, still awaiting approval.
+
+## D-018 — Feature approvals, first batch — 2026-10-29
+- **Decided by:** owner (P00-07d), on the agent's recommendation: approve version-1 features now, hold the rest until the coding portion is reviewed.
+- **Approved (51 total):** Admin Console 13 (incl. Live Monitor and lab-PC panel), Teacher 18, Student 11, Integrity 5, Platform 4. Each is in a phase checklist under "Approved features to build".
+- **Held (10), revisit after the coding portion:** F-ADM-05, 06, 13; F-TCH-12, 18, 21, 22, 24; F-STU-11; F-INT-05.
+- **Declined / deferred (2):** F-TCH-23 multiple choice (D-009); F-PLT-05 light theme (D-015).
+- **Scope note:** 51 features across phases 3–9 is a large plan. Each phase opening re-checks that its list is still realistic, and any feature can be moved or held with the owner's word.

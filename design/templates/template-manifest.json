@@ -1173,6 +1173,237 @@
           ]
         }
       ]
+    },
+    {
+      "id": "admin-overview",
+      "level": "page",
+      "name": "Admin Overview Dashboard",
+      "phase": 8,
+      "usedBy": "Administrator landing page (F-ADM-01)",
+      "approved": "tabler",
+      "adopt": "KPI cards row, activity feed and alert list.",
+      "change": "KPIs: exams running today, submissions today, toolchain health, last backup age; alert list for failed runs, integrity flags and low disk.",
+      "candidates": [
+        {
+          "source": "tabler",
+          "captures": [
+            {
+              "state": "default",
+              "url": "https://preview.tabler.io/index.html?theme=dark"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "admin-class-import",
+      "level": "page",
+      "name": "Class List Import",
+      "phase": 4,
+      "usedBy": "Administrator importing students (F-ADM-03)",
+      "approved": "tabler",
+      "adopt": "Wizard with a file drop zone, preview table and a step indicator.",
+      "change": "Steps: choose Excel/CSV → preview with errors in red → confirm → print first-login slips.",
+      "candidates": [
+        {
+          "source": "tabler",
+          "captures": [
+            {
+              "state": "default",
+              "url": "https://preview.tabler.io/wizard.html?theme=dark"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "admin-academic-structure",
+      "level": "page",
+      "name": "Academic Structure (terms, subjects, sections)",
+      "phase": 4,
+      "usedBy": "Administrator (F-ADM-04)",
+      "approved": "tabler",
+      "adopt": "Sortable data table with search, status badges and per-row actions (same pattern as teacher-assessment-list).",
+      "change": "Tabs: Terms, Subjects, Sections; enrolment and teacher assignment per section.",
+      "candidates": [
+        {
+          "source": "tabler",
+          "captures": [
+            {
+              "state": "default",
+              "url": "https://preview.tabler.io/datatables.html?theme=dark"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "admin-system-settings",
+      "level": "page",
+      "name": "System Settings",
+      "phase": 4,
+      "usedBy": "Administrator (F-ADM-12)",
+      "approved": "tabler",
+      "adopt": "Settings layout: left nav, right cards.",
+      "change": "Cards: school name and logo, password policy, retention, default assessment policies.",
+      "candidates": [
+        {
+          "source": "tabler",
+          "captures": [
+            {
+              "state": "default",
+              "url": "https://preview.tabler.io/settings.html?theme=dark"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "admin-integrity-centre",
+      "level": "page",
+      "name": "Integrity Centre",
+      "phase": 8,
+      "usedBy": "Administrator and teacher reviewing integrity events (F-INT-02, F-ADM-07)",
+      "approved": "tabler",
+      "adopt": "Activity feed / timeline list with severity.",
+      "change": "Per-attempt event timeline; \"review suggested\" flag; mark reviewed / dismissed / escalated. Wording never says \"cheated\".",
+      "candidates": [
+        {
+          "source": "tabler",
+          "captures": [
+            {
+              "state": "default",
+              "url": "https://preview.tabler.io/activity.html?theme=dark"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "admin-audit-log",
+      "level": "page",
+      "name": "Audit Log",
+      "phase": 8,
+      "usedBy": "Administrator (F-ADM-11)",
+      "approved": "tabler",
+      "adopt": "Read-only log table with filters.",
+      "change": "Columns: time, user, action, target; no edit or delete.",
+      "candidates": [
+        {
+          "source": "tabler",
+          "captures": [
+            {
+              "state": "default",
+              "url": "https://preview.tabler.io/logs.html?theme=dark"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "admin-live-monitor",
+      "level": "page",
+      "name": "Live Exam Monitor",
+      "phase": 6,
+      "usedBy": "Teacher/administrator during an exam (F-ADM-14)",
+      "approved": "tabler",
+      "adopt": "Sortable data table with search, status badges and per-row actions (same pattern as teacher-assessment-list).",
+      "change": "One row per student: PC name, question, time left, submissions, flags; actions: extend time, unlock re-entry, message.",
+      "candidates": [
+        {
+          "source": "tabler",
+          "captures": [
+            {
+              "state": "default",
+              "url": "https://preview.tabler.io/datatables.html?theme=dark"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "admin-lab-pcs",
+      "level": "page",
+      "name": "Lab PCs",
+      "phase": 6,
+      "usedBy": "Administrator (F-ADM-15)",
+      "approved": "tabler",
+      "adopt": "List of devices with online status.",
+      "change": "Rows: PC name, address, online/offline, toolchain status, app version.",
+      "candidates": [
+        {
+          "source": "tabler",
+          "captures": [
+            {
+              "state": "default",
+              "url": "https://preview.tabler.io/users.html?theme=dark"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teacher-question-bank",
+      "level": "page",
+      "name": "Question Bank",
+      "phase": 5,
+      "usedBy": "Teacher (F-TCH-03)",
+      "approved": "tabler",
+      "adopt": "Searchable list with filters and tags.",
+      "change": "Filters: language, difficulty, topic, mine/shared; clone and add-to-assessment actions.",
+      "candidates": [
+        {
+          "source": "tabler",
+          "captures": [
+            {
+              "state": "default",
+              "url": "https://preview.tabler.io/search-results.html?theme=dark"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teacher-clarifications-inbox",
+      "level": "page",
+      "name": "Clarifications Inbox",
+      "phase": 6,
+      "usedBy": "Teacher answering student questions during an exam (F-TCH-17)",
+      "approved": "tabler",
+      "adopt": "Two-pane inbox: list left, thread right.",
+      "change": "Reply to one student or broadcast an answer to the whole class.",
+      "candidates": [
+        {
+          "source": "tabler",
+          "captures": [
+            {
+              "state": "default",
+              "url": "https://preview.tabler.io/email-inbox.html?theme=dark"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "student-clarification-panel",
+      "level": "section",
+      "name": "Student Clarification Panel",
+      "phase": 7,
+      "usedBy": "Student workspace (F-STU-09)",
+      "approved": "tabler",
+      "adopt": "Only the message thread (bubbles with name and time) and the input box from the right-hand pane of Tabler's chat page.",
+      "change": "Drop the left conversation list and search: a student has one thread with the teacher. Shown as a slide-out panel inside the workspace; broadcast answers appear highlighted.",
+      "candidates": [
+        {
+          "source": "tabler",
+          "captures": [
+            {
+              "state": "default",
+              "url": "https://preview.tabler.io/chat.html?theme=dark"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

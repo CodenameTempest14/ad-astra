@@ -33,6 +33,19 @@
 - [ ] P05-21 Hidden-test visibility enforced by the service layer (test proves it)
 - [ ] P05-22 Invalid configurations produce useful messages
 
+## Approved features to build (documentation/specs/FEATURES.md, approved 2026-10-29)
+- [ ] P05-F01 F-TCH-01 Teacher dashboard — acceptance test written first
+- [ ] P05-F02 F-TCH-03 Question bank — acceptance test written first
+- [ ] P05-F03 F-TCH-04 Coding questions (stdin/stdout) with statement (markdown), starter… — acceptance test written first
+- [ ] P05-F04 F-TCH-05 Reference solution check — acceptance test written first
+- [ ] P05-F05 F-TCH-06 Expected-output generator — acceptance test written first
+- [ ] P05-F06 F-TCH-08 Assessment modes — acceptance test written first
+- [ ] P05-F07 F-TCH-09 Scheduling — acceptance test written first
+- [ ] P05-F08 F-TCH-10 Per-student accommodations — acceptance test written first
+- [ ] P05-F09 F-TCH-11 Attempt limits and penalty regime (e — acceptance test written first
+- [ ] P05-F10 F-TCH-13 Feedback release control — acceptance test written first
+- [ ] P05-F11 F-TCH-14 Preview as student — acceptance test written first
+
 ## Closing
 - [ ] P05-CLOSE-01 Full Playwright regression, no Mismatch; baselines approved
 - [ ] P05-CLOSE-02 `dotnet test` output in Closing Report

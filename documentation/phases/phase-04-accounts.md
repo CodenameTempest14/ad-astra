@@ -35,6 +35,14 @@
 - [ ] P04-22 Database integrity tests pass
 - [ ] P04-23 Owner traces an account operation from UI to database
 
+## Approved features to build (documentation/specs/FEATURES.md, approved 2026-10-29)
+- [ ] P04-F01 F-ADM-02 User management — acceptance test written first
+- [ ] P04-F02 F-ADM-03 Bulk import of class lists from CSV/Excel with a preview and error… — acceptance test written first
+- [ ] P04-F03 F-ADM-04 Academic structure — acceptance test written first
+- [ ] P04-F04 F-ADM-10 Backup & restore — acceptance test written first
+- [ ] P04-F05 F-ADM-12 System settings — acceptance test written first
+- [ ] P04-F06 F-TCH-02 My classes & rosters (read from admin's structure; a teacher may also… — acceptance test written first
+
 ## Closing
 - [ ] P04-CLOSE-01 Full Playwright regression, no Mismatch; new baselines approved
 - [ ] P04-CLOSE-02 `dotnet test` output in Closing Report
