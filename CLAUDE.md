@@ -13,6 +13,9 @@ Then only the files your task touches. Load MASTER-PLAN sections only when the
 phase brief says so. Re-reading every document fills the context for nothing.
 
 ## Every session
+- **Model advice (MDL):** the first reply of every session says which Claude model to use and why
+  (*"Based on this session's work, you are advised to use Sonnet 5.5 because …"*). The Close Report
+  recommends the model for the next session. Guide: playbook §4b.
 - **Start:** write the Session Start Report *before* any change
   (`documentation/phase-reports/_templates/SESSION_START.md`).
 - **Open every reply with the status line** from `node tools/phase-report.mjs`:

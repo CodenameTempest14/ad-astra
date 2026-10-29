@@ -172,6 +172,35 @@ hooks, scripts that count). Text rules are for judgment calls.
 - **CTX-11 End-of-session question.** Every Session Close Report answers:
   *"Which parts of this did you actually run, and what are you unsure about?"* *(EngiRent)*
 
+## 4b. Model recommendation rules (MDL) — owner rule, 2026-10-29
+
+The owner chooses the Claude model for each session (`/model` in Claude Code). The agent must
+**tell the owner which model to use, and why**, so the choice is deliberate.
+
+- **MDL-1 Every Session Close Report recommends the model for the next session**, with a short
+  reason tied to that session's planned work. The recommendation is copied into `CURRENT_STATE.md`.
+- **MDL-2 Every Session Start Report, and the first reply of every session, states the
+  recommendation**, in plain words: *"Based on this session's work, you are advised to use Sonnet 5.5
+  because …"*. If the owner is already on a different model, say whether that is fine or whether to
+  switch, and why.
+- **MDL-3 Recommend a switch mid-session** when the work changes kind. For example: a routine session
+  hits a hard security design question (→ Opus or Fable), or a hard session is down to mechanical
+  doc updates (→ Sonnet).
+- **MDL-4 Subagents** for read-only searches use the cheapest model that can do the job (usually Haiku 5.5).
+
+**Which model for which work on this project** (current lineup, checked 2026-10-29; all have a 1M-token context):
+
+| Model | Relative cost (API $/1M tokens, in/out) | Use it for | Avoid it for |
+|---|---|---|---|
+| **Fable 5.1** | Highest ($10 / $50); slowest, long turns | The hardest reasoning: execution-sandbox and isolation design (P03), classroom-network security and threat model (P06), a bug that Opus could not root-cause | Routine coding, docs, Q&A (it costs much more for no gain) |
+| **Opus 5.5** | Mid ($4 / $20) | **Default for build sessions:** multi-file implementation, architecture explanations, phase openings/closings, security reviews, UI-GATE passes that need judgment, debugging | Pure Q&A or doc upkeep, where Sonnet is enough |
+| **Sonnet 5.5** | Lower ($2 / $10); fast | Decision Q&A with the owner, writing specs and docs, template capture, checklist and report upkeep, a single UI page once the pattern is set, small well-defined fixes | New architecture, security-sensitive design, unclear bugs |
+| **Haiku 5.5** | Lowest ($0.10 / $0.50) | Subagents: file searches, log reading, link checks; tiny admin sessions (run the phase report, prepare a push) | Anything the owner must learn from or that changes code logic |
+
+Claude Code subscriptions meter usage differently from API prices, but the cost ordering is the same.
+Source: the current Claude model table (claude-api reference, cached 2026-10-06). Re-check it at
+each phase opening (`Pxx-OPEN-04`), because models change.
+
 ## 5. Checkbox convention used by every phase file
 
 | Mark | Meaning | Counted as |
