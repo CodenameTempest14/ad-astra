@@ -4,3 +4,4 @@
 
 Owner-facing how-to guides (debugging walkthroughs, Git basics) go here too.
 - `CLASSROOM-SETUP.md`: step-by-step setup and exam-day procedure for a real computer lab (teacher's PC as host, lab PCs for students, USB fallback, troubleshooting).
+- `COLLABORATION.md`: how the owner and Shem Dumpor work together (own branches, hook, merging, where conflicts happen).

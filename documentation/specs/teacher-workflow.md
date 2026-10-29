@@ -35,7 +35,7 @@ Anything marked **(?)** is a gap the owner should confirm. Screens named below a
    - A flag means "review suggested", never "cheated" (D-010).
 2. **Override a grade** with a required reason, add comments (F-TCH-15); it is written to the audit log (F-ADM-11). `admin-audit-log`
 3. Fixed a wrong test? **Rejudge** all submissions (F-TCH-16).
-4. See the gradebook and question analytics (F-TCH-19, F-TCH-20); export to **Excel** (D-017). `teacher-gradebook`, `teacher-assessment-report`
+4. See the gradebook and question analytics (F-TCH-19, F-TCH-20); export to **Excel (.xlsx) and CSV (.csv)** (D-019). `teacher-gradebook`, `teacher-assessment-report`
 5. Release results to students according to the assessment's setting (F-TCH-13).
 6. Back up. At term end: archive or delete the term (D-016). **(?)** Archive tooling (F-ADM-13) is held; is "delete the term" enough for V1?
 

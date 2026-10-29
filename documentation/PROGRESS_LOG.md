@@ -36,3 +36,12 @@ Chronological, append-only (MASTER-PLAN §15). Each entry links its Session Clos
 - **Changes made:** first push to GitHub (remote main = local, verified with `git ls-remote`); Phase 0 Opening Report and brief; owner decisions D-011 … D-017 (run/feedback, scoring, timer, isolation, screens/theme, retention, exports).
 - **CORRECTION:** the earlier recording of the owner's Q2–Q4 approvals in FEATURES.md marked the **wrong rows** (F-ADM-01…05 instead of F-PLT-03/04, F-INT-02/04, F-TCH-23). The owner never approved or declined any F-ADM feature. Found when recounting by group; fixed by matching each row on its exact ID. True counts: 4 approved, 2 not planned/deferred, 57 awaiting (earlier text said 58). Lesson: after any bulk edit of a status table, re-read the changed rows, not only the totals (TST-5).
 - **Next steps:** owner approves/rejects the 57 features; write teacher and student workflows (P00-14/15); capability list (P00-16); inventory review (P00-18).
+
+## 2026-10-29 — P00 s02: hard rule, exports, themes, two-person branches
+
+- **Status:** Completed
+- **Goal:** apply the owner's four instructions: continuation prompt + progress table (HARD RULE), .xlsx + .csv, multiple themes verified against the templates, branches for the owner and Shem Dumpor.
+- **Changes made:** tools/phase-report.mjs --md and tools/continuation-prompt.mjs; CLAUDE.md HARD RULES block; gates hook; playbook CTX-12 and SEC-13; D-019 (exports), D-020 (themes), D-021 (branches); design/themes with a contrast checker; .githooks pre-push guard; COLLABORATION.md; F-PLT-05 approved (52 approved, 10 held, 1 declined).
+- **Build/tests run:** theme-check 4 × 10 pages → 0 semantic failures (after 3 fixes); 8 simulated pushes against the guard → all as expected.
+- **Problems:** checker counted an errored page as a pass → fixed. Shell string with backticks executed commands → harmless; edits now written as script files.
+- **Next steps:** owner reviews workflows and themes, agrees the protocol with Shem; close Phase 0.

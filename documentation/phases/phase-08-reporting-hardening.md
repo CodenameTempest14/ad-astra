@@ -13,7 +13,7 @@
 
 ## Work items
 - [ ] P08-01 Reporting queries (per P00-13 decision) with tests
-- [ ] P08-02 Export
+- [ ] P08-02 Export to .xlsx and .csv from the same rows (D-019); test compares both outputs; CSV is UTF-8 with BOM
 - [ ] P08-03 Diagnostics: system health, test runner, execution diagnostics, log explorer
 - [ ] P08-04 Redacted diagnostic report (preview before copy)
 - [ ] P08-05 Security boundary + resource-control tests

@@ -1,0 +1,3 @@
+# email=branch   (one per line). Read by .githooks/pre-push. Add a line for every person who pushes.
+codename.tempest14@gmail.com=codenametempest14
+dumporshemjoshua@gmail.com=shem-dumpor

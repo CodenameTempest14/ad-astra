@@ -14,5 +14,10 @@
 - **Open questions for the owner:**
 - **Risks:**
 
+## Phase Progress at session start (HARD RULE CTX-12)
+```
+(paste `node tools/phase-report.mjs --md`)
+```
+
 ## Checkpoints
 - HH:MM — done / in progress / exact next step

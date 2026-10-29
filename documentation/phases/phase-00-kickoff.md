@@ -17,7 +17,7 @@
 - [x] P00-02 D-PW: Playwright Test (Node) for tests/ui-visual — evidence: DECISIONS.md D-002, tests/ui-visual/package.json
 - [x] P00-03 D-LFS: Git LFS for design images; keep phase-closing captures + baselines — evidence: .gitattributes, DECISIONS.md D-003
 - [x] P00-04 D-TPL: free/open-licensed templates only (Tabler, Judge0 IDE, Monaco, shadcn/ui — all MIT) — evidence: design/templates/template-manifest.json
-- [x] P00-05 D-VP: viewports and theme — evidence: DECISIONS.md D-015 (dark only; 1366×768 + 1920×1080)
+- [x] P00-05 D-VP: viewports and theme — evidence: DECISIONS.md D-015 (1366×768 + 1920×1080) and D-020 (multiple themes; supersedes "dark only")
 - [x] P00-06 D-NAME: `AdAstra.*` projects, `ad-astra/` repo root — evidence: src/ folder names
 - [x] P00-07 Account/deployment model — evidence: DECISIONS.md D-007 (admin = teacher + admin role), D-008 (teacher PC host, students on lab PCs); CLASSROOM-SETUP.md §1
 - [x] P00-07a Classroom network in V1; new Phase 6 added; later phases renumbered 7–9 — evidence: DECISIONS.md D-008, documentation/phases/phase-06-classroom-network.md
@@ -30,7 +30,7 @@
 - [x] P00-10 Timer rules — evidence: DECISIONS.md D-013 (auto-submit at zero; autosave + interruption rules specified in Phase 7)
 - [x] P00-11 Retention — evidence: DECISIONS.md D-016
 - [x] P00-12 Isolation strength — evidence: DECISIONS.md D-014 (practical lab protection)
-- [x] P00-13 Export formats — evidence: DECISIONS.md D-017 (Excel only)
+- [x] P00-13 Export formats — evidence: DECISIONS.md D-019 (Excel .xlsx and CSV .csv; supersedes D-017)
 
 ## Requirements and inventory
 - [ ] P00-14 Teacher workflow — PROG: draft written (documentation/specs/teacher-workflow.md, 3 open questions marked (?)); awaiting owner review
@@ -48,6 +48,8 @@
 - [x] P00-24 Phase report script — evidence: tools/phase-report.mjs
 - [x] P00-25 Context files: CURRENT_STATE.md, PHASE_INDEX.md, report templates — evidence: documentation/context/, documentation/phase-reports/
 - [x] P00-26 First push to GitHub — evidence: owner approved 2026-10-29; secret sweep clean; `git push -u origin main` → remote main 65d6d83 = local HEAD (`git ls-remote`); 108 LFS files. **Owner rule: ask before every later push.**
+- [x] P00-28a Two branches created for the owner and Shem Dumpor, with a pre-push guard and a collaboration guide — evidence: DECISIONS.md D-021, .githooks/pre-push, documentation/guides/COLLABORATION.md (branch creation and push are recorded in the session close report)
+- [ ] P00-28 The owner and Shem agree the collaboration protocol (work split, who reviews merges, session-report tags) — awaiting both; proposal in COLLABORATION.md
 - [ ] P00-27 Owner can explain the session workflow and where every report lives (walkthrough)
 
 ## Closing

@@ -83,7 +83,7 @@ a reversed decision gets a new entry that references the old one.
 ## D-016 — Retention: keep per term, archive on request — 2026-10-29
 - **Decided by:** owner (P00-11). Submissions and source code are kept for the current school year/term; the administrator can archive or delete a finished term. Temporary run folders are deleted immediately after each run. Archive tooling is F-ADM-13 (awaiting approval); until then, "delete a term" is the minimum to build.
 
-## D-017 — Exports: Excel (.xlsx) only — 2026-10-29
+## D-017 — Exports: Excel (.xlsx) only — 2026-10-29 (SUPERSEDED by D-019)
 - **Decided by:** owner (P00-13), who selected Excel and not CSV or PDF. Gradebook and assessment results export to .xlsx. CSV and PDF reports are **not** planned (propose again if needed). Importing class lists (F-ADM-03) is a separate feature, still awaiting approval.
 
 ## D-018 — Feature approvals, first batch — 2026-10-29
@@ -92,3 +92,23 @@ a reversed decision gets a new entry that references the old one.
 - **Held (10), revisit after the coding portion:** F-ADM-05, 06, 13; F-TCH-12, 18, 21, 22, 24; F-STU-11; F-INT-05.
 - **Declined / deferred (2):** F-TCH-23 multiple choice (D-009); F-PLT-05 light theme (D-015).
 - **Scope note:** 51 features across phases 3–9 is a large plan. Each phase opening re-checks that its list is still realistic, and any feature can be moved or held with the owner's word.
+
+## D-019 — Exports: both Excel (.xlsx) and CSV (.csv) — 2026-10-29
+- **Decided by:** owner, after reviewing the session ("I decided to use both .xlsx and .csv"). **Supersedes D-017** (which recorded Excel only).
+- **Meaning:** gradebook, assessment results and reports export to **.xlsx and .csv**. PDF reports are still **not** planned.
+- **Design notes:** CSV is UTF-8 with a byte-order mark so Excel opens names with accents correctly; one header row; no formulas. Both formats come from the same result rows, so they cannot disagree (test: export both and compare the values).
+
+## D-020 — Multiple themes; every theme must work with the templates — 2026-10-29
+- **Decided by:** owner ("I plan to add multiple themes, make sure each theme works well with the templates"). **Supersedes the "dark only" part of D-015**; the two screen sizes (1366×768, 1920×1080) stand.
+- **Starter set (the agent's proposal; owner may rename, remove or add):** `astra-dark` (default), `astra-light`, `high-contrast-dark`, `high-contrast-light`. The two high-contrast themes also deliver the accessibility option F-STU-12.
+- **How themes are defined:** one file, `design/themes/themes.json`, holding Tabler CSS variables per theme. Rule that keeps every theme readable: **dark themes use bright fills with dark text; light themes use dark fills with white text**. UI uses **semantic colours only** (primary, secondary, success, warning, danger, info), never Tabler's demo palette (`btn-yellow`, `text-red`).
+- **How "works with the templates" is proven:** `cd tests/ui-visual && npm run theme-check` applies each theme to 10 real Tabler pages, measures the WCAG AA contrast of every visible text element, and saves screenshots. Result 2026-10-29: **4 themes × 10 pages, 15,640 text checks, 0 semantic failures, 0 unchecked pages** (`design/themes/THEME_REPORT.md`). Screenshots were reviewed by eye; this caught weak card borders in the high-contrast themes, which the text check cannot see.
+- **Known limits:** the check measures text contrast only. Non-text contrast (borders, focus rings, icons) is checked by eye for now; a checker for it is a Phase 1 item. The Judge0 and Monaco templates were captured in one theme; Monaco has built-in matching themes (`vs-dark`, `vs`, `hc-black`, `hc-light`, mapped in themes.json).
+- **Cost control for UI-GATE:** a page is compared at **both screen sizes in the default theme**. At each phase close, a **theme sweep** runs every theme at 1366×768 with the contrast scanner. Baselines are kept for the default theme at both sizes and for the other themes at 1366×768.
+
+## D-021 — Two-person collaboration: personal branches, own-branch pushes only — 2026-10-29
+- **Decided by:** owner ("create two branches for me and my colleague, Shem Dumpor … you must only push to my branch name, since Shem will be pushing on his branch").
+- **Branches:** `codenametempest14` (owner), `shem-dumpor` (Shem Dumpor), both created from the same commit. `main` is left at the first push (`65d6d83`) and changes only by a reviewed merge.
+- **HARD RULE (SEC-13):** each person's Claude Code pushes only to their own branch, asks before every push, never to `main` or the other branch. Enforced by `.githooks/pre-push` (identity from `git config user.email`, mapping in `.githooks/branch-owners.txt`). The owner's machine additionally denies pushes to `shem-dumpor` and `main` in the untracked `.claude/settings.local.json`.
+- **Note:** Shem Dumpor's GitHub username is not recorded here. The branch name is only a label; add him as a collaborator on GitHub so he can push (owner action in repository settings).
+- **Open:** work split and merge reviewer are proposals in COLLABORATION.md (checklist P00-28).

@@ -52,7 +52,7 @@ system itself.
 | F-ADM-05 | **Shared question bank governance:** see every teacher's shared questions; tags (topic, difficulty, language); merge duplicates | V1.1 | ⏸ Held — revisit after the coding portion (P00-07d) |
 | F-ADM-06 | **Exam calendar:** all scheduled assessments across classes, with clash warnings (same lab, same time) | V1.1 | ⏸ Held — revisit after the coding portion (P00-07d) |
 | F-ADM-07 | **Integrity centre:** integrity events and similarity reports across all classes; mark reviewed / dismissed / escalated | V1 | ✅ Approved 2026-10-29 (owner, P00-07d) |
-| F-ADM-08 | **Cross-class reports:** results by class, subject, topic; export CSV/Excel/PDF | V1 | ✅ Approved 2026-10-29 (owner, P00-07d) |
+| F-ADM-08 | **Cross-class reports:** results by class, subject, topic; export Excel (.xlsx) and CSV (.csv); PDF not planned (D-019) | V1 | ✅ Approved 2026-10-29 (owner, P00-07d) |
 | F-ADM-09 | **Toolchain manager:** detected compilers, versions and paths; per-language compiler flags and default time/memory/output limits; "test this toolchain" button | V1 | ✅ Approved 2026-10-29 (owner, P00-07d) |
 | F-ADM-10 | **Backup & restore:** manual and scheduled backups, history, verified restore | V1 | ✅ Approved 2026-10-29 (owner, P00-07d) |
 | F-ADM-11 | **Audit log:** who did what and when (logins, grade overrides, deletions, settings changes); read-only | V1 | ✅ Approved 2026-10-29 (owner, P00-07d) |
@@ -83,7 +83,7 @@ system itself.
 | F-TCH-16 | **Rejudge:** re-run all submissions after fixing a test case | V1 | ✅ Approved 2026-10-29 (owner, P00-07d) |
 | F-TCH-17 | **Clarifications:** answer student questions during an exam; broadcast an answer to everyone | V1 (same PC) / LAN | ✅ Approved 2026-10-29 (owner, P00-07d) |
 | F-TCH-18 | Announcements to a class | V1.1 | ⏸ Held — revisit after the coding portion (P00-07d) |
-| F-TCH-19 | Gradebook with export (CSV/Excel) | V1 | ✅ Approved 2026-10-29 (owner, P00-07d) |
+| F-TCH-19 | Gradebook with export to Excel (.xlsx) and CSV (.csv) (D-019) | V1 | ✅ Approved 2026-10-29 (owner, P00-07d) |
 | F-TCH-20 | **Question analytics:** pass rate, most-failed test, average attempts, average time | V1 | ✅ Approved 2026-10-29 (owner, P00-07d) |
 | F-TCH-21 | **Similarity check** between submissions (own implementation of the published winnowing technique; Dolos as optional comparison) | V1.1 | ⏸ Held — revisit after the coding portion (P00-07d) |
 | F-TCH-22 | Rubric scoring for code quality (manual criteria next to automatic tests) | Later | ⏸ Held — revisit after the coding portion (P00-07d) |
@@ -126,7 +126,7 @@ harder and **record evidence** for the teacher to judge. Wording in the UI must 
 | F-PLT-02 | First-run setup wizard (creates the first Administrator) | V1 | ✅ Approved 2026-10-29 (owner, P00-07d) |
 | F-PLT-03 | **USB fallback:** assessment package to lab PCs; encrypted results package back to the teacher's PC (also the network-failure fallback) | V1 | ✅ Approved 2026-10-29 (Q2 fallback, D-008) |
 | F-PLT-04 | **Classroom network mode:** Ad Astra Host on the teacher's PC, Student app on lab PCs, hidden-test grading on the host | **V1** (Phase 6) | ✅ Approved 2026-10-29 (Q2, D-008) |
-| F-PLT-05 | Light theme | pending decision P00-05 | ❌ Not planned — dark theme only (P00-05, D-015) |
+| F-PLT-05 | **Selectable themes** (starter set: Ad Astra Dark, Ad Astra Light, High Contrast Dark, High Contrast Light); each user's choice is remembered; every theme verified against the templates | V1 (Phase 2) | ✅ Approved 2026-10-29 (owner, D-020): multiple selectable themes |
 
 ---
 

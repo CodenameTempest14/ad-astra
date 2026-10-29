@@ -25,6 +25,10 @@
 - [ ] P02-09 GitHub Actions: build + test on push (TST-9)
 - [ ] P02-10 Stop hook running fast unit tests (TST-9) added to .claude/settings.json
 - [ ] P02-11 CLAUDE.md updated with build/test/run commands
+- [ ] P02-12 Theme engine: CSS variables generated from design/themes/themes.json; theme switcher in the top bar; each user's choice remembered (F-PLT-05, D-020)
+- [ ] P02-13 Editor theme mapping (Monaco vs-dark / vs / hc-black / hc-light) wired to the selected theme
+- [ ] P02-14 The contrast scanner from theme-check also runs against Ad Astra's own pages over CDP (theme sweep at phase close, every theme at 1366×768)
+- [ ] P02-15 DESIGN.md states the colour rules: semantic colours only; dark themes = bright fills + dark text, light themes = dark fills + white text
 
 ## Shared components (one at a time — UI-GATE)
 - [ ] P02-UI-01 `button` — Playwright pass no Mismatch

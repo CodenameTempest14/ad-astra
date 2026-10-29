@@ -20,7 +20,11 @@
 ## Design tokens
 - [ ] P01-05 DESIGN.md: colour tokens (navy base, blue/cyan accents, status palette), checked for contrast
 - [ ] P01-06 DESIGN.md: typography (bundled fonts, offline), spacing scale, radius, elevation, focus ring
-- [ ] P01-07 Mapping of Tabler CSS variables → Ad Astra tokens
+- [ ] P01-07 Mapping of Tabler CSS variables → Ad Astra tokens (draft is design/themes/themes.json)
+- [x] P01-21 Theme definitions: 4 starter themes with semantic colours — evidence: design/themes/themes.json (D-020)
+- [x] P01-22 Every theme applied to real templates and checked — evidence: `npm run theme-check` → 4 themes × 10 pages, 0 semantic contrast failures, 0 unchecked pages (design/themes/THEME_REPORT.md); screenshots reviewed by eye 2026-10-29
+- [ ] P01-23 Owner confirms the theme list (rename / remove / add) — awaiting owner
+- [ ] P01-24 Non-text contrast check (borders, focus ring, icons ≥ 3:1) added to the theme checker
 
 ## Template acquisition (search online → capture → record)
 - [x] P01-08 Sources researched; licenses checked (Tabler MIT, Judge0 IDE MIT, Monaco MIT, shadcn/ui MIT) — evidence: design/templates/template-manifest.json `sources`

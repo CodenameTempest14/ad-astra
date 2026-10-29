@@ -375,6 +375,17 @@ branding and content differ from the source. Template comparison is
 therefore a reviewed checklist, with diff images as evidence. Baseline
 comparison is automated.
 
+### 3.5a Themes (owner decision D-020)
+
+Ad Astra has **multiple selectable themes** (starter set: Ad Astra Dark (default),
+Ad Astra Light, High Contrast Dark, High Contrast Light), defined in
+`design/themes/themes.json`. Every theme must work with the approved templates:
+`npm run theme-check` applies each theme to real template pages, measures text contrast
+(WCAG AA) and saves screenshots (`design/themes/THEME_REPORT.md`). A page is compared
+at both screen sizes in the default theme; at each phase close a **theme sweep** runs
+every theme. UI uses semantic colours only. Dark themes use bright fills with dark text;
+light themes use dark fills with white text.
+
 ### 3.6 UI-GATE — one page at a time
 
 **Never continue to the next page unless the current page passes its
@@ -457,7 +468,7 @@ and only the other sections listed in the phase brief.
 2.  **Load context in this order:** `CURRENT_STATE.md` → the phase brief
     → the previous Session Close Report → only the source files the task
     touches.
-3.  **Write the Session Start Report before changing anything.**
+3.  **Write the Session Start Report before changing anything.** It includes the Phase Progress table with percentages (HARD RULE, playbook CTX-12).
 4.  **Reference, don't paste.** Reports point to file paths, line
     numbers, commits, and log locations rather than copying large blocks
     of code or logs.
@@ -471,7 +482,9 @@ and only the other sections listed in the phase brief.
 7.  **Park out-of-scope ideas.** New ideas outside the phase scope go into
     the parking lot in `CURRENT_STATE.md`. They are not pursued.
 8.  **Always close.** Every session ends with a Session Close Report, even
-    if the work was blocked, failed, or abandoned.
+    if the work was blocked, failed, or abandoned. **HARD RULE (owner, 2026-10-29):** the
+    close also shows the Phase Progress table again and leaves a copy-and-paste
+    continuation prompt for the next session (`node tools/continuation-prompt.mjs`).
 
 ### 4.4 Phase and session reports
 
@@ -582,9 +595,13 @@ present. The reports and the log are append-only history.
 
 - **Repository:** https://github.com/CodenameTempest14/ad-astra.git
 - `main` must always build and represent the last owner-approved state.
-- Work happens on short branches named `phase-<NN>/<short-task>` (for
-  example `phase-02/app-shell`). Each branch is merged into `main` after
-  owner review.
+- **Two people work here** (the owner and Shem Dumpor, D-021). Each has a personal
+  branch: `codenametempest14` and `shem-dumpor`. **HARD RULE: you push only to your
+  own branch** (never `main`, never the other person's), and the agent asks before
+  every push. `.githooks/pre-push` enforces it. Work reaches `main` through a pull
+  request that the other person reviews. Full guide:
+  `documentation/guides/COLLABORATION.md`. (Short task branches such as
+  `phase-02/app-shell` may be cut from your own branch when useful.)
 - Commit at least once at every session close. Commit messages name the
   phase and session (for example `phase-02 s03: add toolchain detection`).
 - Tag each completed phase `phase-<NN>-complete` after owner sign-off.

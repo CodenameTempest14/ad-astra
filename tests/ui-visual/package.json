@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "capture-templates": "node scripts/capture-templates.mjs",
-    "registry": "node scripts/build-registry.mjs"
+    "registry": "node scripts/build-registry.mjs",
+    "theme-check": "node scripts/theme-check.mjs"
   },
   "devDependencies": {
     "@playwright/test": "1.56.1"
