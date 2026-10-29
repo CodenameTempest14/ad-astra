@@ -50,6 +50,7 @@
 - [x] P00-26 First push to GitHub — evidence: owner approved 2026-10-29; secret sweep clean; `git push -u origin main` → remote main 65d6d83 = local HEAD (`git ls-remote`); 108 LFS files. **Owner rule: ask before every later push.**
 - [x] P00-28a Two branches created for the owner and Shem Dumpor, with a pre-push guard and a collaboration guide — evidence: DECISIONS.md D-021, .githooks/pre-push, documentation/guides/COLLABORATION.md (branch creation and push are recorded in the session close report)
 - [x] P00-28 Collaboration protocol agreed between the owner and Shem — evidence: owner statement 2026-10-29 ("Collaboration done"). The specifics (work split, merge reviewer) are not yet written down: add them to documentation/guides/COLLABORATION.md
+- [ ] P00-29 Verify the every-turn gates hook fires in a fresh session (owner acknowledged it is unverified, 2026-10-29) — evidence needed: at the start of a new session the gates text (HARD RULE progress table + continuation prompt, own-branch push, UI-GATE) is visible in the agent's context
 - [ ] P00-27 Owner can explain the session workflow and where every report lives (walkthrough)
 
 ## Closing

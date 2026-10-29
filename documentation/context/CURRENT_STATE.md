@@ -11,6 +11,7 @@
 **Sonnet 5.5**, because the next session is the owner reviewing documents (the two workflow drafts, the theme list, the collaboration protocol with Shem), closing Phase 0, and starting Phase 1 (logo brief, DESIGN.md, a non-text contrast check). That is conversation, documents and small scripts, with no architecture or security design. Switch to **Opus 5.5** when Phase 2 implementation starts (solution, WebView2 host, SQLite, tests, theme engine).
 
 ## Next concrete step
+0. **First thing in the next session (P00-29):** check that the every-turn gates hook fired: the agent should see the gates text (progress table + continuation prompt rule, own-branch pushes, UI-GATE) at the start of the first reply. If it did not, the hook is broken (check `.claude/settings.json` and that `bash` runs on this PC) and fixing it comes before anything else. Only then continue with the steps below.
 1. Owner reads `documentation/specs/teacher-workflow.md` and `student-workflow.md` and answers the 4 `(?)` questions (P00-14, P00-15).
 2. Owner confirms the theme list in `design/themes/themes.json` (P01-23) and looks at `design/themes/THEME_REPORT.md` and the screenshots in `design/themes/captures/`.
 3. Owner and Shem agree the collaboration protocol in `documentation/guides/COLLABORATION.md` (P00-28); the owner adds Shem as a collaborator on GitHub (repository Settings → Collaborators).
