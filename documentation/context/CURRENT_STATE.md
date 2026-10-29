@@ -19,9 +19,9 @@
 
 ## Waiting on the owner
 - Answer the 4 `(?)` questions in the two workflow drafts.
-- Confirm or change the 4 starter themes (Ad Astra Dark, Ad Astra Light, High Contrast Dark, High Contrast Light).
 - Review the template registry (60 templates) and approve the inventory.
-- Agree the work split and merge-review rule with Shem; add Shem on GitHub.
+- Write the agreed work split and merge reviewer into COLLABORATION.md (owner says the protocol with Shem is agreed, D-022); confirm Shem has GitHub access.
+- (Done 2026-10-29: the 4 themes are approved, D-022.)
 - 10 held features (V1.1/Later) are revisited after the coding portion; multiple choice is deferred.
 - Every push needs the owner's yes, to the owner's own branch only.
 

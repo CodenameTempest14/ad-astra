@@ -49,7 +49,7 @@
 - [x] P00-25 Context files: CURRENT_STATE.md, PHASE_INDEX.md, report templates — evidence: documentation/context/, documentation/phase-reports/
 - [x] P00-26 First push to GitHub — evidence: owner approved 2026-10-29; secret sweep clean; `git push -u origin main` → remote main 65d6d83 = local HEAD (`git ls-remote`); 108 LFS files. **Owner rule: ask before every later push.**
 - [x] P00-28a Two branches created for the owner and Shem Dumpor, with a pre-push guard and a collaboration guide — evidence: DECISIONS.md D-021, .githooks/pre-push, documentation/guides/COLLABORATION.md (branch creation and push are recorded in the session close report)
-- [ ] P00-28 The owner and Shem agree the collaboration protocol (work split, who reviews merges, session-report tags) — awaiting both; proposal in COLLABORATION.md
+- [x] P00-28 Collaboration protocol agreed between the owner and Shem — evidence: owner statement 2026-10-29 ("Collaboration done"). The specifics (work split, merge reviewer) are not yet written down: add them to documentation/guides/COLLABORATION.md
 - [ ] P00-27 Owner can explain the session workflow and where every report lives (walkthrough)
 
 ## Closing

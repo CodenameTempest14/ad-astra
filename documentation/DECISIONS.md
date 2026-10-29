@@ -112,3 +112,8 @@ a reversed decision gets a new entry that references the old one.
 - **HARD RULE (SEC-13):** each person's Claude Code pushes only to their own branch, asks before every push, never to `main` or the other branch. Enforced by `.githooks/pre-push` (identity from `git config user.email`, mapping in `.githooks/branch-owners.txt`). The owner's machine additionally denies pushes to `shem-dumpor` and `main` in the untracked `.claude/settings.local.json`.
 - **Note:** Shem Dumpor's GitHub username is not recorded here. The branch name is only a label; add him as a collaborator on GitHub so he can push (owner action in repository settings).
 - **Open:** work split and merge reviewer are proposals in COLLABORATION.md (checklist P00-28).
+
+## D-022 — Theme list approved; collaboration protocol agreed — 2026-10-29
+- **Decided by:** owner ("Themes are approved", "Collaboration done").
+- **Themes:** the four starter themes in `design/themes/themes.json` are the approved set (Ad Astra Dark default, Ad Astra Light, High Contrast Dark, High Contrast Light). New themes still need to pass `npm run theme-check`.
+- **Collaboration:** the owner reports the protocol with Shem Dumpor is agreed. The agreed work split and merge reviewer are **not yet recorded**; the owner should add them to `documentation/guides/COLLABORATION.md` or tell the agent to.
