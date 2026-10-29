@@ -4,7 +4,7 @@
 | Field | Value |
 |---|---|
 | Level | component |
-| Built in | Phase 7 |
+| Built in | Phase 8 |
 | Used by | Reports, dashboard |
 | Status | **Approved** |
 | Approved source | Tabler (HTML dashboard UI kit, Bootstrap 5) — https://tabler.io/admin-template |
@@ -24,3 +24,4 @@ Ad Astra branding (plan §1.1) always overrides template colours and logos.
 
 ## Approved images
 - [approved/all-variants__dark__1366x768.png](approved/all-variants__dark__1366x768.png)
+- [approved/README.md](approved/README.md)

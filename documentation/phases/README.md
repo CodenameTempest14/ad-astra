@@ -12,9 +12,10 @@ top of every Claude Code reply comes from that count.
 | [phase-03-execution-engine.md](phase-03-execution-engine.md) | 3 — Execution engine |
 | [phase-04-accounts.md](phase-04-accounts.md) | 4 — Accounts and persistence |
 | [phase-05-teacher-builder.md](phase-05-teacher-builder.md) | 5 — Teacher assessment builder |
-| [phase-06-student-workspace.md](phase-06-student-workspace.md) | 6 — Student workspace and exam workflow |
-| [phase-07-reporting-hardening.md](phase-07-reporting-hardening.md) | 7 — Reporting, diagnostics, hardening |
-| [phase-08-packaging.md](phase-08-packaging.md) | 8 — Packaging and LAN readiness |
+| [phase-06-classroom-network.md](phase-06-classroom-network.md) | 6 — Classroom network and host service *(added 2026-10-29, D-008)* |
+| [phase-07-student-workspace.md](phase-07-student-workspace.md) | 7 — Student workspace and exam workflow |
+| [phase-08-reporting-hardening.md](phase-08-reporting-hardening.md) | 8 — Reporting, diagnostics, hardening |
+| [phase-09-packaging.md](phase-09-packaging.md) | 9 — Packaging and classroom deployment |
 
 ## How to mark items (playbook §5)
 

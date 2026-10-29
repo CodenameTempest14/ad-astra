@@ -19,7 +19,12 @@
 - [x] P00-04 D-TPL: free/open-licensed templates only (Tabler, Judge0 IDE, Monaco, shadcn/ui — all MIT) — evidence: design/templates/template-manifest.json
 - [ ] P00-05 D-VP: confirm viewport set and dark-only vs dark + light theme
 - [x] P00-06 D-NAME: `AdAstra.*` projects, `ad-astra/` repo root — evidence: src/ folder names
-- [ ] P00-07 One-PC account model: separate Windows accounts vs role switching vs teacher-controlled session
+- [x] P00-07 Account/deployment model — evidence: DECISIONS.md D-007 (admin = teacher + admin role), D-008 (teacher PC host, students on lab PCs); CLASSROOM-SETUP.md §1
+- [x] P00-07a Classroom network in V1; new Phase 6 added; later phases renumbered 7–9 — evidence: DECISIONS.md D-008, documentation/phases/phase-06-classroom-network.md
+- [x] P00-07b Multiple-choice deferred until coding portion is reviewed — evidence: DECISIONS.md D-009
+- [x] P00-07c Exam integrity approach: record evidence + flag for review — evidence: DECISIONS.md D-010
+- [ ] P00-07d Owner approves or rejects each remaining proposed feature — PROG: 4 approved, 1 deferred, 58 awaiting (documentation/specs/FEATURES.md)
+- [x] P00-07e Classroom setup directions written — evidence: documentation/guides/CLASSROOM-SETUP.md
 - [ ] P00-08 Can students run code before submitting? Visible/hidden feedback rules
 - [ ] P00-09 Scoring policy: partial credit, penalties, multiple submissions
 - [ ] P00-10 Timer rules: expiry, autosave, late submission, interruption

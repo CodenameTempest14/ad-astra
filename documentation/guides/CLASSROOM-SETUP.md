@@ -1,16 +1,16 @@
 # Classroom Setup Guide — Running Ad Astra in a Real Computer Lab
 
 **For:** the Administrator (admin teacher) and teachers who set up and run exams in a lab.
-**Status:** *Target procedure.* It describes how Ad Astra **will** be set up once it is built. It
-assumes decision **Q2 = (a), classroom network mode**, which is still awaiting owner approval
-(`documentation/specs/FEATURES.md`). Section 7 is the USB fallback, which also covers Q2 = (b).
+**Status:** *Target procedure.* It describes how Ad Astra **will** be set up once it is built. The layout
+(teacher PC as host, lab PCs, USB fallback) was **approved by the owner on 2026-10-29** (DECISIONS.md D-008).
+Section 7 is the USB fallback.
 Items marked 🔧 are details fixed during implementation (installer names, port number). This
 guide is updated as each phase lands.
 
 **Features used here that are still awaiting owner approval** (FEATURES.md): network mode
-(F-PLT-04), USB fallback (F-PLT-03), bulk import (F-ADM-03), academic structure (F-ADM-04),
+(F-PLT-04 ✅), USB fallback (F-PLT-03 ✅), integrity log and flags (F-INT-02/04 ✅); **still awaiting:** bulk import (F-ADM-03), academic structure (F-ADM-04),
 Live Monitor and lab-PC panel (F-ADM-14/15), accommodations (F-TCH-10), clarifications (F-TCH-17),
-rejudge (F-TCH-16), reference-solution check (F-TCH-05), integrity log and lockdown (F-INT-01…04),
+rejudge (F-TCH-16), reference-solution check (F-TCH-05), lockdown and paste blocking (F-INT-01, F-INT-03),
 autosave (F-STU-07). If any is rejected, the matching steps are removed from this guide.
 
 ---

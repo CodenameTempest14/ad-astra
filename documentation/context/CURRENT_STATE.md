@@ -23,14 +23,18 @@ and pushes. After that: resolve open decisions P00-05, P00-07 … P00-13 with th
 Phase 1 template acquisition was done during Phase 0 because the owner asked for it:
 45 elements, 99 images, all Approved — `design/TEMPLATE_REGISTRY.md`.
 
-## Waiting on the owner (2026-10-29)
-- **Approve or reject each proposed feature** in documentation/specs/FEATURES.md (63 items, all ⏳). Owner rule: no new feature is planned or built without approval.
-- **Q1** admin = teacher with an admin role? **Q2** classroom network in V1 (recommended) or USB-only? **Q3** multiple choice in V1? **Q4** integrity strictness.
-- Classroom setup guide written for the owner to review: documentation/guides/CLASSROOM-SETUP.md (assumes Q2 = a).
-- Template work for new admin pages is **paused** until features are approved (no renames, no captures).
+## Answered by the owner (2026-10-29)
+- Q1 admin = teacher + admin role (D-007) · Q2 classroom network in V1 → new Phase 6, phases renumbered 0–9 (D-008)
+- Q3 multiple choice not yet (D-009) · Q4 integrity = evidence + flags (D-010)
+- Phase 6 templates captured and approved (4 new: lab-connect-to-host, connection-status-indicator, host-network-settings, package-transfer-dialog)
+
+## Waiting on the owner
+- **Approve or reject the 58 remaining proposed features** in documentation/specs/FEATURES.md. No new feature is planned, templated or built without approval.
+- Review documentation/guides/CLASSROOM-SETUP.md.
+- Template work for unapproved admin pages stays **paused**.
 
 ## Pending owner decisions
-P00-05 viewports/themes · P00-07 one-PC account model · P00-08 run-before-submit and
+P00-05 viewports/themes · P00-08 run-before-submit and
 feedback · P00-09 scoring · P00-10 timer rules · P00-11 retention · P00-12 isolation
 strength · P00-13 export formats.
 

@@ -34,3 +34,28 @@ a reversed decision gets a new entry that references the old one.
 ## D-006 — Template records are folder README.md files — 2026-10-29
 - **Why:** owner rule "a README in every folder"; GitHub shows README.md automatically, so each
   template folder explains itself. Replaces the earlier `TEMPLATE.md` name.
+
+## D-007 — Roles: the Administrator is a teacher with an extra admin role — 2026-10-29
+- **Decided by:** owner (Q1: "Yes").
+- **Meaning:** one account can hold Teacher + Administrator. The Admin Console is extra pages for
+  that account, not a separate login. Students are a separate role. Permissions are checked in services.
+
+## D-008 — Classroom network is in V1 (new Phase 6) — 2026-10-29
+- **Decided by:** owner (Q2: "Yes"), on the agent's recommendation.
+- **Context:** owner stated that the Teacher/Admin Console runs on the teacher's own PC and students use lab PCs.
+- **Decision:** the teacher's PC runs the Ad Astra Host (the only database). Lab PCs run the Student app and
+  connect over the classroom network (no internet). Visible tests run on lab PCs; **hidden tests run only on the host**.
+  The USB package fallback stays (F-PLT-03).
+- **Supersedes:** MASTER-PLAN §12 "future LAN" and the §17 rule "do not begin LAN before…" (amended).
+- **Consequences:** a new Phase 6 (Classroom Network and Host Service); the old Phases 6/7/8 become 7/8/9;
+  template phase numbers updated; CLASSROOM-SETUP.md describes this layout.
+
+## D-009 — Multiple-choice questions are not in scope yet — 2026-10-29
+- **Decided by:** owner (Q3: "Do not include yet, let's look at the progress first of the coding portion").
+- **Meaning:** F-TCH-23 is deferred. Revisit after the coding workflow (Phase 7) is working. The data model should
+  not block adding question types later, but no MC work is planned.
+
+## D-010 — Exam integrity = record evidence and flag for review — 2026-10-29
+- **Decided by:** owner (Q4: "Yes").
+- **Meaning:** Ad Astra records integrity events and raises "review suggested" flags. It never claims to prevent
+  cheating or labels a student as a cheater. Classroom supervision remains required.

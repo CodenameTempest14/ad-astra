@@ -581,5 +581,60 @@
     "title": "Avatars - Tabler - Premium and Open Source dashboard template with responsive and high quality UI.",
     "status": "OK",
     "capturedAt": "2026-10-29T08:24:18.253Z"
+  },
+  {
+    "id": "lab-connect-to-host",
+    "candidate": "tabler",
+    "state": "default",
+    "url": "https://preview.tabler.io/2-step-verification-code.html?theme=dark",
+    "file": "design/templates/pages/lab-connect-to-host/candidates/tabler/default__dark__1366x768.png",
+    "httpStatus": 200,
+    "title": "2-Step Verification - Tabler - Premium and Open Source dashboard template with responsive and high quality UI.",
+    "status": "OK",
+    "capturedAt": "2026-10-29T10:02:57.882Z"
+  },
+  {
+    "id": "lab-connect-to-host",
+    "candidate": "tabler-sign-in-link",
+    "state": "default",
+    "url": "https://preview.tabler.io/sign-in-link.html?theme=dark",
+    "file": "design/templates/pages/lab-connect-to-host/candidates/tabler-sign-in-link/default__dark__1366x768.png",
+    "httpStatus": 200,
+    "title": "Sign in link - Tabler - Premium and Open Source dashboard template with responsive and high quality UI.",
+    "status": "OK",
+    "capturedAt": "2026-10-29T10:03:01.160Z"
+  },
+  {
+    "id": "connection-status-indicator",
+    "candidate": "tabler",
+    "state": "all-variants",
+    "url": "https://preview.tabler.io/signal.html?theme=dark",
+    "file": "design/templates/components/connection-status-indicator/candidates/tabler/all-variants__dark__1366x768.png",
+    "httpStatus": 200,
+    "title": "Signal - Tabler - Premium and Open Source dashboard template with responsive and high quality UI.",
+    "status": "OK",
+    "capturedAt": "2026-10-29T10:03:04.583Z"
+  },
+  {
+    "id": "host-network-settings",
+    "candidate": "tabler",
+    "state": "default",
+    "url": "https://preview.tabler.io/settings.html?theme=dark",
+    "file": "design/templates/sections/host-network-settings/candidates/tabler/default__dark__1366x768.png",
+    "httpStatus": 200,
+    "title": "Settings - Tabler - Premium and Open Source dashboard template with responsive and high quality UI.",
+    "status": "OK",
+    "capturedAt": "2026-10-29T10:03:07.884Z"
+  },
+  {
+    "id": "package-transfer-dialog",
+    "candidate": "tabler",
+    "state": "default",
+    "url": "https://preview.tabler.io/dropzone.html?theme=dark",
+    "file": "design/templates/sections/package-transfer-dialog/candidates/tabler/default__dark__1366x768.png",
+    "httpStatus": 200,
+    "title": "Dropzone - Tabler - Premium and Open Source dashboard template with responsive and high quality UI.",
+    "status": "OK",
+    "capturedAt": "2026-10-29T10:03:11.297Z"
   }
 ]

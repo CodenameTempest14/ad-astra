@@ -5,7 +5,7 @@
 **Product name:** Ad Astra\
 **Plan version:** v3, 2026-10-29. Adds template and visual-verification
 rules including UI-GATE (§3), context management and phase reports (§4),
-repository rules (§5), Claude Code practices (§2.1), and Phases 0–8 as
+repository rules (§5), Claude Code practices (§2.1), and Phases 0–9 as
 checklists (§13 → `documentation/phases/`). Supersedes
 `documentation/predated/ORIGINAL-PROJECT-PLAN.md`.\
 **Repository:** https://github.com/CodenameTempest14/ad-astra.git\
@@ -271,7 +271,7 @@ empty), and approval status.
 
 | ID | Level | Name | Used by | Source | License | Status | Last visual pass |
 |---|---|---|---|---|---|---|---|
-| `student-coding-workspace` | Page | Student Coding Workspace | Phase 6 | (URL) | MIT | Approved | 2026-xx-xx — Match |
+| `student-coding-workspace` | Page | Student Coding Workspace | Phase 7 | (URL) | MIT | Approved | 2026-xx-xx — Match |
 
 **Status values:** `Proposed` → `Approved` → `Implemented` → `Verified`
 (Playwright pass with no unresolved mismatches) → `Baselined` (owner
@@ -975,12 +975,35 @@ score, and reopening a previous result.
 
 ------------------------------------------------------------------------
 
-## 12. Future LAN Architecture
+## 12. Classroom Network Architecture (in V1)
 
-The first release will use one PC. The codebase should nevertheless
-avoid coupling every UI component directly to local database calls.
+> **Changed 2026-10-29 (owner decision Q2, DECISIONS.md D-008).** The
+> Teacher/Admin Console runs on the teacher's own PC and students use lab
+> PCs, so the classroom network is part of **version 1** (new Phase 6).
+> Version 1 deployment:
+>
+> ``` text
+> Lab PC (Student app) ──┐
+> Lab PC (Student app) ──┼── classroom network (no internet) ──► Teacher's PC: Ad Astra Host
+> Lab PC (Student app) ──┘                                         ├── Admin/Teacher Console
+>                                                                  ├── SQLite (only copy of all data)
+>                                                                  ├── Hidden tests + grading
+>                                                                  └── Execution service
+> ```
+>
+> - Lab PCs run **visible tests** locally (Run). **Hidden tests run only
+>   on the host** (Submit). This closes the weakness noted in §9.4: hidden
+>   tests never reach a student's machine.
+> - USB packages are the fallback when the network fails (F-PLT-03).
+> - Step-by-step lab setup: `documentation/guides/CLASSROOM-SETUP.md`.
+>
+> The text below is the original design reasoning. It still applies, with
+> "future" now meaning Phase 6.
 
-### Single-PC mode
+The codebase should avoid coupling every UI component directly to local
+database calls.
+
+### Development mode (everything on one PC)
 
 ``` text
 Desktop UI
@@ -1288,7 +1311,42 @@ validation-error states. Full regression at phase close.
 
 ------------------------------------------------------------------------
 
-### Phase 6 — Student Workspace and Exam Workflow
+### Phase 6 — Classroom Network and Host Service *(added 2026-10-29, D-008)*
+
+**Objective:** The teacher's PC runs the Ad Astra Host, and lab PCs connect
+over the classroom network with no internet. Submissions are graded on the
+host against hidden tests that never leave it. A USB package fallback works
+when the network does not.
+
+**Entry criteria:** Phase 5 signed off.
+
+**Scope**
+- Design explained to the owner first: host technology, transport
+  security, discovery, authentication, where code runs, offline
+  behaviour.
+- Host service inside the teacher app; a student-facing API that never
+  returns hidden test data.
+- Submission queue and grading on the host, using the Phase 3 engine.
+- Lab PC client: reconnect, queued submissions, local Run of visible tests.
+- USB fallback: encrypted assessment and results packages (F-PLT-03).
+
+**UI inventory (templates required):** `lab-connect-to-host`,
+`connection-status-indicator`, `host-network-settings`, package dialogs.
+
+**Visual verification:** A pass for each element above. Full regression
+at phase close.
+
+**Acceptance criteria**
+- Host + 3 clients complete an exam end to end (automated), and 2 physical
+  PCs complete a dry run.
+- 40 simulated clients submitting within a minute are all graded.
+- Pulling a cable or restarting the host mid-exam loses no work.
+- No student-facing response contains hidden test data (contract test).
+- The checklist is in `documentation/phases/phase-06-classroom-network.md`.
+
+------------------------------------------------------------------------
+
+### Phase 7 — Student Workspace and Exam Workflow
 
 **Objective:** Students can take a timed assessment from start to
 submission.
@@ -1329,12 +1387,12 @@ result state. Full regression at phase close.
 
 ------------------------------------------------------------------------
 
-### Phase 7 — Reporting, Diagnostics, Hardening, and Recovery
+### Phase 8 — Reporting, Diagnostics, Hardening, and Recovery
 
 **Objective:** Traceable results, developer diagnostics, and proven
 recovery.
 
-**Entry criteria:** Phase 6 signed off.
+**Entry criteria:** Phase 7 signed off.
 
 **Scope**
 - Implement the reporting features selected during requirements
@@ -1367,12 +1425,13 @@ regression of the whole application.
 
 ------------------------------------------------------------------------
 
-### Phase 8 — Packaging and LAN Readiness
+### Phase 9 — Packaging and Classroom Deployment
 
-**Objective:** Ad Astra installs and runs on a clean machine, and the
-path to LAN mode is documented.
+**Objective:** Ad Astra installs and runs on a clean machine, with two
+installer modes: "Teacher PC (Host)" and "Lab PC (Student)". It is ready for
+a real classroom (CLASSROOM-SETUP.md).
 
-**Entry criteria:** Phase 7 signed off.
+**Entry criteria:** Phase 8 signed off.
 
 **Scope**
 - Create the Windows installer, including the WebView2 runtime strategy
@@ -1723,8 +1782,12 @@ For significant code changes, provide a concise change summary such as:
     correct.
 -   Do not finalize the database schema before validating core
     workflows.
--   Do not begin LAN implementation before the single-PC architecture
-    and execution engine are stable.
+-   Do not begin the classroom network (Phase 6) before the execution
+    engine (Phase 3), accounts (Phase 4) and the assessment builder
+    (Phase 5) are signed off. *(Amended 2026-10-29, D-008: the network is
+    now in V1 instead of "later".)*
+-   **Do not plan, template or build a new feature until the owner has
+    approved it in `documentation/specs/FEATURES.md`.**
 -   Preserve readable code and explainability even when a more abstract
     implementation is possible.
 -   Track known bugs and technical debt instead of hiding them.

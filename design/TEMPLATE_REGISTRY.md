@@ -17,21 +17,24 @@ Implemented/Verified/Baselined are set during the build phases; the last column 
 | `teacher-assessment-list` | page | Assessment List | P5 | Tabler | MIT | Approved | [image](templates/pages/teacher-assessment-list/approved/default__dark__1366x768.png) | — |
 | `teacher-assessment-editor` | page | Assessment Editor | P5 | Tabler | MIT | Approved | [image](templates/pages/teacher-assessment-editor/approved/default__dark__1366x768.png) | — |
 | `teacher-question-editor` | page | Question Editor | P5 | Tabler | MIT | Approved | [image](templates/pages/teacher-question-editor/approved/default__dark__1366x768.png) | — |
-| `student-dashboard` | page | Student Dashboard | P6 | Tabler | MIT | Approved | [image](templates/pages/student-dashboard/approved/default__dark__1366x768.png) | — |
-| `student-assessment-lobby` | page | Assessment Lobby | P6 | Tabler | MIT | Approved | [image](templates/pages/student-assessment-lobby/approved/default__dark__1366x768.png) | — |
-| `student-coding-workspace` | page | Coding Workspace | P6 | Judge0 IDE | MIT | Approved | [image](templates/pages/student-coding-workspace/approved/default__dark__1366x768.png) | — |
-| `student-results` | page | Results | P6 | Tabler | MIT | Approved | [image](templates/pages/student-results/approved/default__dark__1366x768.png) | — |
-| `teacher-assessment-report` | page | Assessment Report | P7 | Tabler | MIT | Approved | [image](templates/pages/teacher-assessment-report/approved/default__dark__1366x768.png) | — |
-| `teacher-gradebook` | page | Gradebook | P7 | Tabler | MIT | Approved | [image](templates/pages/teacher-gradebook/approved/default__dark__1366x768.png) | — |
-| `teacher-submission-review` | page | Submission Review | P7 | Judge0 IDE | MIT | Approved | [image](templates/pages/teacher-submission-review/approved/default__dark__1366x768.png) | — |
-| `dev-system-health` | page | System Health | P7 | Tabler | MIT | Approved | [image](templates/pages/dev-system-health/approved/default__dark__1366x768.png) | — |
-| `dev-log-explorer` | page | Log Explorer | P7 | Tabler | MIT | Approved | [image](templates/pages/dev-log-explorer/approved/default__dark__1366x768.png) | — |
-| `dev-test-runner` | page | Test Runner | P7 | Tabler | MIT | Approved | [image](templates/pages/dev-test-runner/approved/default__dark__1366x768.png) | — |
-| `shared-first-run-setup` | page | First-Run Setup Wizard | P8 | Tabler | MIT | Approved | [image](templates/pages/shared-first-run-setup/approved/default__dark__1366x768.png) | — |
+| `lab-connect-to-host` | page | Lab PC: Connect to Host | P6 | Tabler | MIT | Approved | [image](templates/pages/lab-connect-to-host/approved/default__dark__1366x768.png) | — |
+| `student-dashboard` | page | Student Dashboard | P7 | Tabler | MIT | Approved | [image](templates/pages/student-dashboard/approved/default__dark__1366x768.png) | — |
+| `student-assessment-lobby` | page | Assessment Lobby | P7 | Tabler | MIT | Approved | [image](templates/pages/student-assessment-lobby/approved/default__dark__1366x768.png) | — |
+| `student-coding-workspace` | page | Coding Workspace | P7 | Judge0 IDE | MIT | Approved | [image](templates/pages/student-coding-workspace/approved/default__dark__1366x768.png) | — |
+| `student-results` | page | Results | P7 | Tabler | MIT | Approved | [image](templates/pages/student-results/approved/default__dark__1366x768.png) | — |
+| `teacher-assessment-report` | page | Assessment Report | P8 | Tabler | MIT | Approved | [image](templates/pages/teacher-assessment-report/approved/default__dark__1366x768.png) | — |
+| `teacher-gradebook` | page | Gradebook | P8 | Tabler | MIT | Approved | [image](templates/pages/teacher-gradebook/approved/default__dark__1366x768.png) | — |
+| `teacher-submission-review` | page | Submission Review | P8 | Judge0 IDE | MIT | Approved | [image](templates/pages/teacher-submission-review/approved/default__dark__1366x768.png) | — |
+| `dev-system-health` | page | System Health | P8 | Tabler | MIT | Approved | [image](templates/pages/dev-system-health/approved/default__dark__1366x768.png) | — |
+| `dev-log-explorer` | page | Log Explorer | P8 | Tabler | MIT | Approved | [image](templates/pages/dev-log-explorer/approved/default__dark__1366x768.png) | — |
+| `dev-test-runner` | page | Test Runner | P8 | Tabler | MIT | Approved | [image](templates/pages/dev-test-runner/approved/default__dark__1366x768.png) | — |
+| `shared-first-run-setup` | page | First-Run Setup Wizard | P9 | Tabler | MIT | Approved | [image](templates/pages/shared-first-run-setup/approved/default__dark__1366x768.png) | — |
 | `shell-navigation-sidebar` | section | Navigation Sidebar | P2 | Tabler | MIT | Approved | [image](templates/sections/shell-navigation-sidebar/approved/default__dark__1366x768.png) | — |
 | `shell-top-bar` | section | Top Bar | P2 | Tabler | MIT | Approved | [image](templates/sections/shell-top-bar/approved/default__dark__1366x768.png) | — |
 | `shell-content-area` | section | Content Area + Page Header | P2 | Tabler | MIT | Approved | [image](templates/sections/shell-content-area/approved/default__dark__1366x768.png) | — |
-| `workspace-code-editor-panel` | section | Code Editor Panel | P6 | Monaco Editor playground | MIT | Approved | [image](templates/sections/workspace-code-editor-panel/approved/default__dark__1366x768.png) | — |
+| `host-network-settings` | section | Host Network Settings | P6 | Tabler | MIT | Approved | [image](templates/sections/host-network-settings/approved/default__dark__1366x768.png) | — |
+| `package-transfer-dialog` | section | Package Export / Import (USB fallback) | P6 | Tabler | MIT | Approved | [image](templates/sections/package-transfer-dialog/approved/default__dark__1366x768.png) | — |
+| `workspace-code-editor-panel` | section | Code Editor Panel | P7 | Monaco Editor playground | MIT | Approved | [image](templates/sections/workspace-code-editor-panel/approved/default__dark__1366x768.png) | — |
 | `button` | component | Buttons | P2 | Tabler | MIT | Approved | [image](templates/components/button/approved/all-variants__dark__1366x768.png) | — |
 | `form-controls` | component | Form Controls (text, select, checkbox, radio, switch) | P2 | Tabler | MIT | Approved | [image](templates/components/form-controls/approved/all-variants__dark__1366x768.png) | — |
 | `card` | component | Card | P2 | Tabler | MIT | Approved | [image](templates/components/card/approved/all-variants__dark__1366x768.png) | — |
@@ -49,8 +52,9 @@ Implemented/Verified/Baselined are set during the build phases; the last column 
 | `tabs` | component | Tabs | P5 | Tabler | MIT | Approved | [image](templates/components/tabs/approved/all-variants__dark__1366x768.png) | — |
 | `segmented-control` | component | Segmented Control | P5 | Tabler | MIT | Approved | [image](templates/components/segmented-control/approved/all-variants__dark__1366x768.png) | — |
 | `number-input` | component | Number / Duration Input | P5 | Tabler | MIT | Approved | [image](templates/components/number-input/approved/all-variants__dark__1366x768.png) | — |
-| `progress-bar` | component | Progress Bar | P6 | Tabler | MIT | Approved | [image](templates/components/progress-bar/approved/all-variants__dark__1366x768.png) | — |
-| `chart` | component | Charts | P7 | Tabler | MIT | Approved | [image](templates/components/chart/approved/all-variants__dark__1366x768.png) | — |
-| `steps` | component | Steps / Progress Tracker | P8 | Tabler | MIT | Approved | [image](templates/components/steps/approved/all-variants__dark__1366x768.png) | — |
+| `connection-status-indicator` | component | Connection Status Indicator | P6 | Tabler | MIT | Approved | [image](templates/components/connection-status-indicator/approved/all-variants__dark__1366x768.png) | — |
+| `progress-bar` | component | Progress Bar | P7 | Tabler | MIT | Approved | [image](templates/components/progress-bar/approved/all-variants__dark__1366x768.png) | — |
+| `chart` | component | Charts | P8 | Tabler | MIT | Approved | [image](templates/components/chart/approved/all-variants__dark__1366x768.png) | — |
+| `steps` | component | Steps / Progress Tracker | P9 | Tabler | MIT | Approved | [image](templates/components/steps/approved/all-variants__dark__1366x768.png) | — |
 
-**Totals:** 45 elements — 45 approved.
+**Totals:** 49 elements — 49 approved.

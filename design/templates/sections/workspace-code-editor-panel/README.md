@@ -4,7 +4,7 @@
 | Field | Value |
 |---|---|
 | Level | section |
-| Built in | Phase 6 |
+| Built in | Phase 7 |
 | Used by | student-coding-workspace, teacher-question-editor |
 | Status | **Approved** |
 | Approved source | Monaco Editor playground — https://microsoft.github.io/monaco-editor/ |
@@ -24,3 +24,4 @@ Ad Astra branding (plan §1.1) always overrides template colours and logos.
 
 ## Approved images
 - [approved/default__dark__1366x768.png](approved/default__dark__1366x768.png)
+- [approved/README.md](approved/README.md)

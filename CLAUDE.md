@@ -37,6 +37,9 @@ phase brief says so. Re-reading every document fills the context for nothing.
 - Ask the owner before: push, merge to main, force-push, history rewrite, deleting data,
   architecture/scope changes. Template choice does **not** need approval.
 - Every folder has a README.md (`node tools/check-readmes.mjs`).
+- **No new feature is planned, templated or built until the owner approves it** in
+  `documentation/specs/FEATURES.md`. Propose, then wait.
+- Deployment: teacher PC = Ad Astra Host (only database, hidden tests); lab PCs = Student app (D-008).
 
 ## Commands
 | What | Command |

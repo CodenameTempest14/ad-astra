@@ -25,4 +25,5 @@ Ad Astra branding (plan §1.1) always overrides template colours and logos.
 
 ## Approved images
 - [approved/not-found__dark__1366x768.png](approved/not-found__dark__1366x768.png)
+- [approved/README.md](approved/README.md)
 - [approved/server-error__dark__1366x768.png](approved/server-error__dark__1366x768.png)

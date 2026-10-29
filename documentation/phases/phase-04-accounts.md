@@ -16,6 +16,7 @@
 - [ ] P04-01 Users table + migration
 - [ ] P04-02 Password hashing (algorithm decision recorded)
 - [ ] P04-03 Authentication service
+- [ ] P04-03a Roles: Student, Teacher, Administrator; one account may be Teacher + Administrator (D-007); role checks in services
 - [ ] P04-04 Role checks in application services (tests prove UI-hidden actions are still rejected)
 - [ ] P04-05 Data-access layer pattern (parameterised, transactions)
 - [ ] P04-06 Backup

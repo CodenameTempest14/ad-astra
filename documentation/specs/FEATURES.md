@@ -23,9 +23,9 @@ move any feature between tiers.
 ## Tiers
 | Tier | Meaning |
 |---|---|
-| **V1** | In the first release (Phases 2–8) |
+| **V1** | In the first release (Phases 2–9) |
 | **V1.1** | Soon after V1; the design leaves room for it now |
-| **LAN** | Needs network mode (several PCs talking to a host) |
+| **LAN** | Needs the classroom network (Phase 6, now in V1 — D-008) |
 | **Later** | Good idea, not planned yet |
 
 ## Roles
@@ -45,11 +45,11 @@ system itself.
 
 | ID | Feature | Tier | Owner approval |
 |---|---|---|---|
-| F-ADM-01 | **Overview dashboard:** exams running/scheduled today, submissions today, toolchain health, last backup age, open alerts (failed runs, integrity flags, low disk) | V1 | ⏳ Awaiting approval |
-| F-ADM-02 | **User management:** create/edit/deactivate teachers and students, reset passwords, assign roles | V1 | ⏳ Awaiting approval |
-| F-ADM-03 | **Bulk import** of class lists from CSV/Excel with a preview and error report before saving | V1 | ⏳ Awaiting approval |
-| F-ADM-04 | **Academic structure:** school years/terms, subjects, sections/classes, enrolment; assign teachers to classes | V1 | ⏳ Awaiting approval |
-| F-ADM-05 | **Shared question bank governance:** see every teacher's shared questions; tags (topic, difficulty, language); merge duplicates | V1.1 | ⏳ Awaiting approval |
+| F-ADM-01 | **Overview dashboard:** exams running/scheduled today, submissions today, toolchain health, last backup age, open alerts (failed runs, integrity flags, low disk) | V1 | ✅ Approved 2026-10-29 (Q2, D-008) |
+| F-ADM-02 | **User management:** create/edit/deactivate teachers and students, reset passwords, assign roles | V1 | ✅ Approved 2026-10-29 (Q2 fallback, D-008) |
+| F-ADM-03 | **Bulk import** of class lists from CSV/Excel with a preview and error report before saving | V1 | ❌ Not yet — revisit after coding portion (Q3, D-009) |
+| F-ADM-04 | **Academic structure:** school years/terms, subjects, sections/classes, enrolment; assign teachers to classes | V1 | ✅ Approved 2026-10-29 (Q4, D-010) |
+| F-ADM-05 | **Shared question bank governance:** see every teacher's shared questions; tags (topic, difficulty, language); merge duplicates | V1.1 | ✅ Approved 2026-10-29 (Q4, D-010) |
 | F-ADM-06 | **Exam calendar:** all scheduled assessments across classes, with clash warnings (same lab, same time) | V1.1 | ⏳ Awaiting approval |
 | F-ADM-07 | **Integrity centre:** integrity events and similarity reports across all classes; mark reviewed / dismissed / escalated | V1 | ⏳ Awaiting approval |
 | F-ADM-08 | **Cross-class reports:** results by class, subject, topic; export CSV/Excel/PDF | V1 | ⏳ Awaiting approval |
@@ -125,12 +125,15 @@ harder and **record evidence** for the teacher to judge. Wording in the UI must 
 | F-PLT-01 | Five languages via adapters; per-language limits | V1 | ⏳ Awaiting approval |
 | F-PLT-02 | First-run setup wizard (creates the first Administrator) | V1 | ⏳ Awaiting approval |
 | F-PLT-03 | **USB fallback:** assessment package to lab PCs; encrypted results package back to the teacher's PC (also the network-failure fallback) | V1 | ⏳ Awaiting approval |
-| F-PLT-04 | **Classroom network mode:** Ad Astra Host on the teacher's PC, Student app on lab PCs, hidden-test grading on the host | **V1 if Q2 = (a)**, else LAN | ⏳ Awaiting approval |
+| F-PLT-04 | **Classroom network mode:** Ad Astra Host on the teacher's PC, Student app on lab PCs, hidden-test grading on the host | **V1** (Phase 6) | ⏳ Awaiting approval |
 | F-PLT-05 | Light theme | pending decision P00-05 | ⏳ Awaiting approval |
 
 ---
 
-## Decisions this catalogue raises (owner)
+## Decisions this catalogue raised — answered 2026-10-29
+Q1 Yes (D-007) · Q2 Yes, (a) network in V1 (D-008) · Q3 Not yet (D-009) · Q4 Yes (D-010). Original wording kept below for history.
+
+### Original questions
 - **Q1 — Admin = teacher with an admin role?** Recommended: yes, one account with two roles,
   rather than a separate admin-only account. An admin-only account is still possible.
 - **Q2 — How do student PCs and the teacher's PC talk in V1?** Since the console is on the teacher's PC
