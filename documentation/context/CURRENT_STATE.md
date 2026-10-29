@@ -13,8 +13,8 @@
 ## Next concrete step
 0. **First thing in the next session (P00-29):** check that the every-turn gates hook fired: the agent should see the gates text (progress table + continuation prompt rule, own-branch pushes, UI-GATE) at the start of the first reply. If it did not, the hook is broken (check `.claude/settings.json` and that `bash` runs on this PC) and fixing it comes before anything else. Only then continue with the steps below.
 1. Owner reads `documentation/specs/teacher-workflow.md` and `student-workflow.md` and answers the 4 `(?)` questions (P00-14, P00-15).
-2. Owner confirms the theme list in `design/themes/themes.json` (P01-23) and looks at `design/themes/THEME_REPORT.md` and the screenshots in `design/themes/captures/`.
-3. Owner and Shem agree the collaboration protocol in `documentation/guides/COLLABORATION.md` (P00-28); the owner adds Shem as a collaborator on GitHub (repository Settings → Collaborators).
+2. ~~Theme list~~ approved by the owner 2026-10-29 (D-022, P01-23 done).
+3. Collaboration with Shem agreed by the owner (D-022, P00-28 done). Still to do: write the agreed work split and merge reviewer into `documentation/guides/COLLABORATION.md`, and confirm Shem has GitHub access (repository Settings → Collaborators).
 4. Owner approves the template inventory (P00-18) and does the walkthrough (P00-27); then Phase 0 closing report and sign-off.
 5. Then Phase 1: logo concept and icon exports, `DESIGN.md`, 1920×1080 captures, the non-text contrast check (P01-24).
 
