@@ -35,7 +35,7 @@
 
 ## Playwright tooling
 - [x] P01-17 tests/ui-visual set up with Playwright Test 1.56.1 + Chromium — evidence: tests/ui-visual/package.json, `npm run capture-templates` output
-- [ ] P01-18 Spike: minimal WPF + BlazorWebView window; Playwright attaches over CDP (`WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS=--remote-debugging-port=9222`) and captures it — BLOCKED: .NET SDK not installed on this PC (`dotnet` not found, 2026-10-29)
+- [ ] P01-18 Spike: minimal WPF + BlazorWebView window; Playwright attaches over CDP (`WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS=--remote-debugging-port=9222`) and captures it (unblocked 2026-10-29: .NET SDK 10.0.403 installed)
 - [ ] P01-19 Side-by-side + diff image generation script (template vs implementation) — tests/ui-visual/scripts/compare.mjs
 - [ ] P01-20 PASS_REPORT.md template — design/captures/README.md
 

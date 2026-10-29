@@ -13,8 +13,11 @@ the secret sweep and the remote visibility check (SEC-6), then `git lfs install`
 and pushes. After that: resolve open decisions P00-05, P00-07 … P00-13 with the owner.
 
 ## Blockers (owner can unblock)
-- P00-26 Push to GitHub — needs owner approval.
-- P01-18 / P02-OPEN-06 — .NET SDK not installed on this PC (`dotnet` not found).
+- P00-26 Push to GitHub — needs owner approval. **Owner rule: ask before EVERY push**, even if approved before.
+- Owner asked to confirm the system's purpose before Phase 0 questions (agent's summary given 2026-10-29; awaiting confirmation).
+
+## Resolved this session
+- .NET SDK 10.0.403 installed (P02-OPEN-06 done; P01-18 unblocked).
 
 ## Done out of order (owner-directed, 2026-10-29)
 Phase 1 template acquisition was done during Phase 0 because the owner asked for it:

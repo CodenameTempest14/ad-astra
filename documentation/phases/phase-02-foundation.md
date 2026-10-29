@@ -10,7 +10,7 @@
 - [ ] P02-OPEN-03 Phase brief written
 - [ ] P02-OPEN-04 Best-practice sources re-checked
 - [ ] P02-OPEN-05 Repo-derived state table in the Opening Report
-- [ ] P02-OPEN-06 .NET SDK (current LTS) installed and `dotnet --info` recorded — BLOCKED: not installed (2026-10-29)
+- [x] P02-OPEN-06 .NET SDK (current LTS) installed — evidence: `dotnet --list-sdks` → `10.0.403 [C:\Program Files\dotnet\sdk]` (winget Microsoft.DotNet.SDK.10, 2026-10-29)
 - [ ] P02-OPEN-07 BlazorWebView WPF package support for the chosen .NET version verified
 
 ## Solution
