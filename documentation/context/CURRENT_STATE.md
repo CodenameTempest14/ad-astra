@@ -7,6 +7,13 @@
 **Branch / last commit:** `main` (local only, not pushed) — see `git log -1`
 **Status line:** run `node tools/phase-report.mjs`
 
+## Recommended model for the next session (MDL-1)
+**Sonnet 5.5**, because the next session is owner Q&A (approving or rejecting the 58 remaining
+features and answering the remaining Phase 0 questions) and writing the teacher and student workflow specs. That is
+conversation and documentation, with no new architecture or security design, so Sonnet is fast and cheaper
+with no loss in quality. Switch to **Opus 5.5** when Phase 2 implementation starts, or if a decision turns
+into design work.
+
 ## Next concrete step
 Owner: approve the first push to GitHub (P00-26). Before pushing, the agent runs
 the secret sweep and the remote visibility check (SEC-6), then `git lfs install`

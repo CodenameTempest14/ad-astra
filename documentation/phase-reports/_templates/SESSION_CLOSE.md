@@ -16,6 +16,7 @@
 - **Which parts did I actually run, and what am I unsure about? (CTX-11):**
 - **Handoff (≤ 10 lines, enough for a cold start):**
 - **Next session's first concrete step:**
+- **Recommended model for the next session (MDL-1):** <model> — because <reason tied to the planned work>; switch to <model> if <condition>.
 - **Owner review / explanation needed:**
 
 ## Phase report

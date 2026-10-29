@@ -2,6 +2,7 @@
 
 [status line from `node tools/phase-report.mjs`]
 
+- **Recommended model for this session (MDL-2):** <model> — because <reason tied to this session's work>. Owner is on: <model> (fine / switch, and why).
 - **Session goal:** (checklist item IDs)
 - **Starting state:** branch, commit hash, link to previous Close Report
 - **Context loaded:** (files and plan sections actually read)
