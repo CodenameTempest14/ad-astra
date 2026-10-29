@@ -27,5 +27,5 @@ Chronological, append-only (MASTER-PLAN §15). Each entry links its Session Clos
   decisions D-007 … D-010; new Phase 6 (classroom network) with phases renumbered to 0–9; MASTER-PLAN §12/§13/§17 updated;
   4 Phase 6 templates captured (5/5 OK, checked by eye) → registry 49 elements.
 - **Build/tests run:** `dotnet --list-sdks` → 10.0.403; `npm run capture-templates -- <4 ids>` 5/5 OK; `npm run registry`; `node tools/check-readmes.mjs`.
-- **Problems:** renumbering regex silently failed (escaped `` mangled) — caught by reading the output, fixed with `(?![0-9])`.
+- **Problems:** renumbering regex silently failed (the word-boundary escape was mangled by shell + JS escaping) — caught by reading the output, fixed with `(?![0-9])`.
 - **Next steps:** owner approves/rejects remaining features; then add approved ones to checklists and capture their templates.
