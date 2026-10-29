@@ -17,20 +17,20 @@
 - [x] P00-02 D-PW: Playwright Test (Node) for tests/ui-visual — evidence: DECISIONS.md D-002, tests/ui-visual/package.json
 - [x] P00-03 D-LFS: Git LFS for design images; keep phase-closing captures + baselines — evidence: .gitattributes, DECISIONS.md D-003
 - [x] P00-04 D-TPL: free/open-licensed templates only (Tabler, Judge0 IDE, Monaco, shadcn/ui — all MIT) — evidence: design/templates/template-manifest.json
-- [ ] P00-05 D-VP: confirm viewport set and dark-only vs dark + light theme
+- [x] P00-05 D-VP: viewports and theme — evidence: DECISIONS.md D-015 (dark only; 1366×768 + 1920×1080)
 - [x] P00-06 D-NAME: `AdAstra.*` projects, `ad-astra/` repo root — evidence: src/ folder names
 - [x] P00-07 Account/deployment model — evidence: DECISIONS.md D-007 (admin = teacher + admin role), D-008 (teacher PC host, students on lab PCs); CLASSROOM-SETUP.md §1
 - [x] P00-07a Classroom network in V1; new Phase 6 added; later phases renumbered 7–9 — evidence: DECISIONS.md D-008, documentation/phases/phase-06-classroom-network.md
 - [x] P00-07b Multiple-choice deferred until coding portion is reviewed — evidence: DECISIONS.md D-009
 - [x] P00-07c Exam integrity approach: record evidence + flag for review — evidence: DECISIONS.md D-010
-- [ ] P00-07d Owner approves or rejects each remaining proposed feature — PROG: 4 approved, 1 deferred, 58 awaiting (documentation/specs/FEATURES.md)
+- [ ] P00-07d Owner approves or rejects each remaining proposed feature — PROG: 4 approved, 1 deferred, 57 awaiting (documentation/specs/FEATURES.md)
 - [x] P00-07e Classroom setup directions written — evidence: documentation/guides/CLASSROOM-SETUP.md
 - [x] P00-08 Run-before-submit and feedback rules — evidence: DECISIONS.md D-011
 - [x] P00-09 Scoring policy — evidence: DECISIONS.md D-012 (partial credit by weight; penalties still awaiting approval)
 - [x] P00-10 Timer rules — evidence: DECISIONS.md D-013 (auto-submit at zero; autosave + interruption rules specified in Phase 7)
-- [ ] P00-11 Retention: source code, submissions, temp run folders
+- [x] P00-11 Retention — evidence: DECISIONS.md D-016
 - [x] P00-12 Isolation strength — evidence: DECISIONS.md D-014 (practical lab protection)
-- [ ] P00-13 Report/export formats
+- [x] P00-13 Export formats — evidence: DECISIONS.md D-017 (Excel only)
 
 ## Requirements and inventory
 - [ ] P00-14 Teacher workflow written — documentation/specs/teacher-workflow.md

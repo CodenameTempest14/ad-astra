@@ -8,7 +8,7 @@
 **Status line:** run `node tools/phase-report.mjs`
 
 ## Recommended model for the next session (MDL-1)
-**Sonnet 5.5**, because the next session is owner Q&A (approving or rejecting the 58 remaining
+**Sonnet 5.5**, because the next session is owner Q&A (approving or rejecting the 57 remaining
 features and answering the remaining Phase 0 questions) and writing the teacher and student workflow specs. That is
 conversation and documentation, with no new architecture or security design, so Sonnet is fast and cheaper
 with no loss in quality. Switch to **Opus 5.5** when Phase 2 implementation starts, or if a decision turns
@@ -36,7 +36,7 @@ Phase 1 template acquisition was done during Phase 0 because the owner asked for
 - Phase 6 templates captured and approved (4 new: lab-connect-to-host, connection-status-indicator, host-network-settings, package-transfer-dialog)
 
 ## Waiting on the owner
-- **Approve or reject the 58 remaining proposed features** in documentation/specs/FEATURES.md. No new feature is planned, templated or built without approval.
+- **Approve or reject the 57 remaining proposed features** in documentation/specs/FEATURES.md. No new feature is planned, templated or built without approval.
 - Review documentation/guides/CLASSROOM-SETUP.md.
 - Template work for unapproved admin pages stays **paused**.
 

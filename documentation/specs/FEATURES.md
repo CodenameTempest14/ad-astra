@@ -45,11 +45,11 @@ system itself.
 
 | ID | Feature | Tier | Owner approval |
 |---|---|---|---|
-| F-ADM-01 | **Overview dashboard:** exams running/scheduled today, submissions today, toolchain health, last backup age, open alerts (failed runs, integrity flags, low disk) | V1 | ✅ Approved 2026-10-29 (Q2, D-008) |
-| F-ADM-02 | **User management:** create/edit/deactivate teachers and students, reset passwords, assign roles | V1 | ✅ Approved 2026-10-29 (Q2 fallback, D-008) |
-| F-ADM-03 | **Bulk import** of class lists from CSV/Excel with a preview and error report before saving | V1 | ❌ Not yet — revisit after coding portion (Q3, D-009) |
-| F-ADM-04 | **Academic structure:** school years/terms, subjects, sections/classes, enrolment; assign teachers to classes | V1 | ✅ Approved 2026-10-29 (Q4, D-010) |
-| F-ADM-05 | **Shared question bank governance:** see every teacher's shared questions; tags (topic, difficulty, language); merge duplicates | V1.1 | ✅ Approved 2026-10-29 (Q4, D-010) |
+| F-ADM-01 | **Overview dashboard:** exams running/scheduled today, submissions today, toolchain health, last backup age, open alerts (failed runs, integrity flags, low disk) | V1 | ⏳ Awaiting approval |
+| F-ADM-02 | **User management:** create/edit/deactivate teachers and students, reset passwords, assign roles | V1 | ⏳ Awaiting approval |
+| F-ADM-03 | **Bulk import** of class lists from CSV/Excel with a preview and error report before saving | V1 | ⏳ Awaiting approval |
+| F-ADM-04 | **Academic structure:** school years/terms, subjects, sections/classes, enrolment; assign teachers to classes | V1 | ⏳ Awaiting approval |
+| F-ADM-05 | **Shared question bank governance:** see every teacher's shared questions; tags (topic, difficulty, language); merge duplicates | V1.1 | ⏳ Awaiting approval |
 | F-ADM-06 | **Exam calendar:** all scheduled assessments across classes, with clash warnings (same lab, same time) | V1.1 | ⏳ Awaiting approval |
 | F-ADM-07 | **Integrity centre:** integrity events and similarity reports across all classes; mark reviewed / dismissed / escalated | V1 | ⏳ Awaiting approval |
 | F-ADM-08 | **Cross-class reports:** results by class, subject, topic; export CSV/Excel/PDF | V1 | ⏳ Awaiting approval |
@@ -87,7 +87,7 @@ system itself.
 | F-TCH-20 | **Question analytics:** pass rate, most-failed test, average attempts, average time | V1 | ⏳ Awaiting approval |
 | F-TCH-21 | **Similarity check** between submissions (own implementation of the published winnowing technique; Dolos as optional comparison) | V1.1 | ⏳ Awaiting approval |
 | F-TCH-22 | Rubric scoring for code quality (manual criteria next to automatic tests) | Later | ⏳ Awaiting approval |
-| F-TCH-23 | Multiple-choice and short-answer questions | V1.1 | ⏳ Awaiting approval |
+| F-TCH-23 | Multiple-choice and short-answer questions | V1.1 | ❌ Not yet — revisit after coding portion (Q3, D-009) |
 | F-TCH-24 | Import/export question packs (file) to share between schools | V1.1 | ⏳ Awaiting approval |
 
 ## C. Student features
@@ -113,9 +113,9 @@ harder and **record evidence** for the teacher to judge. Wording in the UI must 
 | ID | Feature | Tier | Owner approval |
 |---|---|---|---|
 | F-INT-01 | Exam lockdown window: full screen, no app menus, close/minimise blocked during an exam | V1 | ⏳ Awaiting approval |
-| F-INT-02 | **Integrity event log:** focus lost, full-screen exit, paste attempts, app restarts, with timestamps | V1 | ⏳ Awaiting approval |
+| F-INT-02 | **Integrity event log:** focus lost, full-screen exit, paste attempts, app restarts, with timestamps | V1 | ✅ Approved 2026-10-29 (Q4, D-010) |
 | F-INT-03 | Paste from outside the app blocked in Exam mode (paste inside the editor allowed) | V1 | ⏳ Awaiting approval |
-| F-INT-04 | "Review suggested" flag per attempt based on events (never "cheated") | V1 | ⏳ Awaiting approval |
+| F-INT-04 | "Review suggested" flag per attempt based on events (never "cheated") | V1 | ✅ Approved 2026-10-29 (Q4, D-010) |
 | F-INT-05 | Similarity reports (see F-TCH-21) | V1.1 | ⏳ Awaiting approval |
 | F-INT-06 | Hidden tests never in student-facing data or logs (MASTER-PLAN §9.4) | V1 | ⏳ Awaiting approval |
 
@@ -124,9 +124,9 @@ harder and **record evidence** for the teacher to judge. Wording in the UI must 
 |---|---|---|---|
 | F-PLT-01 | Five languages via adapters; per-language limits | V1 | ⏳ Awaiting approval |
 | F-PLT-02 | First-run setup wizard (creates the first Administrator) | V1 | ⏳ Awaiting approval |
-| F-PLT-03 | **USB fallback:** assessment package to lab PCs; encrypted results package back to the teacher's PC (also the network-failure fallback) | V1 | ⏳ Awaiting approval |
-| F-PLT-04 | **Classroom network mode:** Ad Astra Host on the teacher's PC, Student app on lab PCs, hidden-test grading on the host | **V1** (Phase 6) | ⏳ Awaiting approval |
-| F-PLT-05 | Light theme | pending decision P00-05 | ⏳ Awaiting approval |
+| F-PLT-03 | **USB fallback:** assessment package to lab PCs; encrypted results package back to the teacher's PC (also the network-failure fallback) | V1 | ✅ Approved 2026-10-29 (Q2 fallback, D-008) |
+| F-PLT-04 | **Classroom network mode:** Ad Astra Host on the teacher's PC, Student app on lab PCs, hidden-test grading on the host | **V1** (Phase 6) | ✅ Approved 2026-10-29 (Q2, D-008) |
+| F-PLT-05 | Light theme | pending decision P00-05 | ❌ Not planned — dark theme only (P00-05, D-015) |
 
 ---
 

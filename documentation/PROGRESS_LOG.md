@@ -29,3 +29,10 @@ Chronological, append-only (MASTER-PLAN §15). Each entry links its Session Clos
 - **Build/tests run:** `dotnet --list-sdks` → 10.0.403; `npm run capture-templates -- <4 ids>` 5/5 OK; `npm run registry`; `node tools/check-readmes.mjs`.
 - **Problems:** renumbering regex silently failed (the word-boundary escape was mangled by shell + JS escaping) — caught by reading the output, fixed with `(?![0-9])`.
 - **Next steps:** owner approves/rejects remaining features; then add approved ones to checklists and capture their templates.
+
+## 2026-10-29 — P00 s01 (continued): first push, Phase 0 decisions D-011…D-017, correction
+
+- **Status:** Partially completed (feature approvals and workflow specs pending)
+- **Changes made:** first push to GitHub (remote main = local, verified with `git ls-remote`); Phase 0 Opening Report and brief; owner decisions D-011 … D-017 (run/feedback, scoring, timer, isolation, screens/theme, retention, exports).
+- **CORRECTION:** the earlier recording of the owner's Q2–Q4 approvals in FEATURES.md marked the **wrong rows** (F-ADM-01…05 instead of F-PLT-03/04, F-INT-02/04, F-TCH-23). The owner never approved or declined any F-ADM feature. Found when recounting by group; fixed by matching each row on its exact ID. True counts: 4 approved, 2 not planned/deferred, 57 awaiting (earlier text said 58). Lesson: after any bulk edit of a status table, re-read the changed rows, not only the totals (TST-5).
+- **Next steps:** owner approves/rejects the 57 features; write teacher and student workflows (P00-14/15); capability list (P00-16); inventory review (P00-18).

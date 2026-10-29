@@ -76,3 +76,12 @@ a reversed decision gets a new entry that references the old one.
 ## D-014 — Isolation: practical lab protection — 2026-10-29
 - **Decided by:** owner (P00-12).
 - **Meaning:** standard Windows student account, Job Objects (time, memory, output limits, kill process tree), a separate temp folder per run, no shell-string building. This stops accidents and casual abuse. It does **not** stop a determined attacker, and SECURITY.md must say so (MASTER-PLAN §10, never claim a sandbox without evidence). Stronger isolation can be re-evaluated in Phase 3 if the owner's threat model changes.
+
+## D-015 — Screens and theme: dark only, 1366×768 and 1920×1080 — 2026-10-29
+- **Decided by:** owner (P00-05). Every page is designed, built and Playwright-compared at these two sizes in the dark theme. Light theme is **not** planned (parking lot). The approved templates were captured at 1366×768; 1920×1080 captures are added per page when that page is built.
+
+## D-016 — Retention: keep per term, archive on request — 2026-10-29
+- **Decided by:** owner (P00-11). Submissions and source code are kept for the current school year/term; the administrator can archive or delete a finished term. Temporary run folders are deleted immediately after each run. Archive tooling is F-ADM-13 (awaiting approval); until then, "delete a term" is the minimum to build.
+
+## D-017 — Exports: Excel (.xlsx) only — 2026-10-29
+- **Decided by:** owner (P00-13), who selected Excel and not CSV or PDF. Gradebook and assessment results export to .xlsx. CSV and PDF reports are **not** planned (propose again if needed). Importing class lists (F-ADM-03) is a separate feature, still awaiting approval.

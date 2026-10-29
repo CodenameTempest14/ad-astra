@@ -19,7 +19,7 @@
 - **Best-practice re-check:** done 2026-10-29 for Claude Code (playbook sources) and the model lineup (playbook §4b).
 - **Risks and assumptions:**
   - Phase 1 template work was done early, so the Phase 1 checklist is partly ticked while Phase 0 is open.
-  - Features awaiting approval (58) could change the template inventory and the phase scope.
+  - Features awaiting approval (57) could change the template inventory and the phase scope.
   - Assumes lab PCs and the teacher PC are Windows 10/11 on a wired classroom network.
 - **Owner decisions needed before closing Phase 0:** the questions in the table above.
 - **Owner approval to start:** approved 2026-10-29 ("proceed to Phase 0").
