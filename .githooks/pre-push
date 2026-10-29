@@ -24,6 +24,7 @@ if [ -z "$allowed" ]; then
 fi
 
 zero="0000000000000000000000000000000000000000"
+input="$(cat)"        # keep the pushed refs: we read them twice (our checks, then Git LFS)
 while read -r local_ref local_sha remote_ref remote_sha; do
   case "$remote_ref" in refs/heads/*) ;; *) continue ;; esac
   target="${remote_ref#refs/heads/}"
@@ -39,5 +40,11 @@ while read -r local_ref local_sha remote_ref remote_sha; do
     echo "pre-push: BLOCKED. This would rewrite '$target' (non-fast-forward). Pull/rebase first; force-push is not allowed." >&2
     exit 1
   fi
-done
+done <<< "$input"
+
+# Pointing core.hooksPath here REPLACES Git LFS's own pre-push hook, so chain to it: without this the
+# design images (stored in LFS) are not uploaded and GitHub rejects the push ("pre-receive hook declined").
+if command -v git-lfs >/dev/null 2>&1; then
+  printf '%s\n' "$input" | git lfs pre-push "$@" || exit $?
+fi
 exit 0
