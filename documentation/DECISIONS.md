@@ -121,3 +121,9 @@ a reversed decision gets a new entry that references the old one.
 ## D-023 — Fonts: Inter (UI) and JetBrains Mono (code), bundled offline — 2026-10-30
 - **Decided by:** owner ("Accept the Inter & JetBrains Mono").
 - **Meaning:** both are SIL OFL 1.1 and ship inside the app (no CDN), so the offline classroom and Playwright screenshots render identically. Fallbacks: Segoe UI / Cascadia Mono / Consolas. Licence texts go into THIRD_PARTY_NOTICES.md and the installer. The files are downloaded in Phase 2; their licences are re-verified against the upstream repositories at that point.
+
+## D-024 — Logo direction: concept D1 (B's A inside C's ring) — 2026-10-30
+- **Decided by:** owner ("Lets get logo D.1, and send some enhancement").
+- **Meaning:** the symbol is a bold A with a curved cyan crossbar (the orbital arc) inside a blue ring, with one white four-point star riding the ring, on a deep navy rounded square. Concepts A, B, C, D2, E1 and E2 are kept in `assets/branding/source/concepts/` for reference only.
+- **Enhancements (approved by the owner 2026-10-30, "proceed to D1 enhanced"):** the ring opens around the star (true gap instead of a navy disc), a faint glow behind the A, heavier strokes, and a separate **small-size master** (16/24/32 px) with an even bolder A, crossbar and ring because fine detail disappears at tiny sizes.
+- **Note:** the concepts are hand-authored SVG, not output of an image generator; the plan's generation prompt (§1.1) was used as the brief.

@@ -12,7 +12,7 @@
 - [ ] P01-OPEN-05 Repo-derived state table of this checklist in the Opening Report
 
 ## Brand
-- [ ] P01-01 Logo concept generated from the plan §1.1 prompt; master saved to assets/branding/source/
+- [x] P01-01 Logo concept generated from the plan §1.1 prompt; master saved to assets/branding/source/ — evidence: owner chose D1 and approved the enhanced version 2026-10-30 (D-024); masters assets/branding/source/ad-astra-icon-master.svg and ad-astra-icon-small.svg (hand-authored SVG, not AI-generated); concept sheets in assets/branding/source/concepts/
 - [ ] P01-02 Exports: 16, 32, 48, 256 PNG and multi-resolution .ico — assets/branding/exports/
 - [ ] P01-03 Legibility check at real size on light and dark surfaces (screenshot evidence)
 - [ ] P01-04 Asset source, steps and file names recorded in assets/branding/README.md

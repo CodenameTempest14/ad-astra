@@ -2,33 +2,32 @@
 
 > Overwritten at every session close. The first file read in every session (CLAUDE.md).
 
-**Current phase:** P00 — Kickoff, Requirements, and Working System
-**Last session:** 2026-10-29 s02 — [close report](../phase-reports/phase-00-kickoff/sessions/2026-10-29_s02_CLOSE.md)
-**Branches:** owner works on `codenametempest14`, Shem Dumpor on `shem-dumpor`; `main` stays at the first push (`65d6d83`) until a reviewed merge. See `git log -1` for the latest commit.
+**Current phase:** P00 — Kickoff, Requirements, and Working System (closing). Phase 1 work has started in parallel at the owner's request.
+**Last session:** 2026-10-30 s03 — [close report](../phase-reports/phase-00-kickoff/sessions/2026-10-30_s03_CLOSE.md)
+**Branches:** owner works on `codenametempest14`, Shem Dumpor on `shem-dumpor`; `main` stays at the first push (`65d6d83`) until a reviewed merge (Shem reviews the owner's work). See `git log -1` for the latest commit.
 **Status line:** run `node tools/phase-report.mjs` · progress table: `node tools/phase-report.mjs --md`
+**Phase builder:** owner only (Shem reviews; he pushes only when the owner asks). Ask again at the start of every session.
 
 ## Recommended model for the next session (MDL-1)
-**Sonnet 5.5**, because the next session is the owner reviewing documents (the two workflow drafts, the theme list, the collaboration protocol with Shem), closing Phase 0, and starting Phase 1 (logo brief, DESIGN.md, a non-text contrast check). That is conversation, documents and small scripts, with no architecture or security design. Switch to **Opus 5.5** when Phase 2 implementation starts (solution, WebView2 host, SQLite, tests, theme engine).
+**Sonnet 5.5**, because the work is the hook check, closing Phase 0, writing the Phase 1 opening documents, and the logo exports (scripted image conversion). Switch to **Opus 5.5** at P01-18 (WPF + Blazor spike) or when Phase 2 starts.
 
 ## Next concrete step
-0. **First thing in the next session (P00-29):** check that the every-turn gates hook fired: the agent should see the gates text (progress table + continuation prompt rule, own-branch pushes, UI-GATE) at the start of the first reply. If it did not, the hook is broken (check `.claude/settings.json` and that `bash` runs on this PC) and fixing it comes before anything else. Only then continue with the steps below.
-1. Owner reads `documentation/specs/teacher-workflow.md` and `student-workflow.md` and answers the 4 `(?)` questions (P00-14, P00-15).
-2. ~~Theme list~~ approved by the owner 2026-10-29 (D-022, P01-23 done).
-3. Collaboration with Shem agreed by the owner (D-022, P00-28 done). Still to do: write the agreed work split and merge reviewer into `documentation/guides/COLLABORATION.md`, and confirm Shem has GitHub access (repository Settings → Collaborators).
-4. Owner approves the template inventory (P00-18) and does the walkthrough (P00-27); then Phase 0 closing report and sign-off.
-5. Then Phase 1: logo concept and icon exports, `DESIGN.md`, 1920×1080 captures, the non-text contrast check (P01-24).
+0. **First thing (P00-29):** the agent must say which rules the every-turn gates hook sent (progress table + continuation prompt, own-branch pushes, UI-GATE, ask-before-merge-to-main, phase-owner question). If the agent cannot quote them, the hook is not running in this VS Code environment: the owner checks `/hooks`; then fix, or rule P00-29 out with a reason.
+1. The enhanced D1 logo is approved (P01-01 done; masters in `assets/branding/source/`). Next: P01-02 exports (16/32/48/256 PNG + .ico; small-size master for 16–32), P01-03 legibility check, P01-04 README.
+2. Close Phase 0: P00-CLOSE-01…05 (closing report, owner sign-off, tag `phase-00-complete` with approval; open the pull request into `main` for Shem's review, ask first). Then write the Phase 1 Opening Report and brief (P01-OPEN-02…05).
+3. Owner adds Shem's GitHub username to COLLABORATION.md and adds him as a collaborator.
+4. Then remaining Phase 1: P01-14/15 missing section templates and states, P01-18 WPF+Blazor spike (Opus), P01-19/20 compare script and PASS_REPORT.
 
 ## Waiting on the owner
-- Answer the 4 `(?)` questions in the two workflow drafts.
-- Review the template registry (60 templates) and approve the inventory.
-- Write the agreed work split and merge reviewer into COLLABORATION.md (owner says the protocol with Shem is agreed, D-022); confirm Shem has GitHub access.
-- (Done 2026-10-29: the 4 themes are approved, D-022.)
+- Push of the unpushed commits to `codenametempest14` (every push needs a yes, own branch only).
+- Phase 0 sign-off and tag; `main` merge only via a reviewed pull request.
+- Shem's GitHub username and collaborator access.
 - 10 held features (V1.1/Later) are revisited after the coding portion; multiple choice is deferred.
-- Every push needs the owner's yes, to the owner's own branch only.
 
 ## Decisions so far (all in DECISIONS.md)
-D-001…D-006 setup · D-007 admin = teacher + admin role · D-008 classroom network in V1 (Phase 6) · D-009 no multiple choice yet · D-010 integrity = evidence + flags · D-011 free Run on visible tests · D-012 partial credit by weight · D-013 auto-submit at zero · D-014 practical isolation · D-015 screen sizes 1366×768 + 1920×1080 · D-016 keep per term · D-017 (superseded) · D-018 51 features approved, 10 held · **D-019 exports .xlsx and .csv** · **D-020 multiple themes, each verified against the templates** · **D-021 two people, own-branch pushes only**.
+D-001…D-006 setup · D-007 admin = teacher + admin role · D-008 classroom network in V1 · D-009 no multiple choice yet · D-010 integrity = evidence + flags · D-011 free Run on visible tests · D-012 partial credit by weight · D-013 auto-submit at zero · D-014 practical isolation · D-015 screen sizes · D-016 keep per term · D-018 51 features approved, 10 held · D-019 exports .xlsx and .csv · D-020 multiple themes · D-021 two people, own-branch pushes · D-022 themes approved, collaboration agreed · **D-023 fonts Inter + JetBrains Mono** · **D-024 logo direction D1**. New feature approved: F-ADM-17 term-end backup reminder.
 
 ## Parking lot (out of scope — not being pursued)
 - `teacher-assessment-preview` template: planned to reuse `student-coding-workspace` with a preview banner; confirm in P05.
 - PDF reports (not chosen in D-019).
+- Slider (`.form-range`) track contrast: checked as a component in Phase 2.
