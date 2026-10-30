@@ -636,5 +636,126 @@
     "title": "Dropzone - Tabler - Premium and Open Source dashboard template with responsive and high quality UI.",
     "status": "OK",
     "capturedAt": "2026-10-29T10:03:11.297Z"
+  },
+  {
+    "id": "admin-overview",
+    "candidate": "tabler",
+    "state": "default",
+    "url": "https://preview.tabler.io/index.html?theme=dark",
+    "file": "design/templates/pages/admin-overview/candidates/tabler/default__dark__1366x768.png",
+    "httpStatus": 200,
+    "title": "Dashboard - Tabler - Premium and Open Source dashboard template with responsive and high quality UI.",
+    "status": "OK",
+    "capturedAt": "2026-10-29T10:43:29.922Z"
+  },
+  {
+    "id": "admin-class-import",
+    "candidate": "tabler",
+    "state": "default",
+    "url": "https://preview.tabler.io/wizard.html?theme=dark",
+    "file": "design/templates/pages/admin-class-import/candidates/tabler/default__dark__1366x768.png",
+    "httpStatus": 200,
+    "title": "Wizard - Tabler - Premium and Open Source dashboard template with responsive and high quality UI.",
+    "status": "OK",
+    "capturedAt": "2026-10-29T10:43:33.299Z"
+  },
+  {
+    "id": "admin-academic-structure",
+    "candidate": "tabler",
+    "state": "default",
+    "url": "https://preview.tabler.io/datatables.html?theme=dark",
+    "file": "design/templates/pages/admin-academic-structure/candidates/tabler/default__dark__1366x768.png",
+    "httpStatus": 200,
+    "title": "Datatables - Tabler - Premium and Open Source dashboard template with responsive and high quality UI.",
+    "status": "OK",
+    "capturedAt": "2026-10-29T10:44:31.986Z"
+  },
+  {
+    "id": "admin-system-settings",
+    "candidate": "tabler",
+    "state": "default",
+    "url": "https://preview.tabler.io/settings.html?theme=dark",
+    "file": "design/templates/pages/admin-system-settings/candidates/tabler/default__dark__1366x768.png",
+    "httpStatus": 200,
+    "title": "Settings - Tabler - Premium and Open Source dashboard template with responsive and high quality UI.",
+    "status": "OK",
+    "capturedAt": "2026-10-29T10:43:40.386Z"
+  },
+  {
+    "id": "admin-integrity-centre",
+    "candidate": "tabler",
+    "state": "default",
+    "url": "https://preview.tabler.io/activity.html?theme=dark",
+    "file": "design/templates/pages/admin-integrity-centre/candidates/tabler/default__dark__1366x768.png",
+    "httpStatus": 200,
+    "title": "Activity - Tabler - Premium and Open Source dashboard template with responsive and high quality UI.",
+    "status": "OK",
+    "capturedAt": "2026-10-29T10:43:44.120Z"
+  },
+  {
+    "id": "admin-audit-log",
+    "candidate": "tabler",
+    "state": "default",
+    "url": "https://preview.tabler.io/logs.html?theme=dark",
+    "file": "design/templates/pages/admin-audit-log/candidates/tabler/default__dark__1366x768.png",
+    "httpStatus": 200,
+    "title": "Logs - Tabler - Premium and Open Source dashboard template with responsive and high quality UI.",
+    "status": "OK",
+    "capturedAt": "2026-10-29T10:43:47.635Z"
+  },
+  {
+    "id": "admin-live-monitor",
+    "candidate": "tabler",
+    "state": "default",
+    "url": "https://preview.tabler.io/datatables.html?theme=dark",
+    "file": "design/templates/pages/admin-live-monitor/candidates/tabler/default__dark__1366x768.png",
+    "httpStatus": 200,
+    "title": "Datatables - Tabler - Premium and Open Source dashboard template with responsive and high quality UI.",
+    "status": "OK",
+    "capturedAt": "2026-10-29T10:44:35.332Z"
+  },
+  {
+    "id": "admin-lab-pcs",
+    "candidate": "tabler",
+    "state": "default",
+    "url": "https://preview.tabler.io/users.html?theme=dark",
+    "file": "design/templates/pages/admin-lab-pcs/candidates/tabler/default__dark__1366x768.png",
+    "httpStatus": 200,
+    "title": "Users list - Tabler - Premium and Open Source dashboard template with responsive and high quality UI.",
+    "status": "OK",
+    "capturedAt": "2026-10-29T10:43:54.944Z"
+  },
+  {
+    "id": "teacher-question-bank",
+    "candidate": "tabler",
+    "state": "default",
+    "url": "https://preview.tabler.io/search-results.html?theme=dark",
+    "file": "design/templates/pages/teacher-question-bank/candidates/tabler/default__dark__1366x768.png",
+    "httpStatus": 200,
+    "title": "Search results - Tabler - Premium and Open Source dashboard template with responsive and high quality UI.",
+    "status": "OK",
+    "capturedAt": "2026-10-29T10:44:00.393Z"
+  },
+  {
+    "id": "teacher-clarifications-inbox",
+    "candidate": "tabler",
+    "state": "default",
+    "url": "https://preview.tabler.io/email-inbox.html?theme=dark",
+    "file": "design/templates/pages/teacher-clarifications-inbox/candidates/tabler/default__dark__1366x768.png",
+    "httpStatus": 200,
+    "title": "Email inbox - Tabler - Premium and Open Source dashboard template with responsive and high quality UI.",
+    "status": "OK",
+    "capturedAt": "2026-10-29T10:44:05.103Z"
+  },
+  {
+    "id": "student-clarification-panel",
+    "candidate": "tabler",
+    "state": "default",
+    "url": "https://preview.tabler.io/chat.html?theme=dark",
+    "file": "design/templates/sections/student-clarification-panel/candidates/tabler/default__dark__1366x768.png",
+    "httpStatus": 200,
+    "title": "Chat - Tabler - Premium and Open Source dashboard template with responsive and high quality UI.",
+    "status": "OK",
+    "capturedAt": "2026-10-29T10:44:11.589Z"
   }
 ]

@@ -2,49 +2,32 @@
 
 > Overwritten at every session close. The first file read in every session (CLAUDE.md).
 
-**Current phase:** P00 — Kickoff, Requirements, and Working System
-**Last session:** 2026-10-29 s01 — [close report](../phase-reports/phase-00-kickoff/sessions/2026-10-29_s01_CLOSE.md)
-**Branch / last commit:** `main` (local only, not pushed) — see `git log -1`
-**Status line:** run `node tools/phase-report.mjs`
+**Current phase:** P00 — Kickoff, Requirements, and Working System (closing). Phase 1 work has started in parallel at the owner's request.
+**Last session:** 2026-10-30 s03 — [close report](../phase-reports/phase-00-kickoff/sessions/2026-10-30_s03_CLOSE.md)
+**Branches:** owner works on `codenametempest14`, Shem Dumpor on `shem-dumpor`; `main` stays at the first push (`65d6d83`) until a reviewed merge (Shem reviews the owner's work). See `git log -1` for the latest commit.
+**Status line:** run `node tools/phase-report.mjs` · progress table: `node tools/phase-report.mjs --md`
+**Phase builder:** owner only (Shem reviews; he pushes only when the owner asks). Ask again at the start of every session.
 
 ## Recommended model for the next session (MDL-1)
-**Sonnet 5.5**, because the next session is owner Q&A (approving or rejecting the 58 remaining
-features and answering the remaining Phase 0 questions) and writing the teacher and student workflow specs. That is
-conversation and documentation, with no new architecture or security design, so Sonnet is fast and cheaper
-with no loss in quality. Switch to **Opus 5.5** when Phase 2 implementation starts, or if a decision turns
-into design work.
+**Sonnet 5.5**, because the work is the hook check, closing Phase 0, writing the Phase 1 opening documents, and the logo exports (scripted image conversion). Switch to **Opus 5.5** at P01-18 (WPF + Blazor spike) or when Phase 2 starts.
 
 ## Next concrete step
-Owner: approve the first push to GitHub (P00-26). Before pushing, the agent runs
-the secret sweep and the remote visibility check (SEC-6), then `git lfs install`
-and pushes. After that: resolve open decisions P00-05, P00-07 … P00-13 with the owner.
-
-## Blockers (owner can unblock)
-- P00-26 Push to GitHub — needs owner approval. **Owner rule: ask before EVERY push**, even if approved before.
-- Owner asked to confirm the system's purpose before Phase 0 questions (agent's summary given 2026-10-29; awaiting confirmation).
-
-## Resolved this session
-- .NET SDK 10.0.403 installed (P02-OPEN-06 done; P01-18 unblocked).
-
-## Done out of order (owner-directed, 2026-10-29)
-Phase 1 template acquisition was done during Phase 0 because the owner asked for it:
-45 elements, 99 images, all Approved — `design/TEMPLATE_REGISTRY.md`.
-
-## Answered by the owner (2026-10-29)
-- Q1 admin = teacher + admin role (D-007) · Q2 classroom network in V1 → new Phase 6, phases renumbered 0–9 (D-008)
-- Q3 multiple choice not yet (D-009) · Q4 integrity = evidence + flags (D-010)
-- Phase 6 templates captured and approved (4 new: lab-connect-to-host, connection-status-indicator, host-network-settings, package-transfer-dialog)
+0. ~~P00-29 hook check~~ **Done in s04 (2026-10-30):** the agent quoted all 12 hook lines and they match `.claude/hooks/ad-astra-gates.sh`. Evidence is on the checklist line. (The s04 Close Report is not written yet.)
+1. The enhanced D1 logo is approved (P01-01 done; masters in `assets/branding/source/`). Next: P01-02 exports (16/32/48/256 PNG + .ico; small-size master for 16–32), P01-03 legibility check, P01-04 README.
+2. Close Phase 0: P00-CLOSE-01…05 (closing report, owner sign-off, tag `phase-00-complete` with approval; open the pull request into `main` for Shem's review, ask first). Then write the Phase 1 Opening Report and brief (P01-OPEN-02…05).
+3. Owner adds Shem's GitHub username to COLLABORATION.md and adds him as a collaborator.
+4. Then remaining Phase 1: P01-14/15 missing section templates and states, P01-18 WPF+Blazor spike (Opus), P01-19/20 compare script and PASS_REPORT.
 
 ## Waiting on the owner
-- **Approve or reject the 58 remaining proposed features** in documentation/specs/FEATURES.md. No new feature is planned, templated or built without approval.
-- Review documentation/guides/CLASSROOM-SETUP.md.
-- Template work for unapproved admin pages stays **paused**.
+- Push of the unpushed commits to `codenametempest14` (every push needs a yes, own branch only).
+- Phase 0 sign-off and tag; `main` merge only via a reviewed pull request.
+- Shem's GitHub username and collaborator access.
+- 10 held features (V1.1/Later) are revisited after the coding portion; multiple choice is deferred.
 
-## Pending owner decisions
-P00-05 viewports/themes · P00-08 run-before-submit and
-feedback · P00-09 scoring · P00-10 timer rules · P00-11 retention · P00-12 isolation
-strength · P00-13 export formats.
+## Decisions so far (all in DECISIONS.md)
+D-001…D-006 setup · D-007 admin = teacher + admin role · D-008 classroom network in V1 · D-009 no multiple choice yet · D-010 integrity = evidence + flags · D-011 free Run on visible tests · D-012 partial credit by weight · D-013 auto-submit at zero · D-014 practical isolation · D-015 screen sizes · D-016 keep per term · D-018 51 features approved, 10 held · D-019 exports .xlsx and .csv · D-020 multiple themes · D-021 two people, own-branch pushes · D-022 themes approved, collaboration agreed · **D-023 fonts Inter + JetBrains Mono** · **D-024 logo direction D1**. New feature approved: F-ADM-17 term-end backup reminder.
 
 ## Parking lot (out of scope — not being pursued)
-- Light theme (pending P00-05).
 - `teacher-assessment-preview` template: planned to reuse `student-coding-workspace` with a preview banner; confirm in P05.
+- PDF reports (not chosen in D-019).
+- Slider (`.form-range`) track contrast: checked as a component in Phase 2.

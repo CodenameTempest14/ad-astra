@@ -57,6 +57,13 @@ documentation/guides/CLASSROOM-SETUP.md.
 - [ ] P06-23 Real-hardware dry run on at least 2 physical PCs (CLASSROOM-SETUP.md §3.5) with evidence
 - [ ] P06-24 `/security-review` on the network branch (auth, transport, hidden-test leakage)
 
+## Approved features to build (documentation/specs/FEATURES.md, approved 2026-10-29)
+- [ ] P06-F01 F-ADM-14 Live exam monitor — acceptance test written first
+- [ ] P06-F02 F-ADM-15 Lab/host management — acceptance test written first
+- [ ] P06-F03 F-PLT-03 USB fallback — acceptance test written first
+- [ ] P06-F04 F-PLT-04 Classroom network mode — acceptance test written first
+- [ ] P06-F05 F-TCH-17 Clarifications — acceptance test written first
+
 ## Closing
 - [ ] P06-CLOSE-01 Full Playwright regression, no Mismatch; baselines approved
 - [ ] P06-CLOSE-02 `dotnet test` output (incl. integration + load) in Closing Report

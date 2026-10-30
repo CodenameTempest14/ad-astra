@@ -42,6 +42,10 @@ Matrix per language: valid program · compile/syntax error · runtime error · c
 ## UI
 - [ ] P03-UI-01 (Only if built) `dev-execution-sandbox` page — template Approved first, then Playwright pass no Mismatch — else RULED
 
+## Approved features to build (documentation/specs/FEATURES.md, approved 2026-10-29)
+- [ ] P03-F01 F-PLT-01 Five languages via adapters; per-language limits — acceptance test written first
+- [ ] P03-F02 F-TCH-07 Output comparison policy per test (exact / ignore trailing whitespace… — acceptance test written first
+
 ## Closing
 - [ ] P03-CLOSE-01 Regression pass of Phase 2 baselines, no Mismatch
 - [ ] P03-CLOSE-02 `dotnet test` output (full matrix) in Closing Report

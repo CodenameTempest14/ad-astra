@@ -30,6 +30,9 @@
 - [ ] P09-22 Toolchain dependencies clearly communicated
 - [ ] P09-23 Owner diagnoses a common setup failure using the docs
 
+## Approved features to build (documentation/specs/FEATURES.md, approved 2026-10-29)
+- [ ] P09-F01 F-PLT-02 First-run setup wizard (creates the first Administrator) — acceptance test written first
+
 ## Closing
 - [ ] P09-CLOSE-01 Full Playwright regression **on the installed build**, no Mismatch
 - [ ] P09-CLOSE-02 `dotnet test` output in Closing Report

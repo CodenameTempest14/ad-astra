@@ -1,0 +1,222 @@
+{
+  "$comment": "Source of truth for Ad Astra themes (owner decision D-020). Values are Tabler --tblr-* CSS variables so each theme can be applied to the real templates and checked: `cd tests/ui-visual && npm run theme-check`. In Phase 2 the same values become the CSS files of the app's theme engine. Rule that makes themes safe: DARK themes use BRIGHT fills with DARK text (fg); LIGHT themes use DARK fills with WHITE text (fg). 'semantic' entries expand to --tblr-<name>, --tblr-<name>-rgb and --tblr-<name>-fg. The starter set is the agent's proposal; the owner may rename, remove or add themes.",
+  "default": "astra-dark",
+  "themes": {
+    "astra-dark": {
+      "label": "Ad Astra Dark",
+      "purpose": "Default. Deep navy with electric-blue and cyan accents (MASTER-PLAN §1.1).",
+      "base": "dark",
+      "monacoTheme": "vs-dark",
+      "vars": {
+        "--tblr-body-bg": "#0b1220",
+        "--tblr-body-color": "#e6edf7",
+        "--tblr-bg-surface": "#121c30",
+        "--tblr-bg-surface-secondary": "#0f1829",
+        "--tblr-bg-surface-tertiary": "#17243b",
+        "--tblr-border-color": "#2a3b57",
+        "--tblr-secondary-color": "#a9b8cf",
+        "--tblr-tertiary-color": "#93a5c2",
+        "--tblr-muted": "#9aabc6",
+        "--tblr-emphasis-color": "#ffffff",
+        "--tblr-link-color": "#7db1ff",
+        "--tblr-link-hover-color": "#a9ccff",
+        "--aa-control-border": "#6f83a3",
+        "--aa-focus": "#6cb2ff"
+      },
+      "semantic": {
+        "primary": {
+          "fill": "#5b9bff",
+          "fg": "#07101f"
+        },
+        "secondary": {
+          "fill": "#a9b8cf",
+          "fg": "#0b1220"
+        },
+        "success": {
+          "fill": "#3dd68c",
+          "fg": "#0b1220"
+        },
+        "warning": {
+          "fill": "#fbbf24",
+          "fg": "#0b1220"
+        },
+        "danger": {
+          "fill": "#f87171",
+          "fg": "#0b1220"
+        },
+        "info": {
+          "fill": "#38bdf8",
+          "fg": "#0b1220"
+        }
+      },
+      "extraCss": ".alert-important, .alert-important :is(.alert-heading,.alert-description,.alert-title,a,li), .page-item.active .page-link { color: #0b1220 !important; } .form-control, .form-select, .form-check-input, .form-selectgroup-label, .input-group-flat, .input-group-flat .input-group-text, .number-input, textarea.form-control { border-color: var(--aa-control-border) !important; } :focus-visible, .form-control:focus, .form-select:focus, .btn:focus-visible { outline: 2px solid var(--aa-focus) !important; outline-offset: 2px !important; } .form-control.is-valid, .form-select.is-valid { border-color: var(--tblr-success) !important; } .form-control.is-invalid, .form-select.is-invalid { border-color: var(--tblr-danger) !important; }"
+    },
+    "astra-light": {
+      "label": "Ad Astra Light",
+      "purpose": "Bright rooms and printing. Same blue accent on white surfaces.",
+      "base": "light",
+      "monacoTheme": "vs",
+      "vars": {
+        "--tblr-body-bg": "#f3f6fb",
+        "--tblr-body-color": "#14213d",
+        "--tblr-bg-surface": "#ffffff",
+        "--tblr-bg-surface-secondary": "#f8fafd",
+        "--tblr-bg-surface-tertiary": "#edf2f9",
+        "--tblr-border-color": "#d3dce9",
+        "--tblr-secondary-color": "#4b5b76",
+        "--tblr-tertiary-color": "#5f6f89",
+        "--tblr-muted": "#566681",
+        "--tblr-emphasis-color": "#0a1226",
+        "--tblr-link-color": "#1d4ed8",
+        "--tblr-link-hover-color": "#1e3a8a",
+        "--aa-control-border": "#728199",
+        "--aa-focus": "#1a56db"
+      },
+      "semantic": {
+        "primary": {
+          "fill": "#1d4ed8",
+          "fg": "#ffffff"
+        },
+        "secondary": {
+          "fill": "#566681",
+          "fg": "#ffffff"
+        },
+        "success": {
+          "fill": "#15803d",
+          "fg": "#ffffff"
+        },
+        "warning": {
+          "fill": "#b45309",
+          "fg": "#ffffff"
+        },
+        "danger": {
+          "fill": "#b91c1c",
+          "fg": "#ffffff"
+        },
+        "info": {
+          "fill": "#0369a1",
+          "fg": "#ffffff"
+        }
+      },
+      "extraCss": ".form-control, .form-select, .form-check-input, .form-selectgroup-label, .input-group-flat, .input-group-flat .input-group-text, .number-input, textarea.form-control { border-color: var(--aa-control-border) !important; } :focus-visible, .form-control:focus, .form-select:focus, .btn:focus-visible { outline: 2px solid var(--aa-focus) !important; outline-offset: 2px !important; } .form-control.is-valid, .form-select.is-valid { border-color: var(--tblr-success) !important; } .form-control.is-invalid, .form-select.is-invalid { border-color: var(--tblr-danger) !important; }"
+    },
+    "high-contrast-dark": {
+      "label": "High Contrast Dark",
+      "purpose": "Accessibility (F-STU-12). Pure black, white text, yellow accent, white borders.",
+      "base": "dark",
+      "monacoTheme": "hc-black",
+      "vars": {
+        "--tblr-body-bg": "#000000",
+        "--tblr-body-color": "#ffffff",
+        "--tblr-bg-surface": "#0a0a0a",
+        "--tblr-bg-surface-secondary": "#000000",
+        "--tblr-bg-surface-tertiary": "#1a1a1a",
+        "--tblr-border-color": "#ffffff",
+        "--tblr-secondary-color": "#f2f2f2",
+        "--tblr-tertiary-color": "#e0e0e0",
+        "--tblr-muted": "#e6e6e6",
+        "--tblr-emphasis-color": "#ffffff",
+        "--tblr-link-color": "#8ad4ff",
+        "--tblr-link-hover-color": "#c2e8ff",
+        "--tblr-border-color-translucent": "#ffffff",
+        "--aa-control-border": "#ffffff",
+        "--aa-focus": "#ffd400"
+      },
+      "semantic": {
+        "primary": {
+          "fill": "#ffe600",
+          "fg": "#000000"
+        },
+        "secondary": {
+          "fill": "#f2f2f2",
+          "fg": "#000000"
+        },
+        "success": {
+          "fill": "#4ade80",
+          "fg": "#000000"
+        },
+        "warning": {
+          "fill": "#ffd54a",
+          "fg": "#000000"
+        },
+        "danger": {
+          "fill": "#ff8a80",
+          "fg": "#000000"
+        },
+        "info": {
+          "fill": "#67e8f9",
+          "fg": "#000000"
+        }
+      },
+      "extraCss": ".alert-important, .alert-important :is(.alert-heading,.alert-description,.alert-title,a,li), .page-item.active .page-link { color: #000000 !important; } .form-control, .form-select, .form-check-input, .form-selectgroup-label, .input-group-flat, .input-group-flat .input-group-text, .number-input, textarea.form-control { border-color: var(--aa-control-border) !important; } :focus-visible, .form-control:focus, .form-select:focus, .btn:focus-visible { outline: 2px solid var(--aa-focus) !important; outline-offset: 2px !important; } .form-control.is-valid, .form-select.is-valid { border-color: var(--tblr-success) !important; } .form-control.is-invalid, .form-select.is-invalid { border-color: var(--tblr-danger) !important; }"
+    },
+    "high-contrast-light": {
+      "label": "High Contrast Light",
+      "purpose": "Accessibility (F-STU-12). White, black text, deep blue accent, black borders.",
+      "base": "light",
+      "monacoTheme": "hc-light",
+      "vars": {
+        "--tblr-body-bg": "#ffffff",
+        "--tblr-body-color": "#000000",
+        "--tblr-bg-surface": "#ffffff",
+        "--tblr-bg-surface-secondary": "#f5f5f5",
+        "--tblr-bg-surface-tertiary": "#ebebeb",
+        "--tblr-border-color": "#000000",
+        "--tblr-secondary-color": "#1a1a1a",
+        "--tblr-tertiary-color": "#333333",
+        "--tblr-muted": "#262626",
+        "--tblr-emphasis-color": "#000000",
+        "--tblr-link-color": "#0020c2",
+        "--tblr-link-hover-color": "#00127a",
+        "--tblr-border-color-translucent": "#000000",
+        "--aa-control-border": "#000000",
+        "--aa-focus": "#0000cc"
+      },
+      "semantic": {
+        "primary": {
+          "fill": "#0020c2",
+          "fg": "#ffffff"
+        },
+        "secondary": {
+          "fill": "#1a1a1a",
+          "fg": "#ffffff"
+        },
+        "success": {
+          "fill": "#006b2e",
+          "fg": "#ffffff"
+        },
+        "warning": {
+          "fill": "#7a4a00",
+          "fg": "#ffffff"
+        },
+        "danger": {
+          "fill": "#a60000",
+          "fg": "#ffffff"
+        },
+        "info": {
+          "fill": "#00537a",
+          "fg": "#ffffff"
+        }
+      },
+      "extraCss": ".form-control, .form-select, .form-check-input, .form-selectgroup-label, .input-group-flat, .input-group-flat .input-group-text, .number-input, textarea.form-control { border-color: var(--aa-control-border) !important; } :focus-visible, .form-control:focus, .form-select:focus, .btn:focus-visible { outline: 2px solid var(--aa-focus) !important; outline-offset: 2px !important; } .form-control.is-valid, .form-select.is-valid { border-color: var(--tblr-success) !important; } .form-control.is-invalid, .form-select.is-invalid { border-color: var(--tblr-danger) !important; }"
+    }
+  },
+  "samplePages": [
+    "sign-in.html",
+    "index.html",
+    "datatables.html",
+    "buttons.html",
+    "badges.html",
+    "form-elements.html",
+    "alerts.html",
+    "modals.html",
+    "settings.html",
+    "wizard.html"
+  ],
+  "thresholds": {
+    "normalText": 4.5,
+    "largeText": 3,
+    "nonText": 3,
+    "note": "WCAG 2.1 AA. High-contrast themes aim for AAA (7:1) on body text."
+  }
+}

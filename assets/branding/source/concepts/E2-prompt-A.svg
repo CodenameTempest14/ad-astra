@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16233f"/><stop offset="1" stop-color="#0b1220"/></linearGradient>
+<linearGradient id="disc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#4f8cff"/></linearGradient></defs>
+<rect width="256" height="256" rx="56" fill="url(#bg)"/>
+<path d="M44 196 Q128 236 212 196" fill="none" stroke="#22d3ee" stroke-width="10" stroke-linecap="round"/>
+<path d="M66 186 L128 66 L190 186" fill="none" stroke="#eaf2ff" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M112 130 L140 152 L112 174" fill="none" stroke="#4f8cff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="128.0,16.0 132.9,35.1 152.0,40.0 132.9,44.9 128.0,64.0 123.1,44.9 104.0,40.0 123.1,35.1" fill="#22d3ee"/>
+</svg>

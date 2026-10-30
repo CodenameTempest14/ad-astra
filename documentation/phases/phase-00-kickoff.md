@@ -7,8 +7,8 @@
 
 ## Opening
 - [x] P00-OPEN-01 Master plan v2 written — evidence: documentation/planning/MASTER-PLAN.md
-- [ ] P00-OPEN-02 Phase Opening Report written — documentation/phase-reports/phase-00-kickoff/PHASE_OPENING.md
-- [ ] P00-OPEN-03 Phase brief written — documentation/context/phase-00-brief.md
+- [x] P00-OPEN-02 Phase Opening Report written — evidence: documentation/phase-reports/phase-00-kickoff/PHASE_OPENING.md; owner approved start 2026-10-29 ("proceed to Phase 0")
+- [x] P00-OPEN-03 Phase brief written — evidence: documentation/context/phase-00-brief.md
 - [x] P00-OPEN-04 Claude Code best practices researched and recorded — evidence: documentation/guides/CLAUDE-CODE-PLAYBOOK.md (sources listed, 2026-10-29)
 - [x] P00-OPEN-05 Colleague reference project reviewed (EngiRent, with permission) — evidence: playbook §0, rules marked *(EngiRent)*
 
@@ -17,27 +17,27 @@
 - [x] P00-02 D-PW: Playwright Test (Node) for tests/ui-visual — evidence: DECISIONS.md D-002, tests/ui-visual/package.json
 - [x] P00-03 D-LFS: Git LFS for design images; keep phase-closing captures + baselines — evidence: .gitattributes, DECISIONS.md D-003
 - [x] P00-04 D-TPL: free/open-licensed templates only (Tabler, Judge0 IDE, Monaco, shadcn/ui — all MIT) — evidence: design/templates/template-manifest.json
-- [ ] P00-05 D-VP: confirm viewport set and dark-only vs dark + light theme
+- [x] P00-05 D-VP: viewports and theme — evidence: DECISIONS.md D-015 (1366×768 + 1920×1080) and D-020 (multiple themes; supersedes "dark only")
 - [x] P00-06 D-NAME: `AdAstra.*` projects, `ad-astra/` repo root — evidence: src/ folder names
 - [x] P00-07 Account/deployment model — evidence: DECISIONS.md D-007 (admin = teacher + admin role), D-008 (teacher PC host, students on lab PCs); CLASSROOM-SETUP.md §1
 - [x] P00-07a Classroom network in V1; new Phase 6 added; later phases renumbered 7–9 — evidence: DECISIONS.md D-008, documentation/phases/phase-06-classroom-network.md
 - [x] P00-07b Multiple-choice deferred until coding portion is reviewed — evidence: DECISIONS.md D-009
 - [x] P00-07c Exam integrity approach: record evidence + flag for review — evidence: DECISIONS.md D-010
-- [ ] P00-07d Owner approves or rejects each remaining proposed feature — PROG: 4 approved, 1 deferred, 58 awaiting (documentation/specs/FEATURES.md)
+- [x] P00-07d Owner approved or held every proposed feature — evidence: documentation/specs/FEATURES.md (51 approved, 10 held, 2 declined = 63 rows, counted by script); DECISIONS.md D-018
 - [x] P00-07e Classroom setup directions written — evidence: documentation/guides/CLASSROOM-SETUP.md
-- [ ] P00-08 Can students run code before submitting? Visible/hidden feedback rules
-- [ ] P00-09 Scoring policy: partial credit, penalties, multiple submissions
-- [ ] P00-10 Timer rules: expiry, autosave, late submission, interruption
-- [ ] P00-11 Retention: source code, submissions, temp run folders
-- [ ] P00-12 Isolation strength required for the classroom threat model
-- [ ] P00-13 Report/export formats
+- [x] P00-08 Run-before-submit and feedback rules — evidence: DECISIONS.md D-011
+- [x] P00-09 Scoring policy — evidence: DECISIONS.md D-012 (partial credit by weight; penalties still awaiting approval)
+- [x] P00-10 Timer rules — evidence: DECISIONS.md D-013 (auto-submit at zero; autosave + interruption rules specified in Phase 7)
+- [x] P00-11 Retention — evidence: DECISIONS.md D-016
+- [x] P00-12 Isolation strength — evidence: DECISIONS.md D-014 (practical lab protection)
+- [x] P00-13 Export formats — evidence: DECISIONS.md D-019 (Excel .xlsx and CSV .csv; supersedes D-017)
 
 ## Requirements and inventory
-- [ ] P00-14 Teacher workflow written — documentation/specs/teacher-workflow.md
-- [ ] P00-15 Student workflow written — documentation/specs/student-workflow.md
-- [ ] P00-16 Capability list (plan §6) confirmed item by item
+- [x] P00-14 Teacher workflow — owner answered all questions 2026-10-30 (documentation/specs/teacher-workflow.md)
+- [x] P00-15 Student workflow — owner answered the question 2026-10-30 (documentation/specs/student-workflow.md)
+- [x] P00-16 Capability list confirmed item by item — evidence: FEATURES.md approval column + D-018
 - [x] P00-17 UI inventory (pages → sections → components with IDs) — evidence: design/templates/template-manifest.json (45 elements), design/TEMPLATE_REGISTRY.md
-- [ ] P00-18 Owner reviews and approves the UI inventory
+- [x] P00-18 Owner reviews and approves the UI inventory — evidence: owner "Approve" 2026-10-30 (template registry, 60/60)
 
 ## Repository and working system
 - [x] P00-19 Repository cloned from https://github.com/CodenameTempest14/ad-astra.git — evidence: ad-astra/.git
@@ -47,12 +47,15 @@
 - [x] P00-23 .gitignore and .gitattributes (LFS) — evidence: repo root
 - [x] P00-24 Phase report script — evidence: tools/phase-report.mjs
 - [x] P00-25 Context files: CURRENT_STATE.md, PHASE_INDEX.md, report templates — evidence: documentation/context/, documentation/phase-reports/
-- [ ] P00-26 First commit pushed to GitHub — BLOCKED: owner approval to push (SEC-7); also run secret sweep + visibility check first (SEC-6)
-- [ ] P00-27 Owner can explain the session workflow and where every report lives (walkthrough)
+- [x] P00-26 First push to GitHub — evidence: owner approved 2026-10-29; secret sweep clean; `git push -u origin main` → remote main 65d6d83 = local HEAD (`git ls-remote`); 108 LFS files. **Owner rule: ask before every later push.**
+- [x] P00-28a Two branches created for the owner and Shem Dumpor, with a pre-push guard and a collaboration guide — evidence: DECISIONS.md D-021, .githooks/pre-push, documentation/guides/COLLABORATION.md (branch creation and push are recorded in the session close report)
+- [x] P00-28 Collaboration protocol agreed between the owner and Shem — evidence: owner statement 2026-10-29 ("Collaboration done"). Work split and reviewer written into documentation/guides/COLLABORATION.md 2026-10-30 (owner builds, Shem reviews; Shem username still to be added by the owner)
+- [x] P00-29 Verify the every-turn gates hook fires in a fresh session (owner acknowledged it is unverified, 2026-10-29) — evidence: session s04, 2026-10-30. The hook text was in the agent's context from the first message; asked "quote the rules the every-turn hook sent", the agent quoted all 12 lines (progress table + continuation prompt, own-branch push, ask before merge to main, phase-owner question, UI-GATE, template-first, TST-7, IMP-6/7, MDL, features, session reports, READMEs). Quote matches the output of `bash .claude/hooks/ad-astra-gates.sh` line for line. Hook registered in `.claude/settings.json` (UserPromptSubmit). Note: working-tree copy of the script is CRLF (index is LF); it still runs under Git Bash.
+- [x] P00-27 Owner can explain the session workflow and where every report lives (walkthrough) — evidence: 5-question walkthrough in session s03, owner approved each answer 2026-10-30
 
 ## Closing
-- [ ] P00-CLOSE-01 All items done or RULED with reason
-- [ ] P00-CLOSE-02 Phase Closing Report with `node tools/phase-report.mjs` output and the end-of-session question
+- [x] P00-CLOSE-01 All items done or RULED with reason — evidence: all 40 non-closing items ticked, none ruled; `grep "^- \[ \]"` showed only P00-CLOSE-01…05 open before this tick
+- [x] P00-CLOSE-02 Phase Closing Report with `node tools/phase-report.mjs` output and the end-of-session question — evidence: documentation/phase-reports/phase-00-kickoff/PHASE_CLOSING.md
 - [ ] P00-CLOSE-03 Owner sign-off
 - [ ] P00-CLOSE-04 Tag `phase-00-complete` (owner approval)
 - [ ] P00-CLOSE-05 CURRENT_STATE.md moved to Phase 1

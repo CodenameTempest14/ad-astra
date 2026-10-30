@@ -41,6 +41,22 @@ for (const file of files) {
   rows.push({ file, title: `${title} ${name}`, name, ...counts, total, pct });
 }
 
+// --md: the "Phase Progress" table required at every session start and end (HARD RULE, playbook CTX-12).
+// Prints only the table, so it can be pasted into reports and continuation prompts.
+if (process.argv.includes('--md')) {
+  const bar = (p) => '█'.repeat(Math.round(p / 10)) + '░'.repeat(10 - Math.round(p / 10));
+  const sum = (k) => rows.reduce((a, r) => a + r[k], 0);
+  const overall = Math.round((sum('done') / (sum('total') - sum('ruled'))) * 100);
+  console.log('| Phase | Done / Total | Progress | % |');
+  console.log('|---|---|---|---|');
+  for (const r of rows) {
+    const label = r.file.slice(6, 8).replace(/^0/, 'P') === r.file.slice(6, 8) ? `P${r.file.slice(6, 8)}` : `P${r.file.slice(7, 8)}`;
+    console.log(`| ${label} ${r.name} | ${r.done} / ${r.total - r.ruled}${r.prog ? ` (+${r.prog} partly)` : ''}${r.blocked ? `, ${r.blocked} blocked` : ''} | ${bar(r.pct)} | ${r.pct}% |`);
+  }
+  console.log(`| **Whole project** | ${sum('done')} / ${sum('total') - sum('ruled')} | ${bar(overall)} | **${overall}%** |`);
+  process.exit(0);
+}
+
 const pad = (v, n) => String(v).padStart(n);
 console.log('Phase                          done prog todo BLOCKED ruled total    %');
 for (const r of rows) {
