@@ -24,7 +24,7 @@
 - [x] P01-21 Theme definitions: 4 starter themes with semantic colours — evidence: design/themes/themes.json (D-020)
 - [x] P01-22 Every theme applied to real templates and checked — evidence: `npm run theme-check` → 4 themes × 10 pages, 0 semantic contrast failures, 0 unchecked pages (design/themes/THEME_REPORT.md); screenshots reviewed by eye 2026-10-29
 - [x] P01-23 Owner confirms the theme list — evidence: owner statement 2026-10-29 ("Themes are approved"): Ad Astra Dark, Ad Astra Light, High Contrast Dark, High Contrast Light
-- [ ] P01-24 Non-text contrast check (borders, focus ring, icons ≥ 3:1) added to the theme checker
+- [x] P01-24 Non-text contrast check (borders, focus ring, icons ≥ 3:1) added to the theme checker — evidence: `npm run theme-check` 2026-10-30: 4 themes × 10 pages, 293 non-text elements per theme, 0 failures (first run 267 failures on astra-dark; fixed by --aa-control-border and --aa-focus tokens in themes.json); screenshot reviewed: form-elements__astra-light
 
 ## Template acquisition (search online → capture → record)
 - [x] P01-08 Sources researched; licenses checked (Tabler MIT, Judge0 IDE MIT, Monaco MIT, shadcn/ui MIT) — evidence: design/templates/template-manifest.json `sources`

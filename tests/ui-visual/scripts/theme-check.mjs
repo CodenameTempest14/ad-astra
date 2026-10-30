@@ -1,5 +1,5 @@
 // Applies every theme in design/themes/themes.json to real Tabler template pages, then
-//  1. measures the WCAG contrast of every visible piece of text, and
+//  1. measures the WCAG contrast of every visible piece of text, and the non-text parts (control borders, icons, focus ring; WCAG 1.4.11, 3:1), and
 //  2. saves a screenshot per theme × page,
 // and writes design/themes/THEME_REPORT.md. Proves "each theme works with the templates" (D-020).
 //
@@ -18,7 +18,7 @@ const viewport = { width: 1366, height: 768 };
 const HIDE = '.tblr-banner, .btn-floating';
 
 // Runs inside the page: returns text elements whose contrast is below the threshold.
-function scanContrast({ normalMin, largeMin }) {
+function scanContrast({ normalMin, largeMin, nonTextMin }) {
   const canvas = document.createElement('canvas');
   canvas.width = canvas.height = 1;
   const ctx = canvas.getContext('2d', { willReadFrequently: true });
@@ -95,7 +95,60 @@ function scanContrast({ normalMin, largeMin }) {
       });
     }
   }
-  return { checked, failures };
+
+  // ---- Non-text contrast (WCAG 2.1 SC 1.4.11, threshold nonTextMin = 3:1) ----------------------
+  // (a) boundaries of form controls, (b) icons, (c) the keyboard focus indicator.
+  const nonText = [];
+  let nonTextChecked = 0;
+  const live = (el) => {
+    const cs = getComputedStyle(el), r = el.getBoundingClientRect();
+    if (cs.visibility === 'hidden' || cs.display === 'none' || r.width < 4 || r.height < 4) return null;
+    if (cs.clip !== 'auto' || cs.clipPath !== 'none' && el.matches('.btn-check, .form-selectgroup-input')) return null;   // visually-hidden inputs: the visible control is their label
+    if (el.closest('[aria-hidden="true"], [disabled], .disabled, .offcanvas:not(.show), .modal:not(.show), .dropdown-menu:not(.show), .tblr-banner')) return null;
+    let o = 1;
+    for (let n = el; n; n = n.parentElement) o *= parseFloat(getComputedStyle(n).opacity);
+    return o < 0.05 ? null : { cs, o };
+  };
+  const label = (el) => `${el.tagName.toLowerCase()}${typeof el.className === 'string' && el.className ? '.' + el.className.trim().split(/\s+/).slice(0, 3).join('.') : ''}`;
+  const addNT = (kind, el, r, detail) => { nonTextChecked++; if (r < nonTextMin) nonText.push({ kind, el: label(el), ratio: Math.round(r * 100) / 100, need: nonTextMin, detail }); };
+  const parentBg = (el) => bgOf(el.parentElement || el);
+
+  for (const el of document.querySelectorAll('input:not([type=hidden]), select, textarea, .form-check-input, .form-selectgroup-input + *')) {
+    const v = live(el); if (!v) continue;
+    const pbg = parentBg(el);
+    const border = parseFloat(v.cs.borderTopWidth) > 0 ? over(toRGBA(v.cs.borderTopColor), pbg) : null;
+    const fill = over(toRGBA(v.cs.backgroundColor), pbg);
+    if (el.matches('.form-range') || el.matches('.otp-rendered .otp-input')) continue;   // slider: track checked in Phase 2; OTP: real input is hidden behind separately drawn boxes   // slider: the track is checked as part of the component in Phase 2
+    let best = Math.max(border ? ratio(border, pbg) : 0, ratio(fill, pbg));
+    // Some inputs sit inside a bordered wrapper (Tom Select, input groups): the wrapper draws the boundary.
+    for (let n = el.parentElement, i = 0; best < nonTextMin && n && i < 3; n = n.parentElement, i++) {
+      const w = getComputedStyle(n), wbg = bgOf(n.parentElement || n);
+      const wb = parseFloat(w.borderTopWidth) > 0 ? ratio(over(toRGBA(w.borderTopColor), wbg), wbg) : 0;
+      best = Math.max(best, wb, ratio(over(toRGBA(w.backgroundColor), wbg), wbg));
+    }
+    addNT('control boundary', el, best, `border ${border ? ratio(border, pbg).toFixed(2) : 'none'}, fill ${ratio(fill, pbg).toFixed(2)}`);
+  }
+  for (const el of document.querySelectorAll('svg.icon')) {
+    const v = live(el); if (!v) continue;
+    if (/(?:^|\s)(?:text|btn|badge|bg)-(?:red|green|blue|azure|indigo|purple|pink|orange|yellow|lime|teal|cyan|facebook|twitter|google|youtube|github|x|white)(?:-lt|-fg)?(?:\s|$)/.test(el.closest('[class]')?.className + ' ' + (el.getAttribute('class') || ''))) continue;
+    const bg = bgOf(el);
+    const fg = toRGBA(v.cs.color);
+    addNT('icon', el, ratio(over([fg[0], fg[1], fg[2], fg[3] * v.o], bg), bg), '');
+  }
+  const focusables = [...document.querySelectorAll('input:not([type=hidden]):not([type=checkbox]):not([type=radio]), select, textarea, button, a.btn, .form-check-input')].filter((e) => live(e)).slice(0, 8);
+  for (const el of focusables) {
+    try { el.focus({ focusVisible: true }); } catch { el.focus(); }
+    const cs = getComputedStyle(el), pbg = parentBg(el);
+    const colours = [];
+    if (cs.outlineStyle !== 'none' && parseFloat(cs.outlineWidth) > 0) colours.push(toRGBA(cs.outlineColor));
+    const m = cs.boxShadow.match(/(rgba?\([^)]*\)|color\([^)]*\)|oklch\([^)]*\)|#[0-9a-f]{3,8})\s+(-?\d+(?:\.\d+)?)px\s+(-?\d+(?:\.\d+)?)px\s+(\d+(?:\.\d+)?)px\s+(\d+(?:\.\d+)?)px/);
+    if (m && cs.boxShadow !== 'none') colours.push(toRGBA(m[1]));
+    colours.push(toRGBA(cs.borderTopColor));      // a focus style that changes the border colour counts too
+    const best = Math.max(...colours.map((c) => ratio(over(c, pbg), pbg)));
+    addNT('focus indicator', el, best, `outline ${cs.outlineStyle} ${cs.outlineWidth}, shadow ${cs.boxShadow.slice(0, 50)}`);
+    el.blur();
+  }
+  return { checked, failures, nonText, nonTextChecked };
 }
 
 const browser = await chromium.launch();
@@ -110,7 +163,8 @@ for (const id of themeIds) {
     vars[`--tblr-${name}-rgb`] = hexToRgb(fill);
     vars[`--tblr-${name}-fg`] = fg;
   }
-  const css = `:root, :root[data-bs-theme] { ${Object.entries(vars).map(([k, v]) => `${k}: ${v} !important;`).join(' ')} }\n${theme.extraCss ?? ''}\n${HIDE} { display: none !important; }`;
+  const css = `:root, :root[data-bs-theme] { ${Object.entries(vars).map(([k, v]) => `${k}: ${v} !important;`).join(' ')} }\n${theme.extraCss ?? ''}\n${HIDE} { display: none !important; }
+*, *::before, *::after { transition: none !important; animation: none !important; }`;   // no transitions: focus styles are read right after focus()
   const ctx = await browser.newContext({ viewport, colorScheme: theme.base });
   results[id] = [];
   for (const file of cfg.samplePages) {
@@ -130,13 +184,13 @@ for (const id of themeIds) {
       await mkdir(outDir, { recursive: true });
       await writeFile(path.join(outDir, 'README.md'), `# Theme sweep: ${theme.label}\n\nTabler template pages with the \`${id}\` variables applied (design/themes/themes.json). File names: \`<page>__<theme>__1366x768.png\`. Regenerate: \`npm run theme-check\` in tests/ui-visual. Overwritten on every run; not baselines.\n`);
       await page.screenshot({ path: path.join(outDir, `${name}__${id}__1366x768.png`) });
-      const scan = await page.evaluate(scanContrast, { normalMin: cfg.thresholds.normalText, largeMin: cfg.thresholds.largeText });
+      const scan = await page.evaluate(scanContrast, { normalMin: cfg.thresholds.normalText, largeMin: cfg.thresholds.largeText, nonTextMin: cfg.thresholds.nonText });
       scan.demo = scan.failures.filter((f) => f.palette);          // Tabler demo palette: informational
       scan.failures = scan.failures.filter((f) => !f.palette);     // semantic colours: must be zero
       results[id].push({ page: name, ...scan });
-      console.log(`${id.padEnd(20)} ${name.padEnd(14)} checked ${String(scan.checked).padStart(4)}  failures ${String(scan.failures.length).padStart(3)}   (demo-palette only: ${scan.demo.length})`);
+      console.log(`${id.padEnd(20)} ${name.padEnd(14)} checked ${String(scan.checked).padStart(4)}  failures ${String(scan.failures.length).padStart(3)}   non-text ${String(scan.nonTextChecked).padStart(3)} checked, ${String(scan.nonText.length).padStart(3)} failing   (demo-palette only: ${scan.demo.length})`);
     } catch (error) {
-      results[id].push({ page: name, checked: 0, failures: [], error: error.message.split('\n')[0] });
+      results[id].push({ page: name, checked: 0, failures: [], nonText: [], nonTextChecked: 0, error: error.message.split('\n')[0] });
       console.log(`${id.padEnd(20)} ${name.padEnd(14)} ERROR ${error.message.split('\n')[0]}`);
     } finally {
       await page.close();
@@ -157,20 +211,25 @@ const lines = [
   'Ad Astra uses **semantic colours only** (primary, secondary, success, warning, danger, info). Failures on Tabler\'s demo palette',
   '(`btn-yellow`, `text-red`, `bg-azure-lt` …) are counted separately and do not fail the check.',
   '',
-  '| Theme | Pages OK | Text elements checked | Contrast failures (semantic) | Demo-palette only (not used) |',
-  '|---|---|---|---|---|',
+  '| Theme | Pages OK | Text elements checked | Contrast failures (semantic) | Non-text checked | Non-text failures | Demo-palette only (not used) |',
+  '|---|---|---|---|---|---|---|',
 ];
 for (const id of themeIds) {
   const r = results[id];
-  const okPages = r.filter((p) => !p.error && p.failures.length === 0).length;
-  lines.push(`| \`${id}\` | ${okPages} / ${r.length} | ${r.reduce((a, p) => a + p.checked, 0)} | **${r.reduce((a, p) => a + p.failures.length, 0)}** | ${r.reduce((a, p) => a + (p.demo?.length ?? 0), 0)} |`);
+  const okPages = r.filter((p) => !p.error && p.failures.length === 0 && p.nonText.length === 0).length;
+  lines.push(`| \`${id}\` | ${okPages} / ${r.length} | ${r.reduce((a, p) => a + p.checked, 0)} | **${r.reduce((a, p) => a + p.failures.length, 0)}** | ${r.reduce((a, p) => a + p.nonTextChecked, 0)} | **${r.reduce((a, p) => a + p.nonText.length, 0)}** | ${r.reduce((a, p) => a + (p.demo?.length ?? 0), 0)} |`);
 }
 for (const id of themeIds) {
-  const bad = results[id].filter((p) => p.error || p.failures.length);
+  const bad = results[id].filter((p) => p.error || p.failures.length || p.nonText.length);
   if (!bad.length) continue;
   lines.push('', `## ${id}: pages with failures`);
   for (const p of bad) {
-    lines.push('', `### ${p.page} — ${p.error ? 'ERROR: ' + p.error : p.failures.length + ' failing of ' + p.checked}`);
+    lines.push('', `### ${p.page} — ${p.error ? 'ERROR: ' + p.error : p.failures.length + ' text failing of ' + p.checked + '; ' + p.nonText.length + ' non-text failing of ' + p.nonTextChecked}`);
+    if (p.nonText.length) {
+      lines.push('', `Non-text (need ≥ ${cfg.thresholds.nonText}:1):`, '| Kind | Element | Ratio | Detail |', '|---|---|---|---|');
+      for (const f of p.nonText.slice(0, 12)) lines.push(`| ${f.kind} | \`${f.el}\` | ${f.ratio} | ${f.detail.replace(/\|/g, '/')} |`);
+      if (p.nonText.length > 12) lines.push(`| … | ${p.nonText.length - 12} more | | |`);
+    }
     if (p.failures.length) {
       lines.push('| Element | Text | Ratio | Needs | Text colour | Background |', '|---|---|---|---|---|---|');
       for (const f of p.failures.slice(0, 12)) lines.push(`| \`${f.el}\` | ${f.text.replace(/\|/g, '/')} | ${f.ratio} | ${f.need} | ${f.fg} | ${f.bg} |`);
@@ -179,7 +238,7 @@ for (const id of themeIds) {
   }
 }
 await writeFile(path.join(themesDir, 'THEME_REPORT.md'), lines.join('\n') + '\n');
-const total = themeIds.reduce((a, id) => a + results[id].reduce((b, p) => b + p.failures.length, 0), 0);
+const total = themeIds.reduce((a, id) => a + results[id].reduce((b, p) => b + p.failures.length + p.nonText.length, 0), 0);
 const errored = themeIds.reduce((a, id) => a + results[id].filter((p) => p.error).length, 0);
 console.log(`\nTotal contrast failures: ${total}. Pages that could not be checked: ${errored}. Report: design/themes/THEME_REPORT.md`);
 process.exitCode = total || errored ? 1 : 0;   // an unchecked page is NOT a pass
