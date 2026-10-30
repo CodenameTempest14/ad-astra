@@ -35,7 +35,7 @@
 - [x] P01-13 Approved template chosen per element; README record per element; registry generated — evidence: design/TEMPLATE_REGISTRY.md (45/45 Approved)
 - [ ] P01-14 Section templates for pages still missing them (e.g. workspace-problem-panel, workspace-output-console, test-case-table) — capture element crops or write a structural note + authored wireframe
 - [ ] P01-15 Missing states captured where they matter: error, empty, loading, disabled (login error, empty lists, running execution)
-- [ ] P01-16 THIRD_PARTY_NOTICES.md lists every source we will adapt code/markup from
+- [x] P01-16 THIRD_PARTY_NOTICES.md lists every source we will adapt code/markup from — evidence: THIRD_PARTY_NOTICES.md (9 works with licence and source; sources match design/templates/template-manifest.json; fonts marked proposed)
 
 ## Playwright tooling
 - [x] P01-17 tests/ui-visual set up with Playwright Test 1.56.1 + Chromium — evidence: tests/ui-visual/package.json, `npm run capture-templates` output
