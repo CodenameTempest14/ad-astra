@@ -26,7 +26,7 @@ Anything marked **(?)** is a gap the owner should confirm. Screens named below a
 ## 3. Running an exam (Teacher on the teacher's PC; classroom layout in CLASSROOM-SETUP.md)
 1. 15 minutes before: lab PCs show Online in the **Lab PCs** list (F-ADM-15). `admin-lab-pcs`
 2. During the exam: the **Live Monitor** shows every student's question, time left, submissions and flags (F-ADM-14). `admin-live-monitor`
-   - Extend a student's time, unlock re-entry on another PC. **(?)** Is force-submit needed?
+   - Extend a student's time, unlock re-entry on another PC. Force-submit: **yes, whenever the time is up** (owner, 2026-10-30; matches D-013 auto-submit at zero). Manual teacher force-submit before time is up: not requested.
    - Answer clarification questions, to one student or broadcast to all (F-TCH-17). `teacher-clarifications-inbox`
 3. At zero, each student's latest saved code is auto-submitted (D-013).
 
@@ -37,8 +37,8 @@ Anything marked **(?)** is a gap the owner should confirm. Screens named below a
 3. Fixed a wrong test? **Rejudge** all submissions (F-TCH-16).
 4. See the gradebook and question analytics (F-TCH-19, F-TCH-20); export to **Excel (.xlsx) and CSV (.csv)** (D-019). `teacher-gradebook`, `teacher-assessment-report`
 5. Release results to students according to the assessment's setting (F-TCH-13).
-6. Back up. At term end: archive or delete the term (D-016). **(?)** Archive tooling (F-ADM-13) is held; is "delete the term" enough for V1?
+6. Back up (F-ADM-10). At term end (about every 3 months) the teacher backs up the students' outputs, scores and other records, then may delete the term's data (D-016). Owner 2026-10-30: "delete the term" is enough for V1, with a **reminder** to back up first. The reminder is feature F-ADM-17 (approved 2026-10-30).
 
 ## 5. When things go wrong
 - Lab PC offline or crashed → CLASSROOM-SETUP.md §5, §7 (USB fallback).
-- Forgot the Administrator password → recovery code from first-run setup. **(?)** Confirm this approach.
+- Forgot the Administrator password → recovery code from first-run setup. Confirmed by the owner 2026-10-30.

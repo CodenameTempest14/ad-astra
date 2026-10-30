@@ -33,8 +33,8 @@
 - [x] P00-13 Export formats — evidence: DECISIONS.md D-019 (Excel .xlsx and CSV .csv; supersedes D-017)
 
 ## Requirements and inventory
-- [ ] P00-14 Teacher workflow — PROG: draft written (documentation/specs/teacher-workflow.md, 3 open questions marked (?)); awaiting owner review
-- [ ] P00-15 Student workflow — PROG: draft written (documentation/specs/student-workflow.md, 1 open question marked (?)); awaiting owner review
+- [x] P00-14 Teacher workflow — owner answered all questions 2026-10-30 (documentation/specs/teacher-workflow.md)
+- [x] P00-15 Student workflow — owner answered the question 2026-10-30 (documentation/specs/student-workflow.md)
 - [x] P00-16 Capability list confirmed item by item — evidence: FEATURES.md approval column + D-018
 - [x] P00-17 UI inventory (pages → sections → components with IDs) — evidence: design/templates/template-manifest.json (45 elements), design/TEMPLATE_REGISTRY.md
 - [ ] P00-18 Owner reviews and approves the UI inventory

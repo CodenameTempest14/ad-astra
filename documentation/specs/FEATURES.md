@@ -61,6 +61,7 @@ system itself.
 | F-ADM-14 | **Live exam monitor:** every student's status, progress, time left, flags; extend time; force-submit; unlock re-entry | **LAN** (single PC: per-PC view only) | ✅ Approved 2026-10-29 (owner, P00-07d) |
 | F-ADM-15 | **Lab/host management:** register lab PCs, see which are online, push assessments to them | LAN | ✅ Approved 2026-10-29 (owner, P00-07d) |
 | F-ADM-16 | **Diagnostics hub:** link to the developer diagnostics (system health, logs, test runner) | V1 | ✅ Approved 2026-10-29 (owner, P00-07d) |
+| F-ADM-17 | **Term-end backup reminder:** about 3 months into a term, or when the teacher deletes a term, warn them to back up students' outputs, scores and records first; show last backup age; deleting needs a verified backup or an explicit skip | V1 | ✅ Approved 2026-10-30 (owner) |
 
 ## B. Teacher features
 | ID | Feature | Tier | Owner approval |

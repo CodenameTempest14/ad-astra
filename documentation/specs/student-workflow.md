@@ -14,7 +14,7 @@ Built from the owner's decisions D-008 … D-018 and the approved student featur
 ## 3. Solving problems — `student-coding-workspace`
 1. Left: problem statement and visible examples. Centre: Monaco editor with starter code, in the language the teacher chose (F-STU-03).
 2. **Run** compiles and runs on the lab PC against the **visible** tests, or against the student's own input (F-STU-04). Unlimited (D-011). Compiler errors and output appear in the console below.
-3. In Practice/Assignment mode a penalty-free **Check** is available (F-STU-05). **(?)** Is "Check" different from "Run"? Proposed: Check = Run against visible tests with a pass/fail summary.
+3. In Practice/Assignment mode a penalty-free **Check** is available (F-STU-05). Check differs from Run: Check = Run against the visible tests with a pass/fail summary (owner confirmed 2026-10-30).
 4. The timer bar warns at 10 minutes and 1 minute (F-STU-06). Code is autosaved continuously; a crash or power loss resumes where they left off (F-STU-07).
 5. The question navigator shows answered / not answered / flagged for review (F-STU-08).
 6. **Ask the teacher** a question in the clarification panel; broadcast answers show highlighted (F-STU-09). `student-clarification-panel`
