@@ -54,8 +54,8 @@
 - [x] P00-27 Owner can explain the session workflow and where every report lives (walkthrough) — evidence: 5-question walkthrough in session s03, owner approved each answer 2026-10-30
 
 ## Closing
-- [ ] P00-CLOSE-01 All items done or RULED with reason
-- [ ] P00-CLOSE-02 Phase Closing Report with `node tools/phase-report.mjs` output and the end-of-session question
+- [x] P00-CLOSE-01 All items done or RULED with reason — evidence: all 40 non-closing items ticked, none ruled; `grep "^- \[ \]"` showed only P00-CLOSE-01…05 open before this tick
+- [x] P00-CLOSE-02 Phase Closing Report with `node tools/phase-report.mjs` output and the end-of-session question — evidence: documentation/phase-reports/phase-00-kickoff/PHASE_CLOSING.md
 - [ ] P00-CLOSE-03 Owner sign-off
 - [ ] P00-CLOSE-04 Tag `phase-00-complete` (owner approval)
 - [ ] P00-CLOSE-05 CURRENT_STATE.md moved to Phase 1
