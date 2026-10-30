@@ -37,7 +37,7 @@
 - [x] P00-15 Student workflow — owner answered the question 2026-10-30 (documentation/specs/student-workflow.md)
 - [x] P00-16 Capability list confirmed item by item — evidence: FEATURES.md approval column + D-018
 - [x] P00-17 UI inventory (pages → sections → components with IDs) — evidence: design/templates/template-manifest.json (45 elements), design/TEMPLATE_REGISTRY.md
-- [ ] P00-18 Owner reviews and approves the UI inventory
+- [x] P00-18 Owner reviews and approves the UI inventory — evidence: owner "Approve" 2026-10-30 (template registry, 60/60)
 
 ## Repository and working system
 - [x] P00-19 Repository cloned from https://github.com/CodenameTempest14/ad-astra.git — evidence: ad-astra/.git
@@ -49,7 +49,7 @@
 - [x] P00-25 Context files: CURRENT_STATE.md, PHASE_INDEX.md, report templates — evidence: documentation/context/, documentation/phase-reports/
 - [x] P00-26 First push to GitHub — evidence: owner approved 2026-10-29; secret sweep clean; `git push -u origin main` → remote main 65d6d83 = local HEAD (`git ls-remote`); 108 LFS files. **Owner rule: ask before every later push.**
 - [x] P00-28a Two branches created for the owner and Shem Dumpor, with a pre-push guard and a collaboration guide — evidence: DECISIONS.md D-021, .githooks/pre-push, documentation/guides/COLLABORATION.md (branch creation and push are recorded in the session close report)
-- [x] P00-28 Collaboration protocol agreed between the owner and Shem — evidence: owner statement 2026-10-29 ("Collaboration done"). The specifics (work split, merge reviewer) are not yet written down: add them to documentation/guides/COLLABORATION.md
+- [x] P00-28 Collaboration protocol agreed between the owner and Shem — evidence: owner statement 2026-10-29 ("Collaboration done"). Work split and reviewer written into documentation/guides/COLLABORATION.md 2026-10-30 (owner builds, Shem reviews; Shem username still to be added by the owner)
 - [ ] P00-29 Verify the every-turn gates hook fires in a fresh session (owner acknowledged it is unverified, 2026-10-29) — evidence needed: at the start of a new session the gates text (HARD RULE progress table + continuation prompt, own-branch push, UI-GATE) is visible in the agent's context
 - [ ] P00-27 Owner can explain the session workflow and where every report lives (walkthrough)
 
