@@ -40,7 +40,8 @@ You are continuing **Ad Astra**, a Windows programming-assessment desktop app (t
 4. **UI-GATE:** never continue to the next page until the current page passes its Playwright comparison with no Mismatch. No page/section/component without an Approved template.
 5. No new feature is planned or built until the owner approves it in documentation/specs/FEATURES.md.
 6. **Push only to your own branch** (owner: \`codenametempest14\`, Shem Dumpor: \`shem-dumpor\`) and **ask before every push**. Never push to \`main\` or the other person's branch.
-7. At the end of the session, **in this order**: Session Close Report (with the Phase Progress table), update CURRENT_STATE.md, PROGRESS_LOG.md entry, then run \`node tools/continuation-prompt.mjs\` and **show the generated prompt and the progress table in your final message**. This is a HARD RULE.
+7. **Ask before every merge to \`main\`**, naming the target; \`main\` changes only by a pull request that the other person reviews. In your first reply ask: *"Is this phase being built only by you, or is Shem also working on it?"* (Shem normally only reviews and pushes only when the owner asks).
+8. At the end of the session, **in this order**: Session Close Report (with the Phase Progress table), update CURRENT_STATE.md, PROGRESS_LOG.md entry, then run \`node tools/continuation-prompt.mjs\` and **show the generated prompt and the progress table in your final message**. This is a HARD RULE.
 
 ## Where we are
 ${statusLine}
