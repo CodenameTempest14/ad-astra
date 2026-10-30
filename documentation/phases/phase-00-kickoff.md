@@ -56,6 +56,6 @@
 ## Closing
 - [x] P00-CLOSE-01 All items done or RULED with reason — evidence: all 40 non-closing items ticked, none ruled; `grep "^- \[ \]"` showed only P00-CLOSE-01…05 open before this tick
 - [x] P00-CLOSE-02 Phase Closing Report with `node tools/phase-report.mjs` output and the end-of-session question — evidence: documentation/phase-reports/phase-00-kickoff/PHASE_CLOSING.md
-- [ ] P00-CLOSE-03 Owner sign-off
+- [x] P00-CLOSE-03 Owner sign-off — evidence: owner "Yes" to "Do you sign off Phase 0?", session s04, 2026-10-30; pull request #2 merged into main (merge commit 4a512ba, contains 5693b28)
 - [ ] P00-CLOSE-04 Tag `phase-00-complete` (owner approval)
-- [ ] P00-CLOSE-05 CURRENT_STATE.md moved to Phase 1
+- [x] P00-CLOSE-05 CURRENT_STATE.md moved to Phase 1 — evidence: documentation/context/CURRENT_STATE.md, s04 close

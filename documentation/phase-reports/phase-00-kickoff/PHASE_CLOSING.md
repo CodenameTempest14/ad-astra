@@ -24,8 +24,8 @@
   - Not run: the pre-push hook against a push to `main` or Shem's branch; the pull request flow.
   - Uncertain: whether `main` is protected on GitHub, which would block the merge route CLAUDE.md describes. Not checked.
 - **Owner walkthrough:** 2026-10-30, s03: 5 questions on the session workflow and where reports live. No open questions.
-- **Owner sign-off:** pending
-- **Git tag:** `phase-00-complete` (not created; needs owner approval)
+- **Owner sign-off:** approved 2026-10-30 (owner "Yes", session s04). Pull request #2 merged into `main` (4a512ba).
+- **Git tag:** `phase-00-complete` (not created yet; waiting for the owner's approval of the tag and its commit)
 
 ## Phase report
 ```

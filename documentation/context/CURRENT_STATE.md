@@ -2,25 +2,25 @@
 
 > Overwritten at every session close. The first file read in every session (CLAUDE.md).
 
-**Current phase:** P00 — Kickoff, Requirements, and Working System (closing). Phase 1 work has started in parallel at the owner's request.
-**Last session:** 2026-10-30 s03 — [close report](../phase-reports/phase-00-kickoff/sessions/2026-10-30_s03_CLOSE.md)
-**Branches:** owner works on `codenametempest14`, Shem Dumpor on `shem-dumpor`; `main` stays at the first push (`65d6d83`) until a reviewed merge (Shem reviews the owner's work). See `git log -1` for the latest commit.
+**Current phase:** P01 — Brand, Design System, and Template Acquisition. Phase 0 is signed off (2026-10-30); only the `phase-00-complete` tag (P00-CLOSE-04) waits for the owner's approval.
+**Last session:** 2026-10-30 s04 — [close report](../phase-reports/phase-00-kickoff/sessions/2026-10-30_s04_CLOSE.md)
+**Branches:** owner works on `codenametempest14`, Shem Dumpor on `shem-dumpor`; `main` is at the merge of pull request #2 (`4a512ba`, Phase 0 closing). Later work reaches `main` only through a reviewed pull request. See `git log -1` for the latest commit.
 **Status line:** run `node tools/phase-report.mjs` · progress table: `node tools/phase-report.mjs --md`
 **Phase builder:** owner only (Shem reviews; he pushes only when the owner asks). Ask again at the start of every session.
 
 ## Recommended model for the next session (MDL-1)
-**Sonnet 5.5**, because the work is the hook check, closing Phase 0, writing the Phase 1 opening documents, and the logo exports (scripted image conversion). Switch to **Opus 5.5** at P01-18 (WPF + Blazor spike) or when Phase 2 starts.
+**Sonnet 5.5**, because the work is the Phase 1 opening documents and the logo exports (scripted image conversion). Switch to **Opus 5.5** at P01-18 (WPF + Blazor spike) or when Phase 2 starts.
 
 ## Next concrete step
-0. ~~P00-29 hook check~~ **Done in s04 (2026-10-30):** the agent quoted all 12 hook lines and they match `.claude/hooks/ad-astra-gates.sh`. Evidence is on the checklist line. (The s04 Close Report is not written yet.)
+0. P00-29 hook check is done (s04). Phase 0 is signed off. **Ask the owner to approve the tag `phase-00-complete`** (P00-CLOSE-04) and which commit it goes on; then create it and push it only with a yes.
 1. The enhanced D1 logo is approved (P01-01 done; masters in `assets/branding/source/`). Next: P01-02 exports (16/32/48/256 PNG + .ico; small-size master for 16–32), P01-03 legibility check, P01-04 README.
-2. Close Phase 0: P00-CLOSE-01…05 (closing report, owner sign-off, tag `phase-00-complete` with approval; open the pull request into `main` for Shem's review, ask first). Then write the Phase 1 Opening Report and brief (P01-OPEN-02…05).
+2. Write the Phase 1 Opening Report and brief (P01-OPEN-02…05). P01-OPEN-01 is complete once the tag exists.
 3. Owner adds Shem's GitHub username to COLLABORATION.md and adds him as a collaborator.
 4. Then remaining Phase 1: P01-14/15 missing section templates and states, P01-18 WPF+Blazor spike (Opus), P01-19/20 compare script and PASS_REPORT.
 
 ## Waiting on the owner
 - Push of the unpushed commits to `codenametempest14` (every push needs a yes, own branch only).
-- Phase 0 sign-off and tag; `main` merge only via a reviewed pull request.
+- Approval of the tag `phase-00-complete` and its commit. The s04 commits after pull request #2 need a new pull request to reach `main`.
 - Shem's GitHub username and collaborator access.
 - 10 held features (V1.1/Later) are revisited after the coding portion; multiple choice is deferred.
 

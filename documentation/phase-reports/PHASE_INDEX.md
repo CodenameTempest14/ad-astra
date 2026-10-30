@@ -2,7 +2,7 @@
 
 | Phase | Status | Opened | Closed | Reports |
 |---|---|---|---|---|
-| P00 Kickoff | **In progress** | 2026-10-29 | — | [phase-00-kickoff/](phase-00-kickoff/) |
+| P00 Kickoff | **Signed off 2026-10-30; tag pending** | 2026-10-29 | 2026-10-30 | [phase-00-kickoff/](phase-00-kickoff/) |
 | P01 Design system | Partly done early (templates) | — | — | — |
 | P02 Foundation | Not started | — | — | — |
 | P03 Execution engine | Not started | — | — | — |

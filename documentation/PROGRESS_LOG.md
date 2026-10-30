@@ -54,3 +54,12 @@ Chronological, append-only (MASTER-PLAN §15). Each entry links its Session Clos
 - **Build/tests run:** theme-check 4 themes x 10 pages: 0 text and 0 non-text failures (first non-text run 267 failures on Ad Astra Dark); DESIGN.md generator 60 ratios, none below threshold; README check; hook JSON check; push to codenametempest14 (f520217) verified with git ls-remote.
 - **Problems:** focus ring read mid-transition (false failures); hidden and wrapped inputs (false failures); one edit batch half applied and then re-applied; gates hook not observed in session.
 - **Next steps:** P00-29 hook check; P01-02 exports; close Phase 0 and open the pull request for Shem's review; Phase 1 opening documents.
+
+## 2026-10-30 — P00 s04: gates hook verified, Phase 0 closed and signed off
+
+- **Status:** Completed (tag `phase-00-complete` waits for the owner's approval)
+- **Goal:** verify the gates hook (P00-29) and close Phase 0.
+- **Changes made:** P00-29 ticked with evidence; Phase 0 Closing Report; P00-CLOSE-01, -02, -03, -05 ticked; PHASE_INDEX and CURRENT_STATE moved to Phase 1; pull request #2 (owner opened and merged it) put the closing report on `main`.
+- **Build/tests run:** hook script output compared with the agent's quote (match); phase report; README check; two pushes to `codenametempest14`; `git fetch` showed the merge on `origin/main`.
+- **Problems:** `gh` not installed, so the owner opened the pull request from the compare link.
+- **Next steps:** owner approves the tag; Phase 1 Opening Report and brief; P01-02 logo exports.
