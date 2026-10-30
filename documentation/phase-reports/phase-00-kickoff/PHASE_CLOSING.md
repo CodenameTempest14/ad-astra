@@ -25,7 +25,7 @@
   - Uncertain: whether `main` is protected on GitHub, which would block the merge route CLAUDE.md describes. Not checked.
 - **Owner walkthrough:** 2026-10-30, s03: 5 questions on the session workflow and where reports live. No open questions.
 - **Owner sign-off:** approved 2026-10-30 (owner "Yes", session s04). Pull request #2 merged into `main` (4a512ba).
-- **Git tag:** `phase-00-complete` (not created yet; waiting for the owner's approval of the tag and its commit)
+- **Git tag:** `phase-00-complete`, created 2026-10-30 with the owner's approval on the commit that ticks P00-CLOSE-04. Phase 0 is closed.
 
 ## Phase report
 ```

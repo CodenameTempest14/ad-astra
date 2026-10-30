@@ -2,7 +2,7 @@
 
 > Overwritten at every session close. The first file read in every session (CLAUDE.md).
 
-**Current phase:** P01 — Brand, Design System, and Template Acquisition. Phase 0 is signed off (2026-10-30); only the `phase-00-complete` tag (P00-CLOSE-04) waits for the owner's approval.
+**Current phase:** P01 — Brand, Design System, and Template Acquisition. Phase 0 is closed and tagged `phase-00-complete` (2026-10-30).
 **Last session:** 2026-10-30 s04 — [close report](../phase-reports/phase-00-kickoff/sessions/2026-10-30_s04_CLOSE.md)
 **Branches:** owner works on `codenametempest14`, Shem Dumpor on `shem-dumpor`; `main` is at the merge of pull request #2 (`4a512ba`, Phase 0 closing). Later work reaches `main` only through a reviewed pull request. See `git log -1` for the latest commit.
 **Status line:** run `node tools/phase-report.mjs` · progress table: `node tools/phase-report.mjs --md`
@@ -12,15 +12,15 @@
 **Sonnet 5.5**, because the work is the Phase 1 opening documents and the logo exports (scripted image conversion). Switch to **Opus 5.5** at P01-18 (WPF + Blazor spike) or when Phase 2 starts.
 
 ## Next concrete step
-0. P00-29 hook check is done (s04). Phase 0 is signed off. **Ask the owner to approve the tag `phase-00-complete`** (P00-CLOSE-04) and which commit it goes on; then create it and push it only with a yes.
+0. Phase 0 is closed (signed off, tagged `phase-00-complete`). The owner opens the pull request for the last commit; `main` is not protected and Shem has approved the route.
 1. The enhanced D1 logo is approved (P01-01 done; masters in `assets/branding/source/`). Next: P01-02 exports (16/32/48/256 PNG + .ico; small-size master for 16–32), P01-03 legibility check, P01-04 README.
-2. Write the Phase 1 Opening Report and brief (P01-OPEN-02…05). P01-OPEN-01 is complete once the tag exists.
+2. Tick P01-OPEN-01 (tag exists), then write the Phase 1 Opening Report and brief (P01-OPEN-02…05).
 3. Owner adds Shem's GitHub username to COLLABORATION.md and adds him as a collaborator.
 4. Then remaining Phase 1: P01-14/15 missing section templates and states, P01-18 WPF+Blazor spike (Opus), P01-19/20 compare script and PASS_REPORT.
 
 ## Waiting on the owner
 - Push of the unpushed commits to `codenametempest14` (every push needs a yes, own branch only).
-- Approval of the tag `phase-00-complete` and its commit. The s04 commits after pull request #2 need a new pull request to reach `main`.
+- A pull request from `codenametempest14` into `main` for the commits after #2 (the owner opens it; `gh` is not installed).
 - Shem's GitHub username and collaborator access.
 - 10 held features (V1.1/Later) are revisited after the coding portion; multiple choice is deferred.
 
