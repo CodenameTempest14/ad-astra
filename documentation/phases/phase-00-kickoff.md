@@ -51,7 +51,7 @@
 - [x] P00-28a Two branches created for the owner and Shem Dumpor, with a pre-push guard and a collaboration guide — evidence: DECISIONS.md D-021, .githooks/pre-push, documentation/guides/COLLABORATION.md (branch creation and push are recorded in the session close report)
 - [x] P00-28 Collaboration protocol agreed between the owner and Shem — evidence: owner statement 2026-10-29 ("Collaboration done"). Work split and reviewer written into documentation/guides/COLLABORATION.md 2026-10-30 (owner builds, Shem reviews; Shem username still to be added by the owner)
 - [ ] P00-29 Verify the every-turn gates hook fires in a fresh session (owner acknowledged it is unverified, 2026-10-29) — evidence needed: at the start of a new session the gates text (HARD RULE progress table + continuation prompt, own-branch push, UI-GATE) is visible in the agent's context
-- [ ] P00-27 Owner can explain the session workflow and where every report lives (walkthrough)
+- [x] P00-27 Owner can explain the session workflow and where every report lives (walkthrough) — evidence: 5-question walkthrough in session s03, owner approved each answer 2026-10-30
 
 ## Closing
 - [ ] P00-CLOSE-01 All items done or RULED with reason
