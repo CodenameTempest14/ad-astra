@@ -28,6 +28,7 @@ phase brief says so. Re-reading every document fills the context for nothing.
 - **Model advice (MDL):** the first reply of every session says which Claude model to use and why
   (*"Based on this session's work, you are advised to use Sonnet 5.5 because …"*). The Close Report
   recommends the model for the next session. Guide: playbook §4b.
+- **Phase-owner question (owner, 2026-10-30):** in the first reply, ask: *"Is this phase being built only by you, or is Shem also working on it?"* Shem normally only reviews the owner's code and pushes only when the owner asks for his help (COLLABORATION.md). Record the answer in the Start Report.
 - **Start:** write the Session Start Report *before* any change
   (`documentation/phase-reports/_templates/SESSION_START.md`).
 - **Open every reply with the status line** from `node tools/phase-report.mjs`:

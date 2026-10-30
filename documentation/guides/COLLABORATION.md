@@ -51,7 +51,12 @@ These files are edited in almost every session, so they are the usual merge conf
 | `documentation/specs/FEATURES.md` | Approval column | Only the owner changes approvals (owner decision rule). |
 | Session reports | Same names | From now on file names carry a person tag: `YYYY-MM-DD_sNN_<owner or shem>_START.md`. |
 
-**Proposed work split (not yet agreed, see checklist P00-28):** split by phase or by feature area so you rarely edit the same code. Example: one person takes the execution engine (Phase 3), the other accounts (Phase 4), because both depend only on the Phase 2 foundation. Decide who does Phase 2 first, because everything else builds on it.
+## Who does what (agreed by the owner, 2026-10-30)
+- **The owner builds.** By default every phase is built by the owner alone, on `codenametempest14`.
+- **Shem reviews.** Shem Dumpor reads and reviews the owner's code (pull request into `main`). Shem does **not** push code on his own.
+- **Shem builds only when the owner asks.** If the owner wants help creating something, the owner says so ("Shem is helping on this phase") and only then Shem works and pushes, to `shem-dumpor`, on the part the owner names.
+- ⛔ **Phase-owner question:** at the start of every session the agent asks the owner: *"Is this phase being built only by you, or is Shem also working on it?"* The answer goes in the Start Report (Phase builder: owner only / owner + Shem, with Shem's part) and decides whether the agent plans for work from `shem-dumpor`.
+- Shem's GitHub username and collaborator access: the owner will add them (repository Settings → Collaborators). Username: *(owner to fill in)*.
 
 ## Rules that apply to both people (they live in CLAUDE.md, so both Claude sessions follow them)
 - Approved templates before UI, UI-GATE one page at a time, new features need the **owner's** approval in `FEATURES.md`.
