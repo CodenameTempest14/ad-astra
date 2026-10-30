@@ -16,6 +16,7 @@ Two people work here: the owner (CodenameTempest14) and Shem Dumpor. Each has th
 3. **Push only to your own branch** and **ask before every push.** Owner = `codenametempest14`,
    Shem Dumpor = `shem-dumpor` (check `git config user.email`). Never push to `main` or the other
    person's branch. A pre-push hook enforces this (`.githooks/`).
+4. **Ask before every push AND every merge to `main`, naming the target** ("push to `codenametempest14`?", "merge into `main`?"), even if the owner approved a push earlier. `main` changes only through a pull request that the other person reviews (COLLABORATION.md); pushing straight to `main` is blocked. If the owner asks for it anyway, the agent explains this and asks them to confirm the merge route instead.
 
 ## Read these, in this order, at the start of every session — and nothing more
 1. `documentation/context/CURRENT_STATE.md` — where we are, next step, blockers
