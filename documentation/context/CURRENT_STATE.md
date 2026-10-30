@@ -12,7 +12,7 @@
 **Sonnet 5.5**, because the work is the hook check, closing Phase 0, writing the Phase 1 opening documents, and the logo exports (scripted image conversion). Switch to **Opus 5.5** at P01-18 (WPF + Blazor spike) or when Phase 2 starts.
 
 ## Next concrete step
-0. **First thing (P00-29):** the agent must say which rules the every-turn gates hook sent (progress table + continuation prompt, own-branch pushes, UI-GATE, ask-before-merge-to-main, phase-owner question). If the agent cannot quote them, the hook is not running in this VS Code environment: the owner checks `/hooks`; then fix, or rule P00-29 out with a reason.
+0. ~~P00-29 hook check~~ **Done in s04 (2026-10-30):** the agent quoted all 12 hook lines and they match `.claude/hooks/ad-astra-gates.sh`. Evidence is on the checklist line. (The s04 Close Report is not written yet.)
 1. The enhanced D1 logo is approved (P01-01 done; masters in `assets/branding/source/`). Next: P01-02 exports (16/32/48/256 PNG + .ico; small-size master for 16–32), P01-03 legibility check, P01-04 README.
 2. Close Phase 0: P00-CLOSE-01…05 (closing report, owner sign-off, tag `phase-00-complete` with approval; open the pull request into `main` for Shem's review, ask first). Then write the Phase 1 Opening Report and brief (P01-OPEN-02…05).
 3. Owner adds Shem's GitHub username to COLLABORATION.md and adds him as a collaborator.
