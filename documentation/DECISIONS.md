@@ -117,3 +117,7 @@ a reversed decision gets a new entry that references the old one.
 - **Decided by:** owner ("Themes are approved", "Collaboration done").
 - **Themes:** the four starter themes in `design/themes/themes.json` are the approved set (Ad Astra Dark default, Ad Astra Light, High Contrast Dark, High Contrast Light). New themes still need to pass `npm run theme-check`.
 - **Collaboration:** the owner reports the protocol with Shem Dumpor is agreed. The agreed work split and merge reviewer are **not yet recorded**; the owner should add them to `documentation/guides/COLLABORATION.md` or tell the agent to.
+
+## D-023 — Fonts: Inter (UI) and JetBrains Mono (code), bundled offline — 2026-10-30
+- **Decided by:** owner ("Accept the Inter & JetBrains Mono").
+- **Meaning:** both are SIL OFL 1.1 and ship inside the app (no CDN), so the offline classroom and Playwright screenshots render identically. Fallbacks: Segoe UI / Cascadia Mono / Consolas. Licence texts go into THIRD_PARTY_NOTICES.md and the installer. The files are downloaded in Phase 2; their licences are re-verified against the upstream repositories at that point.

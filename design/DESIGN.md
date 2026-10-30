@@ -153,7 +153,7 @@ Default theme: `astra-dark`.
 
 ## 4. Typography
 
-> **Owner to confirm** (fonts are a taste decision). Proposed defaults; nothing is downloaded until confirmed.
+> **Confirmed by the owner, 2026-10-30 (D-023).** Font files are downloaded and bundled in Phase 2 (P02 theme engine); until then the fallback stack applies.
 
 | Role | Font | Fallback | Licence | Notes |
 |---|---|---|---|---|

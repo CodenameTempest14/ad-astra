@@ -66,7 +66,7 @@ for (const [id, t] of Object.entries(cfg.themes)) {
 }
 
 w('## 4. Typography', '',
-  '> **Owner to confirm** (fonts are a taste decision). Proposed defaults; nothing is downloaded until confirmed.', '',
+  '> **Confirmed by the owner, 2026-10-30 (D-023).** Font files are downloaded and bundled in Phase 2 (P02 theme engine); until then the fallback stack applies.', '',
   '| Role | Font | Fallback | Licence | Notes |', '|---|---|---|---|---|',
   '| UI text | **Inter** (variable, woff2, bundled in the app) | `Segoe UI`, `system-ui`, sans-serif | SIL OFL 1.1 | Bundled so Playwright screenshots render identically on every PC (MASTER-PLAN §3.5); the app is offline, so no CDN. |',
   '| Code, output, Monaco | **JetBrains Mono** (variable, woff2, bundled) | `Cascadia Mono`, `Consolas`, monospace | SIL OFL 1.1 | Clear `0/O` and `1/l/I`, which matters for students reading code and test output. |', '',
